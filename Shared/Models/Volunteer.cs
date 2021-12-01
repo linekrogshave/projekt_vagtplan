@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+
+public class Volunteer : User  {
+	public int volunteer_id { get; set; }
+    public double hours {
+        get
+        {
+            double sum = 0;
+            if (shifts != null)
+                foreach (Shift shift in shifts)
+                {
+                    if (shift != null)
+                    {
+                        var hours = (shift.end_time - shift.start_time).TotalHours;
+                        sum += hours;
+                    }
+
+                }
+            return sum;
+        }
+    }
+
+    public double points
+    {
+        get
+        {
+            double sum = -6;
+            if (shifts != null)
+            {
+                foreach (Shift shift in shifts)
+                {
+                    if (DateTime.Compare(shift.end_time, DateTime.Now) == -1)
+                    {
+                        var hours = (shift.end_time - shift.start_time).TotalHours;
+                        sum += hours;
+                    }
+                }
+            }
+            {
+                foreach (Coupon coupon in coupons)
+                    {
+                        sum -= coupon.price;
+                    }
+            }
+            if (sum < 0)
+                return 0;
+            return sum;
+        }
+    }
+
+    public List<Shift> shifts { get; set; }
+	public List<Coupon> coupons { get; set; }
+}

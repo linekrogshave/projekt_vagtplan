@@ -1,0 +1,208 @@
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/vagtplanen.Client.StaticWebAssets.xml
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/appsettings.Development.json
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/appsettings.json
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/BlazorDebugProxy/BrowserDebugHost.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/BlazorDebugProxy/BrowserDebugHost.runtimeconfig.json
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/BlazorDebugProxy/BrowserDebugProxy.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/BlazorDebugProxy/Microsoft.CodeAnalysis.CSharp.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/BlazorDebugProxy/Microsoft.CodeAnalysis.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/BlazorDebugProxy/Mono.Cecil.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/BlazorDebugProxy/Mono.Cecil.Pdb.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/BlazorDebugProxy/Mono.Cecil.Rocks.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/BlazorDebugProxy/Newtonsoft.Json.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/vagtplanen.Server.StaticWebAssets.xml
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/vagtplanen.Server.deps.json
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/vagtplanen.Server.runtimeconfig.json
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/vagtplanen.Server.runtimeconfig.dev.json
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/vagtplanen.Server.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/ref/vagtplanen.Server.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/vagtplanen.Server.pdb
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/vagtplanen.Server.Views.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/vagtplanen.Server.Views.pdb
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/BlazorComponentUtilities.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/BlazorPro.Spinkit.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/Dapper.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/Dapper.SimpleCRUD.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/Microsoft.AspNetCore.Authorization.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/Microsoft.AspNetCore.Components.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/Microsoft.AspNetCore.Components.Forms.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/Microsoft.AspNetCore.Components.Web.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/Microsoft.AspNetCore.Components.WebAssembly.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/Microsoft.AspNetCore.Components.WebAssembly.Server.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/Microsoft.AspNetCore.Metadata.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/Microsoft.DotNet.PlatformAbstractions.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/Microsoft.Extensions.DependencyModel.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/Microsoft.JSInterop.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/Microsoft.JSInterop.WebAssembly.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/Newtonsoft.Json.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/Npgsql.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/Radzen.Blazor.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/System.IO.Pipelines.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/System.Linq.Dynamic.Core.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/vagtplanen.Client.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/vagtplanen.Shared.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/vagtplanen.Client.pdb
+/Users/nicolaiskat/Projects/vagtplanen/Server/bin/Debug/net5.0/vagtplanen.Shared.pdb
+/Users/nicolaiskat/Projects/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.csproj.AssemblyReference.cache
+/Users/nicolaiskat/Projects/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nicolaiskat/Projects/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.AssemblyInfoInputs.cache
+/Users/nicolaiskat/Projects/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.AssemblyInfo.cs
+/Users/nicolaiskat/Projects/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.csproj.CoreCompileInputs.cache
+/Users/nicolaiskat/Projects/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.MvcApplicationPartsAssemblyInfo.cache
+/Users/nicolaiskat/Projects/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.RazorAssemblyInfo.cache
+/Users/nicolaiskat/Projects/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.RazorAssemblyInfo.cs
+/Users/nicolaiskat/Projects/vagtplanen/Server/obj/Debug/net5.0/scopedcss/bundle/vagtplanen.Server.styles.css
+/Users/nicolaiskat/Projects/vagtplanen/Server/obj/Debug/net5.0/staticwebassets/vagtplanen.Server.StaticWebAssets.Manifest.cache
+/Users/nicolaiskat/Projects/vagtplanen/Server/obj/Debug/net5.0/staticwebassets/vagtplanen.Server.StaticWebAssets.xml
+/Users/nicolaiskat/Projects/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.TagHelpers.input.cache
+/Users/nicolaiskat/Projects/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.TagHelpers.output.cache
+/Users/nicolaiskat/Projects/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.RazorCoreGenerate.cache
+/Users/nicolaiskat/Projects/vagtplanen/Server/obj/Debug/net5.0/Razor/Pages/Error.cshtml.g.cs
+/Users/nicolaiskat/Projects/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.RazorTargetAssemblyInfo.cache
+/Users/nicolaiskat/Projects/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.RazorTargetAssemblyInfo.cs
+/Users/nicolaiskat/Projects/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.Views.pdb
+/Users/nicolaiskat/Projects/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.csproj.CopyComplete
+/Users/nicolaiskat/Projects/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/obj/Debug/net5.0/ref/vagtplanen.Server.dll
+/Users/nicolaiskat/Projects/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.pdb
+/Users/nicolaiskat/Projects/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.genruntimeconfig.cache
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/vagtplanen.Client.StaticWebAssets.xml
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/appsettings.Development.json
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/appsettings.json
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/BlazorDebugProxy/BrowserDebugHost.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/BlazorDebugProxy/BrowserDebugHost.runtimeconfig.json
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/BlazorDebugProxy/BrowserDebugProxy.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/BlazorDebugProxy/Microsoft.CodeAnalysis.CSharp.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/BlazorDebugProxy/Microsoft.CodeAnalysis.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/BlazorDebugProxy/Mono.Cecil.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/BlazorDebugProxy/Mono.Cecil.Pdb.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/BlazorDebugProxy/Mono.Cecil.Rocks.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/BlazorDebugProxy/Newtonsoft.Json.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/vagtplanen.Server.StaticWebAssets.xml
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/vagtplanen.Server.deps.json
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/vagtplanen.Server.runtimeconfig.json
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/vagtplanen.Server.runtimeconfig.dev.json
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/vagtplanen.Server.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/ref/vagtplanen.Server.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/vagtplanen.Server.pdb
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/vagtplanen.Server.Views.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/vagtplanen.Server.Views.pdb
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/BlazorComponentUtilities.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/BlazorPro.Spinkit.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/Dapper.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/Dapper.SimpleCRUD.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/Microsoft.AspNetCore.Authorization.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/Microsoft.AspNetCore.Components.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/Microsoft.AspNetCore.Components.Forms.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/Microsoft.AspNetCore.Components.Web.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/Microsoft.AspNetCore.Components.WebAssembly.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/Microsoft.AspNetCore.Components.WebAssembly.Server.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/Microsoft.AspNetCore.Metadata.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/Microsoft.DotNet.PlatformAbstractions.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/Microsoft.Extensions.DependencyModel.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/Microsoft.JSInterop.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/Microsoft.JSInterop.WebAssembly.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/Newtonsoft.Json.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/Npgsql.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/Radzen.Blazor.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/System.IO.Pipelines.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/System.Linq.Dynamic.Core.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/vagtplanen.Client.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/vagtplanen.Shared.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/vagtplanen.Client.pdb
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/bin/Debug/net5.0/vagtplanen.Shared.pdb
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.csproj.AssemblyReference.cache
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.AssemblyInfoInputs.cache
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.AssemblyInfo.cs
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.csproj.CoreCompileInputs.cache
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.MvcApplicationPartsAssemblyInfo.cache
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.RazorAssemblyInfo.cache
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.RazorAssemblyInfo.cs
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/obj/Debug/net5.0/scopedcss/bundle/vagtplanen.Server.styles.css
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/obj/Debug/net5.0/staticwebassets/vagtplanen.Server.StaticWebAssets.Manifest.cache
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/obj/Debug/net5.0/staticwebassets/vagtplanen.Server.StaticWebAssets.xml
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.TagHelpers.input.cache
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.TagHelpers.output.cache
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.RazorCoreGenerate.cache
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/obj/Debug/net5.0/Razor/Pages/Error.cshtml.g.cs
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.RazorTargetAssemblyInfo.cache
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.RazorTargetAssemblyInfo.cs
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.Views.pdb
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.csproj.CopyComplete
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/obj/Debug/net5.0/ref/vagtplanen.Server.dll
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.pdb
+/Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Server/obj/Debug/net5.0/vagtplanen.Server.genruntimeconfig.cache
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\appsettings.json
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\BlazorDebugProxy\BrowserDebugHost.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\BlazorDebugProxy\BrowserDebugHost.runtimeconfig.json
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\BlazorDebugProxy\BrowserDebugProxy.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\BlazorDebugProxy\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\BlazorDebugProxy\Microsoft.CodeAnalysis.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\BlazorDebugProxy\Mono.Cecil.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\BlazorDebugProxy\Mono.Cecil.Pdb.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\BlazorDebugProxy\Mono.Cecil.Rocks.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\BlazorDebugProxy\Newtonsoft.Json.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\vagtplanen.Client.StaticWebAssets.xml
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\vagtplanen.Server.StaticWebAssets.xml
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\vagtplanen.Server.exe
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\vagtplanen.Server.deps.json
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\vagtplanen.Server.runtimeconfig.json
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\vagtplanen.Server.runtimeconfig.dev.json
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\vagtplanen.Server.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\ref\vagtplanen.Server.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\vagtplanen.Server.pdb
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\vagtplanen.Server.Views.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\vagtplanen.Server.Views.pdb
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\BlazorComponentUtilities.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\BlazorPro.Spinkit.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\Dapper.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\Dapper.SimpleCRUD.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Components.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Components.WebAssembly.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Components.WebAssembly.Server.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\Microsoft.JSInterop.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\Microsoft.JSInterop.WebAssembly.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\Npgsql.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\Radzen.Blazor.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\System.IO.Pipelines.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\System.Linq.Dynamic.Core.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\vagtplanen.Client.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\vagtplanen.Shared.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\vagtplanen.Client.pdb
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\bin\Debug\net5.0\vagtplanen.Shared.pdb
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\obj\Debug\net5.0\vagtplanen.Server.csproj.AssemblyReference.cache
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\obj\Debug\net5.0\vagtplanen.Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\obj\Debug\net5.0\vagtplanen.Server.AssemblyInfoInputs.cache
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\obj\Debug\net5.0\vagtplanen.Server.AssemblyInfo.cs
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\obj\Debug\net5.0\vagtplanen.Server.csproj.CoreCompileInputs.cache
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\obj\Debug\net5.0\vagtplanen.Server.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\obj\Debug\net5.0\vagtplanen.Server.RazorAssemblyInfo.cache
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\obj\Debug\net5.0\vagtplanen.Server.RazorAssemblyInfo.cs
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\obj\Debug\net5.0\staticwebassets\vagtplanen.Server.StaticWebAssets.Manifest.cache
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\obj\Debug\net5.0\staticwebassets\vagtplanen.Server.StaticWebAssets.xml
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\obj\Debug\net5.0\scopedcss\bundle\vagtplanen.Server.styles.css
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\obj\Debug\net5.0\vagtplanen.Server.TagHelpers.input.cache
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\obj\Debug\net5.0\vagtplanen.Server.TagHelpers.output.cache
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\obj\Debug\net5.0\vagtplanen.Server.RazorCoreGenerate.cache
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\obj\Debug\net5.0\vagtplanen.Server.RazorTargetAssemblyInfo.cache
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\obj\Debug\net5.0\vagtplanen.Server.RazorTargetAssemblyInfo.cs
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\obj\Debug\net5.0\vagtplanen.Server.Views.pdb
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\obj\Debug\net5.0\vagtplanen.Server.csproj.CopyComplete
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\obj\Debug\net5.0\vagtplanen.Server.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\obj\Debug\net5.0\ref\vagtplanen.Server.dll
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\obj\Debug\net5.0\vagtplanen.Server.pdb
+C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Server\obj\Debug\net5.0\vagtplanen.Server.genruntimeconfig.cache

@@ -1,0 +1,158 @@
+﻿@page "/volunteerpage"
+@using vagtplanen.Shared
+@using vagtplanen.Client.Components.Volunteer_components;
+@inject HttpClient Http
+
+<EditForm Model="@vol">
+    <h1>Velkommen @vol.first_name</h1>
+
+    <RadzenCard Style="width:922px;">
+        <div class="row">
+            <RadzenCard Style="width:300px;">
+                <div class="row">
+                    <div class="col-md-10">
+                        <b>Ledige vagter:</b>
+                        <div>Her kan du ser tilgængelige ledige vagter</div>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-success" @onclick="() => OpenAvailableShiftsDialog()">Se</button>
+                    </div>
+                </div>
+            </RadzenCard>
+
+            <RadzenCard Style="width:300px;">
+                <div class="row">
+                    <div class="col-md-10">
+                        <b>Alle kuponer</b>
+                        <div>Her kan du ser alle tilgængelige kuponer</div>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-success" @onclick="() => OpenAllCouponsDialog()">Se</button>
+                    </div>
+                </div>
+            </RadzenCard>
+
+            <RadzenCard Style="width:300px;">
+                <div class="row">
+                    <div class="col-md-10">
+                        <b>Mine kuponer:</b>
+                        <div>Her kan du se alle dine købte kuponer</div>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-success" @onclick="() => OpenMyCouponsDialog()">Se</button>
+                    </div>
+                </div>
+            </RadzenCard>
+
+            <RadzenCard Style="width:300px;">
+                <div class="row">
+                    <div class="col-md-10">
+                        <b>Se skema på vagt:</b>
+                        <div>Se hvem du skal arbejde sammen med</div>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-success" @onclick="() => OpenShiftsSchemeDialog()">Se</button>
+                    </div>
+                </div>
+            </RadzenCard>
+        </div>
+    </RadzenCard>
+    <RadzenDataGrid AllowFiltering="true" AllowPaging="true" AllowSorting="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
+                    Data="@(vol.shifts)" TItem="Shift" Style="width:922px">
+        <Columns>
+            <RadzenDataGridColumn TItem="Shift" Property="description" Title="Beskrivelse" />
+            <RadzenDataGridColumn TItem="Shift" Property="start_time" Title="Start tidspunkt" />
+            <RadzenDataGridColumn TItem="Shift" Property="end_time" Title="Slut tidspunkt" />
+            <RadzenDataGridColumn TItem="Shift" Property="job.area" Title="Jobområde" />
+        </Columns>
+    </RadzenDataGrid>
+</EditForm>
+
+@if (AvailableShiftsDialogOpen)
+{
+    <AvailableShifts OnClose="@OnAvailableShiftsDialogClose"></AvailableShifts>
+}
+
+@if (AllCouponsDialogOpen)
+{
+    <AllCoupons vol=@vol OnClose="@OnAllCouponsDialogClose"></AllCoupons>
+}
+
+@if (MyCouponsDialogOpen)
+{
+    <MyCoupons OnClose="@OnMyCouponsDialogClose"></MyCoupons>
+}
+
+@if (ShiftsSchemeDialogOpen)
+{
+    <ShiftsScheme OnClose="@OnShiftsSchemeDialogClose"></ShiftsScheme>
+}
+
+@code {
+
+    [Parameter] public Volunteer vol { get; set; }
+
+
+
+    // Kode til AvailableShifts Modal Dialog
+    public bool AvailableShiftsDialogOpen { get; set; }
+
+    public void OpenAvailableShiftsDialog()
+    {
+        AvailableShiftsDialogOpen = true;
+        StateHasChanged();
+    }
+
+    public void OnAvailableShiftsDialogClose(bool accepted)
+    {
+        AvailableShiftsDialogOpen = false;
+        StateHasChanged();
+    }
+
+    // Kode til AllCoupons Modal Dialog
+    public bool AllCouponsDialogOpen { get; set; }
+
+    public void OpenAllCouponsDialog()
+    {
+        AllCouponsDialogOpen = true;
+        StateHasChanged();
+    }
+
+    public void OnAllCouponsDialogClose(bool accepted)
+    {
+        AllCouponsDialogOpen = false;
+        StateHasChanged();
+    }
+
+
+    // Kode til MyCoupons Modal Dialog
+    public bool MyCouponsDialogOpen { get; set; }
+
+    public void OpenMyCouponsDialog()
+    {
+        MyCouponsDialogOpen = true;
+        StateHasChanged();
+    }
+
+    public void OnMyCouponsDialogClose(bool accepted)
+    {
+        MyCouponsDialogOpen = false;
+        StateHasChanged();
+    }
+
+    // Kode til ShiftsScheme Modal Dialog
+    public bool ShiftsSchemeDialogOpen { get; set; }
+
+    public void OpenShiftsSchemeDialog()
+    {
+        ShiftsSchemeDialogOpen = true;
+        StateHasChanged();
+    }
+
+    public void OnShiftsSchemeDialogClose(bool accepted)
+    {
+        ShiftsSchemeDialogOpen = false;
+        StateHasChanged();
+    }
+
+}
