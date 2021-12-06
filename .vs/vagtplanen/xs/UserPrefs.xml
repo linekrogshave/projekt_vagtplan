@@ -1,20 +1,17 @@
 ﻿<Properties StartupConfiguration="{756938E9-D97A-47CB-8B33-97138F273F9E}|Default">
   <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Client/Components/AvailableShifts.razor" Line="5" Column="36" />
-      <File FileName="Client/Pages/Login.razor" Line="41" Column="14" />
-      <File FileName="Shared/Models/Shift.cs" Line="9" Column="1" />
-      <File FileName="Shared/Models/Volunteer.cs" Line="57" Column="25" />
+      <File FileName="Client/Pages/CoordinatorPage.razor" Line="22" Column="53" />
+      <File FileName="Client/Pages/Login.razor" />
+      <File FileName="Server/Controllers/MethodController.cs" />
+      <File FileName="Server/Services/MethodService.cs" Line="93" Column="35" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="vagtplanen" expanded="True">
+          <Node name="vagtplanen" expanded="True" selected="True">
             <Node name="vagtplanen.Client" expanded="True">
-              <Node name="Components" expanded="True" />
-              <Node name="Pages" expanded="True">
-                <Node name="VolunteerPage.razor" selected="True" />
-              </Node>
+              <Node name="Pages" expanded="True" />
             </Node>
             <Node name="vagtplanen.Server" expanded="True">
               <Node name="Controllers" expanded="True" />

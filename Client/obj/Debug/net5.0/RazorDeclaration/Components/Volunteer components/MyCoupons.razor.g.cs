@@ -13,84 +13,84 @@ namespace vagtplanen.Client.Components.Volunteer_components
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Client\_Imports.razor"
+#line 1 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Client\_Imports.razor"
+#line 2 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using System.Net.Http.Json;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Client\_Imports.razor"
+#line 3 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Client\_Imports.razor"
+#line 4 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Client\_Imports.razor"
+#line 5 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Client\_Imports.razor"
+#line 6 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Client\_Imports.razor"
+#line 7 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using Microsoft.AspNetCore.Components.WebAssembly.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Client\_Imports.razor"
+#line 8 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Client\_Imports.razor"
+#line 9 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using vagtplanen.Client;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Client\_Imports.razor"
+#line 10 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using vagtplanen.Client.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Client\_Imports.razor"
+#line 11 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using Radzen;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Client\_Imports.razor"
+#line 12 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using Radzen.Blazor;
 
 #line default
@@ -104,15 +104,12 @@ using Radzen.Blazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 36 "C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Client\Components\Volunteer components\MyCoupons.razor"
+#line 32 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Volunteer components/MyCoupons.razor"
        
 
-    public Shift[] shifts;
-
-    protected async override Task OnInitializedAsync()
-    {
-        shifts = await Http.GetFromJsonAsync<Shift[]>("api/shift");
-    }
+    [Parameter]
+    public Volunteer vol { get; set; }
+    RadzenDataGrid<Coupon> grid;
 
     [Parameter]
     public EventCallback<bool> OnClose { get; set; }
@@ -125,6 +122,13 @@ using Radzen.Blazor;
     private Task ModalOk()
     {
         return OnClose.InvokeAsync(true);
+    }
+
+    async Task OnUse(Coupon c)
+    {
+        vol.coupons.Remove(c);
+        await Http.PostAsJsonAsync($"api/method/usecoupon/{vol.volunteer_id}/{c.coupon_id}", c);
+        await grid.Reload();
     }
 
 #line default

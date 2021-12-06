@@ -29,9 +29,6 @@
                                         <RadzenButton Icon="add_shopping_cart" Click=@(args => OnBuy(coupon)) />
                                     </Template>
                                 </RadzenDataGridColumn>
-
-
-
                             </Columns>
                         </RadzenDataGrid>
                     </EditForm>
@@ -73,9 +70,8 @@
     {
         if(vol.points >= c.price)
         {
-            var stringContent = new StringContent(c.coupon_id.ToString());
             vol.coupons.Add(c);
-            await Http.PostAsync($"api/method/buycoupon/{vol.volunteer_id}/{c.coupon_id}", stringContent);
+            await Http.PostAsJsonAsync($"api/method/buycoupon/{vol.volunteer_id}/{c.coupon_id}", c);
         }
     }
 }

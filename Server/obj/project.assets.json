@@ -4680,37 +4680,35 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\linek\\.nuget\\packages\\": {}
+    "/Users/nicolaiskat/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\linek\\Documents\\Erhvervsakademi Aarhus\\2. semester\\Semesterprojekt\\vagtplan\\vagtplanen\\Server\\vagtplanen.Server.csproj",
+      "projectUniqueName": "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/vagtplanen.Server.csproj",
       "projectName": "vagtplanen.Server",
-      "projectPath": "C:\\Users\\linek\\Documents\\Erhvervsakademi Aarhus\\2. semester\\Semesterprojekt\\vagtplan\\vagtplanen\\Server\\vagtplanen.Server.csproj",
-      "packagesPath": "C:\\Users\\linek\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\linek\\Documents\\Erhvervsakademi Aarhus\\2. semester\\Semesterprojekt\\vagtplan\\vagtplanen\\Server\\obj\\",
+      "projectPath": "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/vagtplanen.Server.csproj",
+      "packagesPath": "/Users/nicolaiskat/.nuget/packages/",
+      "outputPath": "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\linek\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/nicolaiskat/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\linek\\Documents\\Erhvervsakademi Aarhus\\2. semester\\Semesterprojekt\\vagtplan\\vagtplanen\\Client\\vagtplanen.Client.csproj": {
-              "projectPath": "C:\\Users\\linek\\Documents\\Erhvervsakademi Aarhus\\2. semester\\Semesterprojekt\\vagtplan\\vagtplanen\\Client\\vagtplanen.Client.csproj"
+            "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/vagtplanen.Client.csproj": {
+              "projectPath": "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/vagtplanen.Client.csproj"
             },
-            "C:\\Users\\linek\\Documents\\Erhvervsakademi Aarhus\\2. semester\\Semesterprojekt\\vagtplan\\vagtplanen\\Shared\\vagtplanen.Shared.csproj": {
-              "projectPath": "C:\\Users\\linek\\Documents\\Erhvervsakademi Aarhus\\2. semester\\Semesterprojekt\\vagtplan\\vagtplanen\\Shared\\vagtplanen.Shared.csproj"
+            "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/vagtplanen.Shared.csproj": {
+              "projectPath": "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/vagtplanen.Shared.csproj"
             }
           }
         }
@@ -4764,7 +4762,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100/RuntimeIdentifierGraph.json"
       }
     }
   }

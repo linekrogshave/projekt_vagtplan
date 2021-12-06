@@ -1,7 +1,7 @@
-﻿@page "/volunteerpage"
-@using vagtplanen.Shared
+﻿@using vagtplanen.Shared.Models;
 @using vagtplanen.Client.Components.Volunteer_components;
 @inject HttpClient Http
+@inject NavigationManager uriHelper
 
 <EditForm Model="@vol">
     <h1>Velkommen @vol.first_name</h1>
@@ -55,22 +55,44 @@
                     </div>
                 </div>
             </RadzenCard>
+            <RadzenCard Style="width:300px;">
+                <div class="row">
+                    <div class="col-md-10">
+                        <b>Se din data:</b>
+                        <div>Se og ændre info vedrørende dig</div>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-success" @onclick="() => OpenVolunteerInfoDialog()">Se</button>
+                    </div>
+                </div>
+            </RadzenCard>
         </div>
     </RadzenCard>
-    <RadzenDataGrid AllowFiltering="true" AllowPaging="true" AllowSorting="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
-                    Data="@(vol.shifts)" TItem="Shift" Style="width:922px">
-        <Columns>
-            <RadzenDataGridColumn TItem="Shift" Property="description" Title="Beskrivelse" />
-            <RadzenDataGridColumn TItem="Shift" Property="start_time" Title="Start tidspunkt" />
-            <RadzenDataGridColumn TItem="Shift" Property="end_time" Title="Slut tidspunkt" />
-            <RadzenDataGridColumn TItem="Shift" Property="job.area" Title="Jobområde" />
-        </Columns>
-    </RadzenDataGrid>
+    <button type="button" class="btn btn-primary" @onclick="@ReloadPage">Log ud</button>
+    @if (shifts == null)
+    {<p><em>...Loading shifts</em></p>}
+    else
+    {
+        <RadzenDataGrid @ref="grid" AllowFiltering="true" AllowPaging="true" AllowSorting="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
+                        Data="@(shifts.Where(x => (x.end_time.Ticks > DateTime.Now.Ticks) && (x.volunteer.volunteer_id == vol.volunteer_id)))" TItem="Shift" Style="width:922px">
+            <Columns>
+                <RadzenDataGridColumn TItem="Shift" Property="task.description" Title="Beskrivelse" />
+                <RadzenDataGridColumn TItem="Shift" Property="start_time" Title="Start tidspunkt" />
+                <RadzenDataGridColumn TItem="Shift" Property="end_time" Title="Slut tidspunkt" />
+                <RadzenDataGridColumn TItem="Shift" Property="shift_id" Title="Frigiv vagt" Width="85px" Filterable="false" Sortable="false">
+                    <Template Context="shift">
+                        <RadzenButton Icon="delete_forever" Click=@(args => OnRelease(shift)) />
+                    </Template>
+                </RadzenDataGridColumn>
+            </Columns>
+        </RadzenDataGrid>
+    }
 </EditForm>
+
 
 @if (AvailableShiftsDialogOpen)
 {
-    <AvailableShifts OnClose="@OnAvailableShiftsDialogClose"></AvailableShifts>
+    <AvailableShifts vol="@vol" OnClose="@((args)=> OnAvailableShiftsDialogClose(args.Item1,args.Item2))"></AvailableShifts>
 }
 
 @if (AllCouponsDialogOpen)
@@ -80,17 +102,28 @@
 
 @if (MyCouponsDialogOpen)
 {
-    <MyCoupons OnClose="@OnMyCouponsDialogClose"></MyCoupons>
+    <MyCoupons vol="@vol" OnClose="@OnMyCouponsDialogClose"></MyCoupons>
 }
 
 @if (ShiftsSchemeDialogOpen)
 {
-    <ShiftsScheme OnClose="@OnShiftsSchemeDialogClose"></ShiftsScheme>
+    <ShiftsScheme vol="@vol" OnClose="@OnShiftsSchemeDialogClose"></ShiftsScheme>
+}
+@if (VolunteerInfoDialogOpen)
+{
+    <VolunteerInfo vol="@vol" OnClose="@OnVolunteerInfoDialogClose"></VolunteerInfo>
 }
 
 @code {
 
     [Parameter] public Volunteer vol { get; set; }
+    RadzenDataGrid<Shift> grid;
+    public List<Shift> shifts;
+
+    protected override async System.Threading.Tasks.Task OnInitializedAsync()
+    {
+        shifts = await Http.GetFromJsonAsync<List<Shift>>("api/shift");
+    }
 
 
 
@@ -103,8 +136,11 @@
         StateHasChanged();
     }
 
-    public void OnAvailableShiftsDialogClose(bool accepted)
+    public void OnAvailableShiftsDialogClose(bool accepted, Shift s)
     {
+        shifts.Add(s);
+        vol.shifts.Add(s);
+        grid.Reload();
         AvailableShiftsDialogOpen = false;
         StateHasChanged();
     }
@@ -152,7 +188,38 @@
     public void OnShiftsSchemeDialogClose(bool accepted)
     {
         ShiftsSchemeDialogOpen = false;
+        grid.Reload();
         StateHasChanged();
     }
 
-}
+    // Kode til AvailableShifts Modal Dialog
+    public bool VolunteerInfoDialogOpen { get; set; }
+
+    public void OpenVolunteerInfoDialog()
+    {
+        VolunteerInfoDialogOpen = true;
+        StateHasChanged();
+    }
+
+    public void OnVolunteerInfoDialogClose(bool accepted)
+    {
+        VolunteerInfoDialogOpen = false;
+        StateHasChanged();
+    }
+
+    public async void OnRelease(Shift s)
+    {
+        shifts.Remove(s);
+        await Http.PostAsJsonAsync<Shift>($"api/method/deassignshift/{vol.volunteer_id}/{s.shift_id}", s);
+        s.taken = false;
+        s.volunteer = new Volunteer();
+        await grid.Reload();
+    }
+
+    public void ReloadPage()
+    {
+        uriHelper.NavigateTo(uriHelper.Uri, forceLoad: true);
+        vol = null;
+    }
+
+    }

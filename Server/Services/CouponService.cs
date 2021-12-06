@@ -30,7 +30,7 @@ namespace vagtplanen.Server.Services
             {
                 var query = "SELECT * FROM all_coupons;";
                 var result = await conn.QueryAsync<Coupon>(query);
-                return result.ToList();
+                return result;
             }
         }
 
@@ -38,6 +38,7 @@ namespace vagtplanen.Server.Services
         {
             using (var conn = OpenConnection(_connectionString))
             {
+                //fiks param
                 var query = @"SELECT * FROM coupon WHERE coupon_id = '{0}'";
                 var result = await conn.QueryFirstOrDefaultAsync<Coupon>(query, id);
                 return result;

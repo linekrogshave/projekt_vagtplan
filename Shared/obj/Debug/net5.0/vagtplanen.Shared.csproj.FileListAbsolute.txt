@@ -20,14 +20,25 @@
 /Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Shared/obj/Debug/net5.0/vagtplanen.Shared.dll
 /Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Shared/obj/Debug/net5.0/ref/vagtplanen.Shared.dll
 /Users/nicolaiskat/Projects/vagtplanen/vagtplanen/Shared/obj/Debug/net5.0/vagtplanen.Shared.pdb
-C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Shared\bin\Debug\net5.0\vagtplanen.Shared.deps.json
-C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Shared\bin\Debug\net5.0\vagtplanen.Shared.dll
-C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Shared\bin\Debug\net5.0\ref\vagtplanen.Shared.dll
-C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Shared\bin\Debug\net5.0\vagtplanen.Shared.pdb
-C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Shared\obj\Debug\net5.0\vagtplanen.Shared.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Shared\obj\Debug\net5.0\vagtplanen.Shared.AssemblyInfoInputs.cache
-C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Shared\obj\Debug\net5.0\vagtplanen.Shared.AssemblyInfo.cs
-C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Shared\obj\Debug\net5.0\vagtplanen.Shared.csproj.CoreCompileInputs.cache
-C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Shared\obj\Debug\net5.0\vagtplanen.Shared.dll
-C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Shared\obj\Debug\net5.0\ref\vagtplanen.Shared.dll
-C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Shared\obj\Debug\net5.0\vagtplanen.Shared.pdb
+C:/Users/linek/Documents/Erhvervsakademi Aarhus/2. semester/Semesterprojekt/vagtplan/vagtplanen/Shared/bin/Debug/net5.0/vagtplanen.Shared.deps.json
+C:/Users/linek/Documents/Erhvervsakademi Aarhus/2. semester/Semesterprojekt/vagtplan/vagtplanen/Shared/bin/Debug/net5.0/vagtplanen.Shared.dll
+C:/Users/linek/Documents/Erhvervsakademi Aarhus/2. semester/Semesterprojekt/vagtplan/vagtplanen/Shared/bin/Debug/net5.0/ref/vagtplanen.Shared.dll
+C:/Users/linek/Documents/Erhvervsakademi Aarhus/2. semester/Semesterprojekt/vagtplan/vagtplanen/Shared/bin/Debug/net5.0/vagtplanen.Shared.pdb
+C:/Users/linek/Documents/Erhvervsakademi Aarhus/2. semester/Semesterprojekt/vagtplan/vagtplanen/Shared/obj/Debug/net5.0/vagtplanen.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/linek/Documents/Erhvervsakademi Aarhus/2. semester/Semesterprojekt/vagtplan/vagtplanen/Shared/obj/Debug/net5.0/vagtplanen.Shared.AssemblyInfoInputs.cache
+C:/Users/linek/Documents/Erhvervsakademi Aarhus/2. semester/Semesterprojekt/vagtplan/vagtplanen/Shared/obj/Debug/net5.0/vagtplanen.Shared.AssemblyInfo.cs
+C:/Users/linek/Documents/Erhvervsakademi Aarhus/2. semester/Semesterprojekt/vagtplan/vagtplanen/Shared/obj/Debug/net5.0/vagtplanen.Shared.csproj.CoreCompileInputs.cache
+C:/Users/linek/Documents/Erhvervsakademi Aarhus/2. semester/Semesterprojekt/vagtplan/vagtplanen/Shared/obj/Debug/net5.0/vagtplanen.Shared.dll
+C:/Users/linek/Documents/Erhvervsakademi Aarhus/2. semester/Semesterprojekt/vagtplan/vagtplanen/Shared/obj/Debug/net5.0/ref/vagtplanen.Shared.dll
+C:/Users/linek/Documents/Erhvervsakademi Aarhus/2. semester/Semesterprojekt/vagtplan/vagtplanen/Shared/obj/Debug/net5.0/vagtplanen.Shared.pdb
+/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/bin/Debug/net5.0/vagtplanen.Shared.deps.json
+/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/bin/Debug/net5.0/vagtplanen.Shared.dll
+/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/bin/Debug/net5.0/ref/vagtplanen.Shared.dll
+/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/bin/Debug/net5.0/vagtplanen.Shared.pdb
+/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/obj/Debug/net5.0/vagtplanen.Shared.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/obj/Debug/net5.0/vagtplanen.Shared.AssemblyInfoInputs.cache
+/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/obj/Debug/net5.0/vagtplanen.Shared.AssemblyInfo.cs
+/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/obj/Debug/net5.0/vagtplanen.Shared.csproj.CoreCompileInputs.cache
+/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/obj/Debug/net5.0/vagtplanen.Shared.dll
+/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/obj/Debug/net5.0/ref/vagtplanen.Shared.dll
+/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/obj/Debug/net5.0/vagtplanen.Shared.pdb

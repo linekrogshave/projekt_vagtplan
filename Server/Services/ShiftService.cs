@@ -30,17 +30,15 @@ namespace vagtplanen.Server.Services
             {
                 var query = @"SELECT * FROM all_shifts";
 
-                var lookup = new Dictionary<int, Shift>();
-                var result = await conn.QueryAsync<Shift, Job, Volunteer, Shift>(query, (s, j, v) => {
-                    Shift shift;
-                    if (!lookup.TryGetValue(s.shift_id, out shift))
-                        lookup.Add(s.shift_id, shift = s);
-                    shift.volunteer = v;
-                    shift.job = j;
-                    return shift;
-                }, splitOn: "shift_id, job_id, volunteer_id");
-                var resultList = lookup.Values;
-                return resultList;
+                var result = await conn.QueryAsync<Shift, Volunteer, Shared.Models.Task, Shift>(query, (s, v, t) => {
+                    if (v == null)
+                        s.volunteer = new();
+                    else
+                        s.volunteer = v;
+                    s.task = t;
+                    return s;
+                }, splitOn: "shift_id, volunteer_id, task_id");
+                return result.ToList();
             }
         }
 
@@ -58,13 +56,12 @@ namespace vagtplanen.Server.Services
         {
             using (var conn = OpenConnection(_connectionString))
             {
-                var query = @"CALL add_shift(@start_t, @end_t, @descr, @jobid)";
+                var query = @"CALL add_shift(@start_t, @end_t, @taskid)";
                 var values = new
                 {
                     start_t = obj.start_time,
                     end_t = obj.end_time,
-                    descr = obj.description,
-                    jobid = obj.job.job_id
+                    taskid = obj.task.task_id
                 };
 
                 conn.ExecuteAsync(query, values);

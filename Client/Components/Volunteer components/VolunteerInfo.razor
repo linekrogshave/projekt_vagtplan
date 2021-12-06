@@ -1,0 +1,103 @@
+﻿@inject HttpClient Http
+
+<div class="modal fade show modal-lg" id="myModal" style="display:block;" aria-modal="true" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Ret valgte data her</h3>
+                <button type="button" class="close" @onclick="@ModalCancel">&times;</button>
+            </div>
+            <div class="modal-body">
+                <EditForm Model="@vol">
+                    <DataAnnotationsValidator />
+                    <div class="form-group ">
+                        <div>
+                            <label>Fornavn:</label>
+                            <div>
+                                <InputText @bind-Value="@vol.first_name" />
+                                <ValidationMessage For="@(() => vol.first_name)" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <div>
+                            <label>Efternavn:</label>
+                            <div>
+                                <InputText @bind-Value="@vol.last_name" />
+                                <ValidationMessage For="@(() => vol.last_name)" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <div>
+                            <label>Mobilnummer:</label>
+                            <div>
+                                <InputText @bind-Value="@vol.mobile" />
+                                <ValidationMessage For="@(() => vol.mobile)" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <div>
+                            <label>Email:</label>
+                            <div>
+                                <InputText @bind-Value="@vol.email" />
+                                <ValidationMessage For="@(() => vol.email)" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <div>
+                            <label>Adresse:</label>
+                            <div>
+                                <InputText @bind-Value="@vol.address" />
+                                <ValidationMessage For="@(() => vol.address)" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <div>
+                            <label>CPR-nummer:</label>
+                            <div>
+                                <InputText @bind-Value="@vol.cpr" />
+                                <ValidationMessage For="@(() => vol.cpr)" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <div>
+                            <label>Køn:</label>
+                            <div>
+                                <InputText @bind-Value="@vol.gender" />
+                                <ValidationMessage For="@(() => vol.gender)" />
+                            </div>
+                        </div>
+                    </div>
+                </EditForm>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" @onclick="@ModalOk">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+
+    [Parameter]
+    public Volunteer vol { get; set; }
+
+    [Parameter]
+    public EventCallback<bool> OnClose { get; set; }
+
+    private Task ModalCancel()
+    {
+        return OnClose.InvokeAsync(false);
+    }
+
+    private async Task ModalOk()
+    {
+        await Http.PutAsJsonAsync<Volunteer>("api/volunteer", vol);
+        await OnClose.InvokeAsync(true);
+    }
+}

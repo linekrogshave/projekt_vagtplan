@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1DMw/M1xXWAqtUT+swyGlsiGXSpB3oYDtoUvQus16VIGPEZsFY3q3YxcO+TlBiugd6V7PHzQKEFXUxf1uUY8yw==",
+  "dgSpecHash": "iRVIfzC0sNPGg0kBkHmQKevH0awTuURo5uVwm+cszsaYLihgiWdjR24MpaXkLYMD6LvJj6zj/8iaEcFl4eJ2hg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\linek\\Documents\\Erhvervsakademi Aarhus\\2. semester\\Semesterprojekt\\vagtplan\\vagtplanen\\Shared\\vagtplanen.Shared.csproj",
+  "projectFilePath": "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/vagtplanen.Shared.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

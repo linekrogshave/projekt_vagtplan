@@ -33,14 +33,9 @@ namespace vagtplanen.Server
             //Tilføj Services til startup konf.
             services.AddSingleton<CoordinatorService>();
             services.AddSingleton<CouponService>();
-            services.AddSingleton<JobService>();
             services.AddSingleton<ShiftService>();
             services.AddSingleton<VolunteerService>();
             services.AddSingleton<MethodService>();
-
-            //Tilføj Radzen Services til startup konf.
-            services.AddScoped<Radzen.DialogService>();
-            services.AddScoped<NotificationService>();
 
             services.AddControllersWithViews();
             services.AddRazorPages();

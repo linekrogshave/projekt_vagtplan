@@ -17,6 +17,7 @@ namespace vagtplanen.Server.Services
             _connectionString = configuration.GetConnectionString("postgres");
         }
 
+        //LINK HERTIL
         public static IDbConnection OpenConnection(string connStr)
         {
             var conn = new NpgsqlConnection(connStr);
@@ -28,39 +29,44 @@ namespace vagtplanen.Server.Services
         {
             using (var conn = OpenConnection(_connectionString))
             {
-                var query = "SELECT * FROM coordinator;";
+                //Brug view hertil
+                var query = "SELECT * FROM all_coordinators;";
                 var result = await conn.QueryAsync<Coordinator>(query);
-                return result.ToList();
-            }
-        }
-
-        public async Task<Coordinator> Get(string un)
-        {
-            using (var conn = OpenConnection(_connectionString))
-            {
-                var query = @"SELECT * FROM coordinator WHERE username = @username";
-                var result = await conn.QueryFirstOrDefaultAsync<Coordinator>(query, new { username = un });
                 return result;
             }
         }
 
-        public Coordinator CreateCoordinator(Coordinator obj)
+        public async Task<Coordinator> Get(string e)
         {
             using (var conn = OpenConnection(_connectionString))
             {
-                var query = @"CALL add_coordinator(@first_name, @last_name, @mobile, @username, @password)";
-                var values = new
-                {
-                    first_name = obj.first_name,
-                    last_name = obj.last_name,
-                    mobil = obj.mobile,
-                    username = obj.username,
-                    password = obj.password
-                };
-
-                conn.ExecuteAsync(query, values);
-                return obj;
+                var values = new { email = e };
+                var query = @"SELECT * FROM all_coordinators WHERE email = @email";
+                var result = await conn.QueryFirstOrDefaultAsync<Coordinator>(query, values);
+                return result;
             }
         }
+
+        //public Coordinator CreateCoordinator(Coordinator obj)
+        //{
+        //    using (var conn = OpenConnection(_connectionString))
+        //    {
+        //        var query = @"CALL add_coordinator(@first_name, @last_name, @mobile, @email, @address, @gender, @cpr @password)";
+        //        var values = new
+        //        {
+        //            first_name = obj.first_name,
+        //            last_name = obj.last_name,
+        //            mobil = obj.mobile,
+        //            email = obj.email,
+        //            address = obj.address,
+        //            gender = obj.gender,
+        //            cpr = obj.cpr,
+        //            password = obj.password
+        //        };
+
+        //        conn.ExecuteAsync(query, values);
+        //        return obj;
+        //    }
+        //}
     }
 }

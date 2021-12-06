@@ -1,5 +1,5 @@
 ﻿@page "/"
-@using vagtplanen.Shared
+@using vagtplanen.Shared.Models
 @inject HttpClient Http
 @using System.Net.Http
 @using BlazorPro.Spinkit
@@ -10,18 +10,23 @@
     <RadzenCard>
         <RadzenTemplateForm Data=@("SimpleLogin")>
             <RadzenLogin AllowRegister="false" AllowResetPassword="false" Login=@(args => OnLogin(args)) Style="margin-bottom: 20px;" />
-            @if (isLoading) { <Chase /> }
+            @if (isLoading)
+            {<Chase />}
         </RadzenTemplateForm>
     </RadzenCard>
 
 }
 else if (page_access == 0)
 {
-    <VolunteerPage vol="@vol" />
+    <VolunteerPage vol="@vol"/>
+}
+else if (page_access == 10)
+{
+    <CoordinatorPage coor="@coor"/>
 }
 else if (page_access == 1)
 {
-    <CoordinatorPage coor="@coor" />
+    <TeamPage tea="@tea"/>
 }
 
 @code {
@@ -30,8 +35,9 @@ else if (page_access == 1)
 
     public Volunteer vol = new();
     public Coordinator coor = new();
+    public Team tea = new();
 
-    async Task OnLogin(LoginArgs args)
+    async System.Threading.Tasks.Task OnLogin(LoginArgs args)
     {
         isLoading = true;
         try
@@ -39,15 +45,23 @@ else if (page_access == 1)
             int res = await Http.GetFromJsonAsync<int>($"api/method/login/{args.Username}/{args.Password}");
             if (res == 0)
             {
+
                 vol = await Http.GetFromJsonAsync<Volunteer>($"api/volunteer/{args.Username}");
-                isLoading = false;
                 page_access = vol.access;
+                isLoading = false;
             }
             else if (res == 1)
             {
                 coor = await Http.GetFromJsonAsync<Coordinator>($"api/coordinator/{args.Username}");
                 page_access = coor.access;
                 isLoading = false;
+            }
+            else if (res == 2)
+            {
+                tea = await Http.GetFromJsonAsync<Team>($"api/team/{args.Username}");
+                page_access = tea.access;
+                isLoading = false;
+
             }
         }
         catch (Exception e)

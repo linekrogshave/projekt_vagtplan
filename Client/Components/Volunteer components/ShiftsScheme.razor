@@ -4,7 +4,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Alle ledige vagter</h3>
+                <h3>Se hvem du skal på vagt med</h3>
                 <button type="button" class="close" @onclick="@ModalCancel">&times;</button>
             </div>
             <div class="modal-body">
@@ -14,16 +14,16 @@
                 }
                 else
                 {
-                    <RadzenDataGrid AllowFiltering="true" AllowPaging="true" AllowSorting="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
-                                    Data="@(shifts.Where(x => x.taken == false))" TItem="Shift">
-                        <Columns>
-                            <RadzenDataGridColumn TItem="Shift" Property="shift_id" Title="ID" Width="70px" />
-                            <RadzenDataGridColumn TItem="Shift" Property="description" Title="Beskrivelse" />
-                            <RadzenDataGridColumn TItem="Shift" Property="start_time" Title="Start tidspunkt" />
-                            <RadzenDataGridColumn TItem="Shift" Property="end_time" Title="Slut tidspunkt" />
-                            <RadzenDataGridColumn TItem="Shift" Property="job.area" Title="Jobområde" />
-                        </Columns>
-                    </RadzenDataGrid>
+                    <EditForm Model="@vol">
+                        <RadzenDataGrid AllowFiltering="true" AllowPaging="true" AllowSorting="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
+                                        Data="@(shifts.Where(x => x.taken == false))" TItem="Shift">
+                            <Columns>
+                                <RadzenDataGridColumn TItem="Shift" Property="shift_id" Title="ID" Width="70px" />
+                                <RadzenDataGridColumn TItem="Shift" Property="start_time" Title="Start tidspunkt" />
+                                <RadzenDataGridColumn TItem="Shift" Property="end_time" Title="Slut tidspunkt" />
+                            </Columns>
+                        </RadzenDataGrid>
+                    </EditForm>
                 }
             </div>
             <div class="modal-footer">
@@ -34,6 +34,9 @@
 </div>
 
 @code {
+
+    [Parameter]
+    public Volunteer vol { get; set; }
 
     public Shift[] shifts;
 

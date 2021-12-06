@@ -13,104 +13,103 @@ namespace vagtplanen.Client.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Client\_Imports.razor"
+#line 1 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Client\_Imports.razor"
+#line 2 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using System.Net.Http.Json;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Client\_Imports.razor"
+#line 3 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Client\_Imports.razor"
+#line 4 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Client\_Imports.razor"
+#line 5 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Client\_Imports.razor"
+#line 6 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Client\_Imports.razor"
+#line 7 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using Microsoft.AspNetCore.Components.WebAssembly.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Client\_Imports.razor"
+#line 8 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Client\_Imports.razor"
+#line 9 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using vagtplanen.Client;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Client\_Imports.razor"
+#line 10 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using vagtplanen.Client.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Client\_Imports.razor"
+#line 11 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using Radzen;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Client\_Imports.razor"
+#line 12 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using Radzen.Blazor;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Client\Pages\VolunteerPage.razor"
-using vagtplanen.Shared;
+#line 1 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Pages/VolunteerPage.razor"
+using vagtplanen.Shared.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Client\Pages\VolunteerPage.razor"
+#line 2 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Pages/VolunteerPage.razor"
 using vagtplanen.Client.Components.Volunteer_components;
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/volunteerpage")]
     public partial class VolunteerPage : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -119,10 +118,17 @@ using vagtplanen.Client.Components.Volunteer_components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 91 "C:\Users\linek\Documents\Erhvervsakademi Aarhus\2. semester\Semesterprojekt\vagtplan\vagtplanen\Client\Pages\VolunteerPage.razor"
+#line 117 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Pages/VolunteerPage.razor"
        
 
     [Parameter] public Volunteer vol { get; set; }
+    RadzenDataGrid<Shift> grid;
+    public List<Shift> shifts;
+
+    protected override async System.Threading.Tasks.Task OnInitializedAsync()
+    {
+        shifts = await Http.GetFromJsonAsync<List<Shift>>("api/shift");
+    }
 
 
 
@@ -135,8 +141,11 @@ using vagtplanen.Client.Components.Volunteer_components;
         StateHasChanged();
     }
 
-    public void OnAvailableShiftsDialogClose(bool accepted)
+    public void OnAvailableShiftsDialogClose(bool accepted, Shift s)
     {
+        shifts.Add(s);
+        vol.shifts.Add(s);
+        grid.Reload();
         AvailableShiftsDialogOpen = false;
         StateHasChanged();
     }
@@ -184,13 +193,46 @@ using vagtplanen.Client.Components.Volunteer_components;
     public void OnShiftsSchemeDialogClose(bool accepted)
     {
         ShiftsSchemeDialogOpen = false;
+        grid.Reload();
         StateHasChanged();
     }
 
+    // Kode til AvailableShifts Modal Dialog
+    public bool VolunteerInfoDialogOpen { get; set; }
+
+    public void OpenVolunteerInfoDialog()
+    {
+        VolunteerInfoDialogOpen = true;
+        StateHasChanged();
+    }
+
+    public void OnVolunteerInfoDialogClose(bool accepted)
+    {
+        VolunteerInfoDialogOpen = false;
+        StateHasChanged();
+    }
+
+    public async void OnRelease(Shift s)
+    {
+        shifts.Remove(s);
+        await Http.PostAsJsonAsync<Shift>($"api/method/deassignshift/{vol.volunteer_id}/{s.shift_id}", s);
+        s.taken = false;
+        s.volunteer = new Volunteer();
+        await grid.Reload();
+    }
+
+    public void ReloadPage()
+    {
+        uriHelper.NavigateTo(uriHelper.Uri, forceLoad: true);
+        vol = null;
+    }
+
+    
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager uriHelper { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }

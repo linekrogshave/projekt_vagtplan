@@ -4,27 +4,23 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Alle ledige vagter</h3>
+                <h3>Mine kuponer</h3>
                 <button type="button" class="close" @onclick="@ModalCancel">&times;</button>
             </div>
             <div class="modal-body">
-                @if (shifts == null)
-                {
-                    <p><em>Loading...</em></p>
-                }
-                else
-                {
-                    <RadzenDataGrid AllowFiltering="true" AllowPaging="true" AllowSorting="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
-                                    Data="@(shifts.Where(x => x.taken == false))" TItem="Shift">
+                <EditForm Model="@vol">
+                    <RadzenDataGrid AllowFiltering="true" AllowPaging="true" @ref="@grid" AllowSorting="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
+                                    Data="@vol.coupons" TItem="Coupon">
                         <Columns>
-                            <RadzenDataGridColumn TItem="Shift" Property="shift_id" Title="ID" Width="70px" />
-                            <RadzenDataGridColumn TItem="Shift" Property="description" Title="Beskrivelse" />
-                            <RadzenDataGridColumn TItem="Shift" Property="start_time" Title="Start tidspunkt" />
-                            <RadzenDataGridColumn TItem="Shift" Property="end_time" Title="Slut tidspunkt" />
-                            <RadzenDataGridColumn TItem="Shift" Property="job.area" Title="Jobområde" />
+                            <RadzenDataGridColumn TItem="Coupon" Property="description" Title="Beskrivelse" />
+                            <RadzenDataGridColumn TItem="Coupon" Property="coupon_id" Title="Brug" Width="60px" Filterable="false" Sortable="false">
+                                <Template Context="coupon">
+                                    <RadzenButton Icon="done" Click=@(args => OnUse(coupon)) />
+                                </Template>
+                            </RadzenDataGridColumn>
                         </Columns>
                     </RadzenDataGrid>
-                }
+                </EditForm>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" @onclick="@ModalOk">OK</button>
@@ -35,12 +31,9 @@
 
 @code {
 
-    public Shift[] shifts;
-
-    protected async override Task OnInitializedAsync()
-    {
-        shifts = await Http.GetFromJsonAsync<Shift[]>("api/shift");
-    }
+    [Parameter]
+    public Volunteer vol { get; set; }
+    RadzenDataGrid<Coupon> grid;
 
     [Parameter]
     public EventCallback<bool> OnClose { get; set; }
@@ -53,5 +46,12 @@
     private Task ModalOk()
     {
         return OnClose.InvokeAsync(true);
+    }
+
+    async Task OnUse(Coupon c)
+    {
+        vol.coupons.Remove(c);
+        await Http.PostAsJsonAsync($"api/method/usecoupon/{vol.volunteer_id}/{c.coupon_id}", c);
+        await grid.Reload();
     }
 }
