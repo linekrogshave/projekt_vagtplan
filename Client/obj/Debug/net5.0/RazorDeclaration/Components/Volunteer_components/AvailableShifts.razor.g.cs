@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace vagtplanen.Client.Components.Coordinator_components
+namespace vagtplanen.Client.Components.Volunteer_components
 {
     #line hidden
     using System;
@@ -96,7 +96,7 @@ using Radzen.Blazor;
 #line default
 #line hidden
 #nullable disable
-    public partial class SeeShifts : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class AvailableShifts : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -104,49 +104,82 @@ using Radzen.Blazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 49 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/SeeShifts.razor"
+#line 42 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Volunteer_components/AvailableShifts.razor"
        
 
     public List<Shift> shifts;
-    public RadzenDataGrid<Shift> grid;
+
+    [Parameter] public Volunteer vol { get; set; }
+    RadzenDataGrid<Shift> grid;
 
     protected async override Task OnInitializedAsync()
     {
         shifts = await Http.GetFromJsonAsync<List<Shift>>("api/shift");
     }
 
+    public List<Shift> MyShifts()
+    {
+        var allShifts = shifts;
+        var myShifts = vol.shifts;
+
+        List<Shift> availableShifts = new List<Shift>();
+
+        bool available = true;
+
+        foreach (Shift shift in allShifts)
+        {
+            foreach (Shift myShift in myShifts)
+            {
+                if (shift.start_time.Ticks < myShift.start_time.Ticks && shift.end_time.Ticks > myShift.start_time.Ticks)
+                {
+                    available = false;
+                }
+                if (shift.start_time.Ticks < myShift.end_time.Ticks && shift.end_time.Ticks > myShift.end_time.Ticks)
+                {
+                    available = false;
+                }
+            }
+            if (available)
+            {
+                availableShifts.Add(shift);
+            }
+            else
+            {
+                available = true;
+            }
+        }
+        return availableShifts.Where(x => x.taken == false && (x.start_time.Ticks > DateTime.Now.Ticks)).ToList();
+    }
+
     [Parameter]
-    public EventCallback<bool> OnClose { get; set; }
+    public EventCallback<(bool, Shift)> OnClose { get; set; }
+
+    public Shift takenShift;
 
     private Task ModalCancel()
     {
-        return OnClose.InvokeAsync(false);
+        return OnClose.InvokeAsync((false, new Shift()));
     }
 
     private Task ModalOk()
     {
-        return OnClose.InvokeAsync(true);
+        return OnClose.InvokeAsync((true, takenShift));
     }
 
-    async void OnLock(Shift s)
+    async void OnTake(Shift s)
     {
-        await Http.PostAsJsonAsync($"api/method/lockshift", s);
-        if (s.locked == false)
-        {
-            s.locked = true;
-        }
-        else if (s.locked == true)
-        {
-            s.locked = false;
-        };
+        shifts.Remove(s);
+        s.taken = true;
+        takenShift = s;
+        takenShift.volunteer = vol;
+        await Http.PostAsJsonAsync($"api/method/assignshift", takenShift);
         await grid.Reload();
     }
-
-    
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager uriHelper { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }

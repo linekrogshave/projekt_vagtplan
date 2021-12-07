@@ -237,13 +237,16 @@ C:/Users/linek/Documents/Erhvervsakademi Aarhus/2. semester/Semesterprojekt/vagt
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/Microsoft.AspNetCore.Components.Web.dll
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/Microsoft.AspNetCore.Components.WebAssembly.dll
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/Microsoft.AspNetCore.Components.WebAssembly.Server.dll
+/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/Microsoft.AspNetCore.JsonPatch.dll
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/Microsoft.AspNetCore.Metadata.dll
+/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/Microsoft.DotNet.PlatformAbstractions.dll
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/Microsoft.Extensions.DependencyInjection.dll
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/Microsoft.Extensions.DependencyModel.dll
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/Microsoft.JSInterop.dll
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/Microsoft.JSInterop.WebAssembly.dll
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/Newtonsoft.Json.dll
+/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/Newtonsoft.Json.Bson.dll
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/Npgsql.dll
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/Radzen.Blazor.dll
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/System.IO.Pipelines.dll
@@ -275,6 +278,3 @@ C:/Users/linek/Documents/Erhvervsakademi Aarhus/2. semester/Semesterprojekt/vagt
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/obj/Debug/net5.0/ref/vagtplanen.Server.dll
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/obj/Debug/net5.0/vagtplanen.Server.pdb
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/obj/Debug/net5.0/vagtplanen.Server.genruntimeconfig.cache
-/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/Microsoft.AspNetCore.JsonPatch.dll
-/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
-/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/Newtonsoft.Json.Bson.dll

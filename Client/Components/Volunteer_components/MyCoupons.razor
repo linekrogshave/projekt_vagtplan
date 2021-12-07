@@ -51,7 +51,7 @@
     async Task OnUse(Coupon c)
     {
         vol.coupons.Remove(c);
-        await Http.PostAsJsonAsync($"api/method/usecoupon/{vol.volunteer_id}/{c.coupon_id}", c);
+        await Http.PostAsJsonAsync($"api/method/usecoupon/{vol.volunteer_id}", c);
         await grid.Reload();
     }
 }

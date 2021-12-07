@@ -106,7 +106,7 @@
         s.taken = true;
         takenShift = s;
         takenShift.volunteer = vol;
-        await Http.PostAsJsonAsync($"api/method/assignshift/{vol.volunteer_id}/{s.shift_id}", s);
+        await Http.PostAsJsonAsync($"api/method/assignshift", takenShift);
         await grid.Reload();
     }
 }

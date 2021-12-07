@@ -38,7 +38,7 @@ namespace vagtplanen.Server.Services
             using (var conn = OpenConnection(_connectionString))
             {
                 //Query gemmes som string
-                var query = @"select * from all_volunteers";
+                var query = @"select * from all_skills";
 
                 //Kører en query 
                 var list = conn.Query<Skill, Team, Volunteer, Skill>(

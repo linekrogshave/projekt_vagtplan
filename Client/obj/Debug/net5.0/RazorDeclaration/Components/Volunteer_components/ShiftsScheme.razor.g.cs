@@ -96,7 +96,7 @@ using Radzen.Blazor;
 #line default
 #line hidden
 #nullable disable
-    public partial class VolunteerInfo : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class ShiftsScheme : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -104,11 +104,18 @@ using Radzen.Blazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 85 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Volunteer components/VolunteerInfo.razor"
+#line 36 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Volunteer_components/ShiftsScheme.razor"
        
 
     [Parameter]
     public Volunteer vol { get; set; }
+
+    public Shift[] shifts;
+
+    protected async override Task OnInitializedAsync()
+    {
+        shifts = await Http.GetFromJsonAsync<Shift[]>("api/shift");
+    }
 
     [Parameter]
     public EventCallback<bool> OnClose { get; set; }
@@ -118,10 +125,9 @@ using Radzen.Blazor;
         return OnClose.InvokeAsync(false);
     }
 
-    private async Task ModalOk()
+    private Task ModalOk()
     {
-        await Http.PutAsJsonAsync<Volunteer>("api/volunteer", vol);
-        await OnClose.InvokeAsync(true);
+        return OnClose.InvokeAsync(true);
     }
 
 #line default

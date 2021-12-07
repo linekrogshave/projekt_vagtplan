@@ -37,6 +37,7 @@ namespace vagtplanen.Server
             services.AddSingleton<VolunteerService>();
             services.AddSingleton<TaskClassService>();
             services.AddSingleton<TeamService>();
+            services.AddSingleton<SkillService>();
             services.AddSingleton<TeamTaskService>();
             services.AddSingleton<MethodService>();
 

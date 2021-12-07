@@ -31,9 +31,12 @@ namespace vagtplanen.Server.Services
             {
                 var query = @"SELECT * FROM all_shifts";
 
-                var result = conn.QueryAsync<Shift, Volunteer, TaskClass, Shift>(query, (s, v, t) => 
+                var result = conn.QueryAsync<Shift, Volunteer, TaskClass, Shift>(query, (s, v, t) =>
                 {
+                    if (v == null) { v = new(); };
                     s.volunteer = v;
+
+                    if (t == null) { t = new(); };
                     s.task = t;
                     return s;
                 }, splitOn: "shift_id, volunteer_id, task_id");
@@ -41,12 +44,13 @@ namespace vagtplanen.Server.Services
             }
         }
 
-        public async Task<Shift> Get(int id)
+        public Shift Get(int id)
         {
             using (var conn = OpenConnection(_connectionString))
             {
-                var query = @"SELECT * FROM shift WHERE shift_id = '{0}'";
-                var result = await conn.QueryFirstOrDefaultAsync<Shift>(query, id);
+                var query = @"SELECT * FROM shift WHERE shift_id = @_id";
+                var value = new { _id = id };
+                var result = conn.QueryFirstOrDefault<Shift>(query, value);
                 return result;
             }
         }
@@ -68,15 +72,29 @@ namespace vagtplanen.Server.Services
             }
         }
 
+        public Shift Update(Shift obj)
+        {
+            using (var conn = OpenConnection(_connectionString))
+            {
+                var query = @"CALL edit_shift(@start_t, @end_t, @taskid)";
+                var values = new
+                {
+                    start_t = obj.start_time,
+                    end_t = obj.end_time,
+                    taskid = obj.task.task_id
+                };
+
+                conn.ExecuteAsync(query, values);
+                return obj;
+            }
+        }
+
         public int Delete(int id)
         {
             using (var conn = OpenConnection(_connectionString))
             {
                 var query = @"CALL delete_shift(@_id)";
-                var values = new
-                {
-                    _id = id
-                };
+                var values = new { _id = id };
 
                 conn.ExecuteAsync(query, values);
                 return id;

@@ -29,7 +29,7 @@ namespace vagtplanen.Server.Services
         {
             using (var conn = OpenConnection(_connectionString))
             {
-                var query = @"select * from all_teamtasks";
+                var query = @"select * from all_tasks";
 
                 var list = conn.Query<TaskClass, Shift, TaskClass>(
                 query,
@@ -40,17 +40,28 @@ namespace vagtplanen.Server.Services
 
                     return t;
                 },
-                splitOn: "taskclass_id, shift_id");
+                splitOn: "task_id, shift_id");
+
+                var result = list.GroupBy(t => t.task_id).Select(g =>
+                {
+                    //Starter ved "first" i gruppen
+                    var groupedList = g.First();
+                    groupedList.shifts = g.Select(t => t.shifts.Single()).ToList();
+                    groupedList.shifts.RemoveAll(s => s == null);
+
+                    //Returnerer grupperet liste
+                    return groupedList;
+                });
 
 
-                return list;
+                return result;
             }
 
         }
 
-        public TaskClass Get(int em)
+        public TaskClass Get(int id)
         {
-            var listen = Get().First(x => x.task_id == em);
+            var listen = Get().First(x => x.task_id == id);
             return listen;
         }
 

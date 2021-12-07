@@ -28,7 +28,7 @@ namespace vagtplanen.Server.Services
         {
             using (var conn = OpenConnection(_connectionString))
             {
-                var query = @"select * from all_teams";
+                var query = @"select *, skillname as name from all_teams";
 
                 var list = conn.Query<Team, TeamTask, Skill, Team>(
                     query,

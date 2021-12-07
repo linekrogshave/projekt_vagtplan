@@ -71,7 +71,7 @@
         if(vol.points >= c.price)
         {
             vol.coupons.Add(c);
-            await Http.PostAsJsonAsync($"api/method/buycoupon/{vol.volunteer_id}/{c.coupon_id}", c);
+            await Http.PostAsJsonAsync($"api/method/buycoupon/{vol.volunteer_id}", c);
         }
     }
 }

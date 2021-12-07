@@ -96,7 +96,7 @@ using Radzen.Blazor;
 #line default
 #line hidden
 #nullable disable
-    public partial class AllCoupons : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class MyCoupons : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -104,18 +104,12 @@ using Radzen.Blazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 44 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Volunteer components/AllCoupons.razor"
+#line 32 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Volunteer_components/MyCoupons.razor"
        
-
-    public List<Coupon> coupons;
 
     [Parameter]
     public Volunteer vol { get; set; }
-
-    protected async override Task OnInitializedAsync()
-    {
-        coupons = await Http.GetFromJsonAsync<List<Coupon>>("api/coupon");
-    }
+    RadzenDataGrid<Coupon> grid;
 
     [Parameter]
     public EventCallback<bool> OnClose { get; set; }
@@ -130,13 +124,11 @@ using Radzen.Blazor;
         return OnClose.InvokeAsync(true);
     }
 
-    async void OnBuy(Coupon c)
+    async Task OnUse(Coupon c)
     {
-        if(vol.points >= c.price)
-        {
-            vol.coupons.Add(c);
-            await Http.PostAsJsonAsync($"api/method/buycoupon/{vol.volunteer_id}/{c.coupon_id}", c);
-        }
+        vol.coupons.Remove(c);
+        await Http.PostAsJsonAsync($"api/method/usecoupon/{vol.volunteer_id}", c);
+        await grid.Reload();
     }
 
 #line default

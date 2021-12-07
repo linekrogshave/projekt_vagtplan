@@ -96,7 +96,7 @@ using Radzen.Blazor;
 #line default
 #line hidden
 #nullable disable
-    public partial class ShiftsScheme : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class AllCoupons : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -104,17 +104,17 @@ using Radzen.Blazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 36 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Volunteer components/ShiftsScheme.razor"
+#line 44 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Volunteer_components/AllCoupons.razor"
        
+
+    public List<Coupon> coupons;
 
     [Parameter]
     public Volunteer vol { get; set; }
 
-    public Shift[] shifts;
-
     protected async override Task OnInitializedAsync()
     {
-        shifts = await Http.GetFromJsonAsync<Shift[]>("api/shift");
+        coupons = await Http.GetFromJsonAsync<List<Coupon>>("api/coupon");
     }
 
     [Parameter]
@@ -128,6 +128,15 @@ using Radzen.Blazor;
     private Task ModalOk()
     {
         return OnClose.InvokeAsync(true);
+    }
+
+    async void OnBuy(Coupon c)
+    {
+        if(vol.points >= c.price)
+        {
+            vol.coupons.Add(c);
+            await Http.PostAsJsonAsync($"api/method/buycoupon/{vol.volunteer_id}", c);
+        }
     }
 
 #line default
