@@ -125,7 +125,7 @@ using vagtplanen.Client.Components.Volunteer_components;
     RadzenDataGrid<Shift> grid;
     public List<Shift> shifts;
 
-    protected override async System.Threading.Tasks.Task OnInitializedAsync()
+    protected override async Task OnInitializedAsync()
     {
         shifts = await Http.GetFromJsonAsync<List<Shift>>("api/shift");
     }

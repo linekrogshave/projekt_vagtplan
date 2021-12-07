@@ -141,13 +141,13 @@ using BlazorPro.Spinkit;
                 page_access = vol.access;
                 isLoading = false;
             }
-            else if (res == 1)
+            else if (res == 10)
             {
                 coor = await Http.GetFromJsonAsync<Coordinator>($"api/coordinator/{args.Username}");
                 page_access = coor.access;
                 isLoading = false;
             }
-            else if (res == 2)
+            else if (res == 1)
             {
                 tea = await Http.GetFromJsonAsync<Team>($"api/team/{args.Username}");
                 page_access = tea.access;

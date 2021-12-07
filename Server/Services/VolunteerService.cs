@@ -72,9 +72,9 @@ namespace vagtplanen.Server.Services
                     groupedList.skills = g.Select(v => v.skills.Single()).ToList();
 
                     //Fjerner alle objekter i listerne, som er lig med null (data trimming)
-                    groupedList.shifts.RemoveAll(x => x == null);
-                    groupedList.coupons.RemoveAll(x => x == null);
-                    groupedList.skills.RemoveAll(x => x == null);
+                    groupedList.shifts.RemoveAll(sh => sh == null);
+                    groupedList.coupons.RemoveAll(c => c == null);
+                    groupedList.skills.RemoveAll(sk => sk == null);
 
                     //Returnerer grupperet liste
                     return groupedList;
@@ -91,8 +91,8 @@ namespace vagtplanen.Server.Services
         {
             //Henter data på alle volunteers fra ovennstående/tidligere Get()
             //Anvender LINQ for at finde unik volunteer på email (email parameter fås fra controller)
-            var listen = Get().First(x => x.email == em);
-            return listen;
+            var vol = Get().First(x => x.email == em);
+            return vol;
         }
 
         //Method til at insert ny volunteer i database (tager imod et Volunteer objekt som parameter)

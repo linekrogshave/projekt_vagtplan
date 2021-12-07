@@ -85,5 +85,32 @@ namespace vagtplanen.Server.Controllers
                 StatusCode(500, ex.Message);
             }
         }
+
+        [HttpPost("assignteamtask/{team}/{task}")]
+        public async Task AssignTeamTask(int team_id, int teamtask)
+        {
+            try
+            {
+                await _service.AssignTeamtask(team_id, teamtask);
+            }
+            catch (Exception ex)
+            {
+                //log error
+                StatusCode(500, ex.Message);
+            }
+        }
+        [HttpPost("deassignteamtask/{team}/{task}")]
+        public async Task DeAssignTeamTask(int team_id, int teamtask)
+        {
+            try
+            {
+                await _service.AssignTeamtask(team_id, teamtask);
+            }
+            catch (Exception ex)
+            {
+                //log error
+                StatusCode(500, ex.Message);
+            }
+        }
     }
 }

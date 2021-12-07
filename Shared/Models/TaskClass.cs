@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace vagtplanen.Shared.Models
 {
-    public class Task
+    public class TaskClass
     {
 		public int task_id { get; set; }
 		public string description { get; set; }

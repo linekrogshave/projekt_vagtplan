@@ -49,16 +49,51 @@ namespace vagtplanen.Server.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Coupon coor)
+        public IActionResult Create(Coupon coup)
         {
             try
             {
-                var _obj = _service.CreateCoupon(coor);
+                var _obj = _service.CreateCoupon(coup);
                 return CreatedAtRoute("CouponById", _obj);
             }
             catch (Exception ex)
             {
                 //log error
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpPut]
+        public IActionResult Update(Coupon coup)
+        {
+        
+            try
+            {
+             
+                var obj = _service.Update(coup);
+                return Ok(obj);
+            }
+            //Hvis fejl
+            catch (Exception ex)
+            {
+                //Returnerer Status 500 for fejl og skriver meddelelsen for fejlen
+                return StatusCode(500, ex.Message);
+            }
+        }
+        //Method til at hente delete volunteer i databasse gennnemm .../api/volunteer/@id
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+         
+            try
+            {
+                _service.Delete(id);
+                return NoContent();
+            }
+            //Hvis fejl
+            catch (Exception ex)
+            {
+                //Returnerer Status 500 for fejl og skriver meddelelsen for fejlen
                 return StatusCode(500, ex.Message);
             }
         }

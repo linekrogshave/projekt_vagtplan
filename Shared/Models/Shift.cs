@@ -1,4 +1,5 @@
 using System;
+using vagtplanen.Shared.Models;
 
 public class Shift {
     public int shift_id { get; set; }
@@ -8,6 +9,6 @@ public class Shift {
     public bool locked { get; set; }
 
     public Volunteer volunteer { get; set; }
-    public vagtplanen.Shared.Models.Task task { get; set; }
+    public TaskClass task { get; set; }
 
 }

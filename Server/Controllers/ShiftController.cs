@@ -17,11 +17,11 @@ namespace vagtplanen.Server.Controllers
 
 
         [HttpGet]
-        public async Task<ActionResult> Get()
+        public IActionResult Get()
         {
             try
             {
-                var list = await _service.Get();
+                var list = _service.Get();
                 return Ok(list);
             }
             catch (Exception ex)
@@ -32,11 +32,11 @@ namespace vagtplanen.Server.Controllers
         }
 
         [HttpGet("{id}", Name = "ShiftById")]
-        public async Task<IActionResult> Get(int id)
+        public IActionResult Get(int id)
         {
             try
             {
-                var coor = await _service.Get(id);
+                var coor = _service.Get(id);
                 if (coor == null)
                     return NotFound();
                 return Ok(coor);
@@ -54,7 +54,7 @@ namespace vagtplanen.Server.Controllers
             try
             {
                 var _obj = _service.Create(shift);
-                return CreatedAtRoute("CouponById", _obj);
+                return CreatedAtRoute("ShiftById", _obj);
             }
             catch (Exception ex)
             {

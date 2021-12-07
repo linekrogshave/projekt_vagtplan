@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Dapper;
 using Microsoft.Extensions.Configuration;
 using Npgsql;
+using vagtplanen.Shared.Models;
 
 namespace vagtplanen.Server.Services
 {
@@ -24,21 +25,19 @@ namespace vagtplanen.Server.Services
             return conn;
         }
 
-        public async Task<IEnumerable<Shift>> Get()
+        public IEnumerable<Shift> Get()
         {
             using (var conn = OpenConnection(_connectionString))
             {
                 var query = @"SELECT * FROM all_shifts";
 
-                var result = await conn.QueryAsync<Shift, Volunteer, Shared.Models.Task, Shift>(query, (s, v, t) => {
-                    if (v == null)
-                        s.volunteer = new();
-                    else
-                        s.volunteer = v;
+                var result = conn.QueryAsync<Shift, Volunteer, TaskClass, Shift>(query, (s, v, t) => 
+                {
+                    s.volunteer = v;
                     s.task = t;
                     return s;
                 }, splitOn: "shift_id, volunteer_id, task_id");
-                return result.ToList();
+                return result.Result;
             }
         }
 

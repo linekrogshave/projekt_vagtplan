@@ -35,6 +35,9 @@ namespace vagtplanen.Server
             services.AddSingleton<CouponService>();
             services.AddSingleton<ShiftService>();
             services.AddSingleton<VolunteerService>();
+            services.AddSingleton<TaskClassService>();
+            services.AddSingleton<TeamService>();
+            services.AddSingleton<TeamTaskService>();
             services.AddSingleton<MethodService>();
 
             services.AddControllersWithViews();
