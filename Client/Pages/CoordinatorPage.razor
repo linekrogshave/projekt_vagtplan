@@ -3,13 +3,16 @@
 @inject HttpClient Http
 @inject NavigationManager uriHelper
 
+<div class="top-row px-3">
+    <button type="button" class="btn btn-primary" id="right" @onclick="@Reload">Log ud</button>
+</div>
 
 <EditForm Model="@coor">
     <h1>Velkommen @coor.first_name</h1>
 
-    <RadzenCard Style="width:922px;">
+    <RadzenCard class="w-6">
         <div class="row">
-            <RadzenCard Style="width:300px;">
+            <RadzenCard class="w-7">
                 <div class="row">
                     <div class="col-md-10">
                         <b>Vagter:</b>
@@ -24,7 +27,7 @@
                 </div>
             </RadzenCard>
 
-            <RadzenCard Style="width:300px;">
+            <RadzenCard class="w-7">
                 <div class="row">
                     <div class="col-md-10">
                         <b>Frivillige:</b>
@@ -38,7 +41,7 @@
                 </div>
             </RadzenCard>
 
-            <RadzenCard Style="width:300px;">
+            <RadzenCard class="w-7">
                 <div class="row">
                     <div class="col-md-10">
                         <b>Koordinatorer:</b>
@@ -52,7 +55,7 @@
                 </div>
             </RadzenCard>
 
-            <RadzenCard Style="width:300px;">
+            <RadzenCard class="w-7">
                 <div class="row">
                     <div class="col-md-10">
                         <b>Kuponer:</b>
@@ -64,7 +67,7 @@
                 </div>
             </RadzenCard>
             
-               <RadzenCard Style="width:300px;">
+            <RadzenCard class="w-7">
                 <div class="row">
                     <div class="col-md-10">
                         <b>Se din data:</b>
@@ -77,7 +80,6 @@
             </RadzenCard>
         </div>
     </RadzenCard>
-    <button type="button" class="btn btn-primary" @onclick="@Reload">Log ud</button>
 </EditForm>
 
 @*SHIFTS*@

@@ -6,27 +6,29 @@
 
 @if (page_access == -1)
 {
-    <h1>Login her</h1>
-    <RadzenCard>
-        <RadzenTemplateForm Data=@("SimpleLogin")>
-            <RadzenLogin AllowRegister="false" AllowResetPassword="false" Login=@(args => OnLogin(args)) Style="margin-bottom: 20px;" />
-            @if (isLoading)
-            {<Chase />}
-        </RadzenTemplateForm>
-    </RadzenCard>
+    <div class="login">
+        <h1>Login her</h1>
+        <RadzenCard class="w-1">
+            <RadzenTemplateForm Data=@("SimpleLogin")>
+                <RadzenLogin AllowRegister="false" AllowResetPassword="false" Login=@(args => OnLogin(args)) Style="margin-bottom: 20px;" />
+                @if (isLoading)
+                {<Chase />}
+            </RadzenTemplateForm>
+        </RadzenCard>
+    </div>
 
 }
 else if (page_access == 0)
 {
-    <VolunteerPage vol="@vol"/>
+    <VolunteerPage vol="@vol" />
 }
 else if (page_access == 10)
 {
-    <CoordinatorPage coor="@coor"/>
+    <CoordinatorPage coor="@coor" />
 }
 else if (page_access == 1)
 {
-    <TeamPage tea="@tea"/>
+    <TeamPage tea="@tea" />
 }
 
 @code {

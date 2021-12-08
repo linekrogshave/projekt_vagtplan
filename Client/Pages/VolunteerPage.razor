@@ -3,12 +3,16 @@
 @inject HttpClient Http
 @inject NavigationManager uriHelper
 
+<div class="top-row px-3">
+    <button type="button" class="btn btn-primary" id="right" @onclick="@ReloadPage">Log ud</button>
+</div>
+
 <EditForm Model="@vol">
     <h1>Velkommen @vol.first_name</h1>
 
-    <RadzenCard Style="width:922px;">
+    <RadzenCard class="w-6">
         <div class="row">
-            <RadzenCard Style="width:300px;">
+            <RadzenCard class="w-7">
                 <div class="row">
                     <div class="col-md-10">
                         <b>Ledige vagter:</b>
@@ -20,7 +24,7 @@
                 </div>
             </RadzenCard>
 
-            <RadzenCard Style="width:300px;">
+            <RadzenCard class="w-7">
                 <div class="row">
                     <div class="col-md-10">
                         <b>Alle kuponer</b>
@@ -32,7 +36,7 @@
                 </div>
             </RadzenCard>
 
-            <RadzenCard Style="width:300px;">
+            <RadzenCard class="w-7">
                 <div class="row">
                     <div class="col-md-10">
                         <b>Mine kuponer:</b>
@@ -44,7 +48,7 @@
                 </div>
             </RadzenCard>
 
-            <RadzenCard Style="width:300px;">
+            <RadzenCard class="w-7">
                 <div class="row">
                     <div class="col-md-10">
                         <b>Se skema på vagt:</b>
@@ -55,7 +59,7 @@
                     </div>
                 </div>
             </RadzenCard>
-            <RadzenCard Style="width:300px;">
+            <RadzenCard class="w-7">
                 <div class="row">
                     <div class="col-md-10">
                         <b>Se din data:</b>
@@ -68,25 +72,26 @@
             </RadzenCard>
         </div>
     </RadzenCard>
-    <button type="button" class="btn btn-primary" @onclick="@ReloadPage">Log ud</button>
-    @if (shifts == null)
-    {<p><em>...Loading shifts</em></p>}
-    else
-    {
-        <RadzenDataGrid @ref="grid" AllowFiltering="true" AllowPaging="true" AllowSorting="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
-                        Data="@(shifts.Where(x => (x.end_time.Ticks > DateTime.Now.Ticks) && (x.volunteer.volunteer_id == vol.volunteer_id)))" TItem="Shift" Style="width:922px">
-            <Columns>
-                <RadzenDataGridColumn TItem="Shift" Property="taskclass.description" Title="Beskrivelse" />
-                <RadzenDataGridColumn TItem="Shift" Property="start_time" Title="Start tidspunkt" />
-                <RadzenDataGridColumn TItem="Shift" Property="end_time" Title="Slut tidspunkt" />
-                <RadzenDataGridColumn TItem="Shift" Property="shift_id" Title="Frigiv vagt" Width="85px" Filterable="false" Sortable="false">
-                    <Template Context="shift">
-                        <RadzenButton Icon="delete_forever" Click=@(args => OnRelease(shift)) />
-                    </Template>
-                </RadzenDataGridColumn>
-            </Columns>
-        </RadzenDataGrid>
-    }
+    <div class="shifts">
+        @if (shifts == null)
+        {<p><em>...Loading shifts</em></p>}
+        else
+        {
+            <RadzenDataGrid @ref="grid" AllowFiltering="true" AllowPaging="true" AllowSorting="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
+                            Data="@(shifts.Where(x => (x.end_time.Ticks > DateTime.Now.Ticks) && (x.volunteer.volunteer_id == vol.volunteer_id)))" TItem="Shift" Style="width:922px">
+                <Columns>
+                    <RadzenDataGridColumn TItem="Shift" Property="taskclass.description" Title="Beskrivelse" />
+                    <RadzenDataGridColumn TItem="Shift" Property="start_time" Title="Start tidspunkt" />
+                    <RadzenDataGridColumn TItem="Shift" Property="end_time" Title="Slut tidspunkt" />
+                    <RadzenDataGridColumn TItem="Shift" Property="shift_id" Title="Frigiv vagt" Width="85px" Filterable="false" Sortable="false">
+                        <Template Context="shift">
+                            <RadzenButton Icon="delete_forever" Click=@(args => OnRelease(shift)) />
+                        </Template>
+                    </RadzenDataGridColumn>
+                </Columns>
+            </RadzenDataGrid>
+        }
+    </div>
 </EditForm>
 
 
