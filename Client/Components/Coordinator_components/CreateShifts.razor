@@ -18,46 +18,62 @@
                     <EditForm Model="@createT">
                         <DataAnnotationsValidator />
                         <ValidationSummary />
-                        <p>
-                            <label>
-                                Beskrivelse:
-                                <InputText @bind-Value="@createT.description" />
-                            </label>
-                        </p>
+                        <div class="form-group">
+                            <div>
+                                <label>Beskrivelse:</label>
+                                <div>
+                                    <InputText @bind-Value="@createT.description" />
+                                </div>
+                            </div>
+                        </div>
                     </EditForm>
 
                     <EditForm Model="@createS">
                         <DataAnnotationsValidator />
                         <ValidationSummary />
-                        <p>
-                            <label>
-                                Vagt startdato:
-                                <input type="date" @bind="@startdate" />
-                            </label>
-                        </p>
-                        <p>
-                            <label>
-                                Vagt starttid:
+                        <div class="form-group">
+                            <div>
+                                <label>Vagt startdato:</label>
+                                <div>
+                                    <input type="date" @bind="@startdate" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Vagt starttid:</label>
+                            <div>
                                 <input type="time" @bind="@starttime" />
-                            </label>
-                        </p>
-                        <p>
-                            <label>
-                                Vagt slut (dato og tid):
-                                <input type="datetime" @bind="@createS.end_time" />
-                            </label>
-                        </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div>
+                                <label>Vagt slutdato:</label>
+                                <div>
+                                    <input type="date" @bind="@enddate" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div>
+                                <label>Vagt sluttid:</label>
+                                <div>
+                                    <input type="time" @bind="@endtime" />
+                                </div>
+                            </div>
+                        </div>
 
                     </EditForm>
                     <EditForm Model="@createT">
                         <DataAnnotationsValidator />
                         <ValidationSummary />
-                        <p>
-                            <label>
-                                Antal vagter:
-                                <InputNumber @bind-Value="@createT.number_of_shifts"/>
-                            </label>
-                        </p>
+                        <div class="form-group">
+                            <div>
+                                <label>Antal vagter:</label>
+                                <div>
+                                    <InputNumber @bind-Value="@createT.number_of_shifts" />
+                                </div>
+                            </div>
+                        </div>
                     </EditForm>
 
                         }
@@ -74,6 +90,16 @@
 
     public Shift[] shifts;
 
+    public static Shift createS = new();
+    public static TaskClass createT = new();
+
+
+    public DateTime startdate = DateTime.Now;
+    public DateTime starttime = DateTime.Now;
+
+    public DateTime enddate = DateTime.Now;
+    public DateTime endtime = DateTime.Now;
+
     protected async override Task OnInitializedAsync()
     {
         shifts = await Http.GetFromJsonAsync<Shift[]>("api/shift");
@@ -87,32 +113,22 @@
         return OnClose.InvokeAsync(false);
     }
 
-    private Task ModalOk()
+    private async Task ModalOk()
     {
-        return OnClose.InvokeAsync(true);
+        DateTime start = startdate.Date.Add(starttime.TimeOfDay);
+        createS.start_time = start;
+
+        DateTime end = enddate.Date.Add(endtime.TimeOfDay);
+        createS.end_time = end;
+
+
+        await OnClose.InvokeAsync(true);
     }
 
 
 
-    public static Shift createS = new();
-    public static TaskClass createT = new();
-
-
-    public DateTime startdate = DateTime.Now;
-    public DateTime starttime = DateTime.Now;
-    
 
 
 
-    //private Task CreateShift()
-    //{
-    //    postUser(create);
-    //    return OnClose.InvokeAsync(true);
-    //}
-
-    //public Task<HttpResponseMessage> postUser(Shift shift)
-    //{
-    //    return Http.PostAsJsonAsync<Shift>("Shift", shift);
-    //}
 
 }

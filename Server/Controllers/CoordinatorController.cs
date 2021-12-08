@@ -17,11 +17,11 @@ namespace vagtplanen.Server.Controllers
 
 
         [HttpGet]
-        public async Task<ActionResult> Get()
+        public ActionResult Get()
         {
             try
             {
-                var list = await _service.Get();
+                var list = _service.Get();
                 return Ok(list);
             }
             catch (Exception ex)
@@ -31,12 +31,12 @@ namespace vagtplanen.Server.Controllers
             }
         }
 
-        [HttpGet("{un}", Name = "CoordinatorById")]
-        public async Task<IActionResult> Get(string un)
+        [HttpGet("{em}", Name = "CoordinatorByEmail")]
+        public IActionResult Get(string em)
         {
             try
             {
-                var coor = await _service.Get(un);
+                var coor = _service.Get(em);
                 if (coor == null)
                     return NotFound();
                 return Ok(coor);

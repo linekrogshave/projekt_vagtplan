@@ -4,30 +4,37 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Alle ledige vagter</h3>
+                <h3>Opret kupon</h3>
                 <button type="button" class="close" @onclick="@ModalCancel">&times;</button>
             </div>
             <div class="modal-body">
-                @if (shifts == null)
-                {
-                    <p><em>Loading...</em></p>
-                }
-                else
-                {
-                    <RadzenDataGrid AllowFiltering="true" AllowPaging="true" AllowSorting="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
-                                    Data="@(shifts.Where(x => x.taken == false))" TItem="Shift">
-                        <Columns>
-                            <RadzenDataGridColumn TItem="Shift" Property="shift_id" Title="ID" Width="70px" />
-                            <RadzenDataGridColumn TItem="Shift" Property="description" Title="Beskrivelse" />
-                            <RadzenDataGridColumn TItem="Shift" Property="start_time" Title="Start tidspunkt" />
-                            <RadzenDataGridColumn TItem="Shift" Property="end_time" Title="Slut tidspunkt" />
-                            <RadzenDataGridColumn TItem="Shift" Property="job.area" Title="Jobområde" />
-                        </Columns>
-                    </RadzenDataGrid>
-                }
+           
+       
+                    <EditForm Model="@create">
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+                        <div class="form-group">
+                            <div>
+                                <label>Beskrivelse:</label>
+                                <div>
+                                    <InputText @bind-Value="@create.description" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div>
+                                <label>Pris:</label>
+                                <div>
+                                    <InputNumber @bind-Value="@create.price" />
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </EditForm>
+                
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" @onclick="@ModalOk">OK</button>
+                <button type="button" class="btn btn-primary" @onclick="@ModalOk">Opret</button>
             </div>
         </div>
     </div>
@@ -35,12 +42,8 @@
 
 @code {
 
-    public Shift[] shifts;
+    public static Coupon create = new();
 
-    protected async override Task OnInitializedAsync()
-    {
-        shifts = await Http.GetFromJsonAsync<Shift[]>("api/shift");
-    }
 
     [Parameter]
     public EventCallback<bool> OnClose { get; set; }
@@ -50,8 +53,14 @@
         return OnClose.InvokeAsync(false);
     }
 
-    private Task ModalOk()
+    private async Task ModalOk()
     {
-        return OnClose.InvokeAsync(true);
+        await Http.PostAsJsonAsync("api/coupon", create);
+        await OnClose.InvokeAsync(true);
     }
+
+
+
+
+
 }

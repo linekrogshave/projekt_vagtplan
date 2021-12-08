@@ -44,6 +44,18 @@
             <RadzenCard class="w-7">
                 <div class="row">
                     <div class="col-md-10">
+                        <b>Teams:</b>
+                        <div>Her kan du se, ændre og oprette teams i systemet</div>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-success" @onclick="OpenCreateTeamsDialog">Opret frivillige</button>
+                    </div>
+                </div>
+            </RadzenCard>
+
+            <RadzenCard class="w-7">
+                <div class="row">
+                    <div class="col-md-10">
                         <b>Koordinatorer:</b>
                         <div>Her kan du se, ændre og oprette koordinatorer i systemet</div>
                     </div>
@@ -66,7 +78,7 @@
                     </div>
                 </div>
             </RadzenCard>
-            
+
             <RadzenCard class="w-7">
                 <div class="row">
                     <div class="col-md-10">
@@ -108,6 +120,12 @@
 @if (EditVolunteersDialogOpen)
 {
     <EditVolunteers OnClose="@OnEditVolunteersDialogClose"></EditVolunteers>
+}
+
+@*TEAMS*@
+@if(CreateTeamsDialogOpen)
+{
+    <CreateTeams OnClose="@OnCreateTeamsDialogClose"></CreateTeams>
 }
 
 @*COORDINATORS*@
@@ -220,6 +238,21 @@
         StateHasChanged();
     }
 
+    // Kode til CreateTeams Modal Dialog
+    public bool CreateTeamsDialogOpen { get; set; }
+
+    public void OpenCreateTeamsDialog()
+    {
+        CreateTeamsDialogOpen = true;
+        StateHasChanged();
+    }
+
+    public void OnCreateTeamsDialogClose(bool accepted)
+    {
+        CreateTeamsDialogOpen = false;
+        StateHasChanged();
+    }
+
     // Kode til SeeCoordinators Modal Dialog
     public bool SeeCoordinatorsDialogOpen { get; set; }
 
@@ -286,8 +319,8 @@
         CreateCouponDialogOpen = false;
         StateHasChanged();
     }
-    
-        // Kode til CoordinatorInfo Modal Dialog
+
+    // Kode til CoordinatorInfo Modal Dialog
     public bool CoordinatorInfoDialogOpen { get; set; }
 
     public void OpenCoordinatorInfoDialog()

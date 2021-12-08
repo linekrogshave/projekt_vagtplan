@@ -25,24 +25,24 @@ namespace vagtplanen.Server.Services
             return conn;
         }
 
-        public async Task<IEnumerable<Coordinator>> Get()
+        public IEnumerable<Coordinator> Get()
         {
             using (var conn = OpenConnection(_connectionString))
             {
                 //Brug view hertil
                 var query = "SELECT * FROM all_coordinators;";
-                var result = await conn.QueryAsync<Coordinator>(query);
+                var result = conn.Query<Coordinator>(query);
                 return result;
             }
         }
 
-        public async Task<Coordinator> Get(string e)
+        public Coordinator Get(string e)
         {
             using (var conn = OpenConnection(_connectionString))
             {
                 var values = new { email = e };
                 var query = @"SELECT * FROM all_coordinators WHERE email = @email";
-                var result = await conn.QueryFirstOrDefaultAsync<Coordinator>(query, values);
+                var result = conn.QueryFirstOrDefault<Coordinator>(query, values);
                 return result;
             }
         }

@@ -43,7 +43,7 @@ namespace vagtplanen.Server.Services
                 //Kører en query 
                 var list = conn.Query<Volunteer, Shift, Coupon, Skill, Volunteer>(
                 query,
-                (v, sh,  c, sk) =>
+                (v, sh, c, sk) =>
                 {
                     //Initialiserer 0..* forholdende mellem klasserne
                     //Og gemmer dataen tilhørende den enkelte volunteer

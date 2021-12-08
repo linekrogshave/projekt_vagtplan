@@ -1,36 +1,24 @@
 ﻿<Properties StartupConfiguration="{756938E9-D97A-47CB-8B33-97138F273F9E}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Client/Shared/MainLayout.razor">
-    <Files>
-      <File FileName="Client/Components/Coordinator_components/SeeTasks.razor" Line="9" Column="78" />
-      <File FileName="Client/Components/Coordinator_components/SeeShifts.razor" />
-      <File FileName="Server/Controllers/MethodController.cs" />
-      <File FileName="Client/Pages/Login.razor" Line="11" Column="33" />
-      <File FileName="Server/Controllers/CoordinatorController.cs" />
-      <File FileName="Server/Services/CoordinatorService.cs" Line="37" Column="10" />
-      <File FileName="Client/Pages/CoordinatorPage.razor" Line="13" Column="28" />
-      <File FileName="Client/wwwroot/css/app.css" Line="76" Column="25" />
-      <File FileName="Client/Pages/VolunteerPage.razor" Line="6" Column="1" />
-      <File FileName="Client/Pages/TeamPage.razor" Line="13" Column="28" />
-      <File FileName="Client/Shared/MainLayout.razor" Line="8" Column="23" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="vagtplanen" expanded="True">
             <Node name="vagtplanen.Client" expanded="True">
               <Node name="Components" expanded="True">
-                <Node name="Coordinator_components" expanded="True" />
+                <Node name="Coordinator_components" expanded="True">
+                  <Node name="CreateVolunteers.razor" selected="True" />
+                </Node>
+                <Node name="Team_components" expanded="True" />
+                <Node name="Volunteer_components" expanded="True" />
               </Node>
               <Node name="Pages" expanded="True" />
-              <Node name="Shared" expanded="True">
-                <Node name="MainLayout.razor" selected="True" />
-              </Node>
+              <Node name="Shared" expanded="True" />
               <Node name="wwwroot" expanded="True">
                 <Node name="css" expanded="True" />
               </Node>
             </Node>
             <Node name="vagtplanen.Server" expanded="True">
-              <Node name="Controllers" expanded="True" />
               <Node name="Services" expanded="True" />
             </Node>
             <Node name="vagtplanen.Shared" expanded="True">

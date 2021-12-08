@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "/Users/andreasskovaagaard/.nuget/packages/": {}
+    "/Users/nicolaiskat/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Shared/vagtplanen.Shared.csproj",
+      "projectUniqueName": "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/vagtplanen.Shared.csproj",
       "projectName": "vagtplanen.Shared",
-      "projectPath": "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Shared/vagtplanen.Shared.csproj",
-      "packagesPath": "/Users/andreasskovaagaard/.nuget/packages/",
-      "outputPath": "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Shared/obj/",
+      "projectPath": "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/vagtplanen.Shared.csproj",
+      "packagesPath": "/Users/nicolaiskat/.nuget/packages/",
+      "outputPath": "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/andreasskovaagaard/.config/NuGet/NuGet.Config"
+        "/Users/nicolaiskat/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -58,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.403/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100/RuntimeIdentifierGraph.json"
       }
     }
   }

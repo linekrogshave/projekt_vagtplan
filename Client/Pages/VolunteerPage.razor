@@ -80,7 +80,7 @@
             <RadzenDataGrid @ref="grid" AllowFiltering="true" AllowPaging="true" AllowSorting="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
                             Data="@(shifts.Where(x => (x.end_time.Ticks > DateTime.Now.Ticks) && (x.volunteer.volunteer_id == vol.volunteer_id)))" TItem="Shift" Style="width:922px">
                 <Columns>
-                    <RadzenDataGridColumn TItem="Shift" Property="taskclass.description" Title="Beskrivelse" />
+                    <RadzenDataGridColumn TItem="Shift" Property="task.description" Title="Beskrivelse" />
                     <RadzenDataGridColumn TItem="Shift" Property="start_time" Title="Start tidspunkt" />
                     <RadzenDataGridColumn TItem="Shift" Property="end_time" Title="Slut tidspunkt" />
                     <RadzenDataGridColumn TItem="Shift" Property="shift_id" Title="Frigiv vagt" Width="85px" Filterable="false" Sortable="false">

@@ -24,17 +24,17 @@ namespace vagtplanen.Server.Services
             return conn;
         }
 
-        public async Task<IEnumerable<Coupon>> Get()
+        public IEnumerable<Coupon> Get()
         {
             using (var conn = OpenConnection(_connectionString))
             {
                 var query = "SELECT * FROM all_coupons;";
-                var result = await conn.QueryAsync<Coupon>(query);
+                var result = conn.Query<Coupon>(query);
                 return result;
             }
         }
 
-        public async Task<Coupon> Get(int id)
+        public Coupon Get(int id)
         {
             using (var conn = OpenConnection(_connectionString))
             {
@@ -42,7 +42,7 @@ namespace vagtplanen.Server.Services
                 var query = @"SELECT * FROM coupon WHERE coupon_id = @_id";
 
                 var value = new { _id = id };
-                var result = await conn.QueryFirstOrDefaultAsync<Coupon>(query, value);
+                var result = conn.QueryFirstOrDefault<Coupon>(query, value);
                 return result;
             }
         }

@@ -39,7 +39,7 @@ else if (page_access == 1)
     public Coordinator coor = new();
     public Team tea = new();
 
-    async System.Threading.Tasks.Task OnLogin(LoginArgs args)
+    async Task OnLogin(LoginArgs args)
     {
         isLoading = true;
         try

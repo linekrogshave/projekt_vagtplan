@@ -13,99 +13,106 @@ namespace vagtplanen.Client.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Client/_Imports.razor"
+#line 1 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Client/_Imports.razor"
+#line 2 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using System.Net.Http.Json;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Client/_Imports.razor"
+#line 3 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Client/_Imports.razor"
+#line 4 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Client/_Imports.razor"
+#line 5 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Client/_Imports.razor"
+#line 6 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Client/_Imports.razor"
+#line 7 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using Microsoft.AspNetCore.Components.WebAssembly.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Client/_Imports.razor"
+#line 8 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Client/_Imports.razor"
+#line 9 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using vagtplanen.Client;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Client/_Imports.razor"
+#line 10 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using vagtplanen.Client.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Client/_Imports.razor"
+#line 11 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using Radzen;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Client/_Imports.razor"
+#line 12 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/_Imports.razor"
 using Radzen.Blazor;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Client/Pages/TeamPage.razor"
+#line 1 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Pages/TeamPage.razor"
 using vagtplanen.Shared.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Client/Pages/TeamPage.razor"
+#line 2 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Pages/TeamPage.razor"
 using vagtplanen.Client.Components.Volunteer_components;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Pages/TeamPage.razor"
+using vagtplanen.Client.Components.Team_components;
 
 #line default
 #line hidden
@@ -118,74 +125,42 @@ using vagtplanen.Client.Components.Volunteer_components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 92 "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Client/Pages/TeamPage.razor"
-        [Parameter] public Team tea { get; set; }
+#line 64 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Pages/TeamPage.razor"
+       
 
-            // Kode til AvailableShifts Modal Dialog
-            public bool AvailableShiftsDialogOpen { get; set; }
-
-            public void OpenAvailableShiftsDialog()
-            {
-                AvailableShiftsDialogOpen = true;
-                StateHasChanged();
-            }
-
-            public void OnAvailableShiftsDialogClose(bool accepted, Shift s)
-            {
-                AvailableShiftsDialogOpen = false;
-                StateHasChanged();
-            }
-
-            // Kode til AllCoupons Modal Dialog
-            public bool AllCouponsDialogOpen { get; set; }
-
-            public void OpenAllCouponsDialog()
-            {
-                AllCouponsDialogOpen = true;
-                StateHasChanged();
-            }
-
-            public void OnAllCouponsDialogClose(bool accepted)
-            {
-                AllCouponsDialogOpen = false;
-                StateHasChanged();
-            }
+    [Parameter] public Team tea { get; set; }
 
 
-            // Kode til MyCoupons Modal Dialog
-            public bool MyCouponsDialogOpen { get; set; }
+    // Kode til Available Teamtasks Modal Dialog
+    public bool AvailableTeamtasksDialogOpen { get; set; }
 
-            public void OpenMyCouponsDialog()
-            {
-                MyCouponsDialogOpen = true;
-                StateHasChanged();
-            }
+    public void OpenAvailableTeamtasksDialog()
+    {
+        AvailableTeamtasksDialogOpen = true;
+        StateHasChanged();
+    }
 
-            public void OnMyCouponsDialogClose(bool accepted)
-            {
-                MyCouponsDialogOpen = false;
-                StateHasChanged();
-            }
+    public void OnAvailableTeamtasksDialogClose(bool accepted)
+    {
+        AvailableTeamtasksDialogOpen = false;
+        StateHasChanged();
+    }
 
-            // Kode til ShiftsScheme Modal Dialog
-            public bool ShiftsSchemeDialogOpen { get; set; }
+    // Kode til TeamInfo Modal Dialog
+    public bool TeamInfoDialogOpen { get; set; }
 
-            public void OpenShiftsSchemeDialog()
-            {
-                ShiftsSchemeDialogOpen = true;
-                StateHasChanged();
-            }
+    public void OpenTeamInfoDialog()
+    {
+        TeamInfoDialogOpen = true;
+        StateHasChanged();
+    }
 
-            public void OnShiftsSchemeDialogClose(bool accepted)
-            {
-                ShiftsSchemeDialogOpen = false;
-                StateHasChanged();
-            }
+    public void OnTeamInfoDialogClose(bool accepted)
+    {
+        TeamInfoDialogOpen = false;
+        StateHasChanged();
+    }
 
-            public void Reload()
-            {
-                uriHelper.NavigateTo(uriHelper.Uri, forceLoad: true);
-            } 
 
 #line default
 #line hidden
