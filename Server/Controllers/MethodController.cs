@@ -17,12 +17,12 @@ namespace vagtplanen.Server.Controllers
         }
 
         [HttpGet("login/{un}/{pw}")]
-        public async Task<ActionResult> Get(string un, string pw)
+        public async Task<IActionResult> Get(string un, string pw)
         {
             try
             {
-                var result = await _service.CheckLogin(un, pw);
-                return Ok(result);
+                var access_niveau = await _service.CheckLogin(un, pw);
+                return Ok(access_niveau);
             }
             catch (Exception ex)
             {
@@ -30,12 +30,12 @@ namespace vagtplanen.Server.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
-        [HttpPost("usecoupon/{vol}")]
-        public async Task UseCoupon(int vol, Coupon c)
+        [HttpPost("usecoupon/{volunteer_id}")]
+        public async Task UseCoupon(int volunteer_id, Coupon coupon)
         {
             try
             {
-                await _service.UseCoupon(vol, c);
+                await _service.UseCoupon(volunteer_id, coupon);
             }
             catch (Exception ex)
             {
@@ -44,12 +44,12 @@ namespace vagtplanen.Server.Controllers
             }
         }
 
-        [HttpPost("buycoupon/{vol}")]
-        public async Task BuyCoupon(int vol, Coupon c)
+        [HttpPost("buycoupon/{volunteer_id}")]
+        public async Task BuyCoupon(int volunteer_id, Coupon coupon)
         {
             try
             {
-                await _service.BuyCoupon(vol, c);
+                await _service.BuyCoupon(volunteer_id, coupon);
             }
             catch (Exception ex)
             {
@@ -59,11 +59,11 @@ namespace vagtplanen.Server.Controllers
         }
 
         [HttpPost("assignshift")]
-        public async Task AssignShift(Shift s)
+        public async Task AssignShift(Shift shift)
         {
             try
             {
-                await _service.AssignShift(s);
+                await _service.AssignShift(shift);
             }
             catch (Exception ex)
             {
@@ -73,11 +73,11 @@ namespace vagtplanen.Server.Controllers
         }
 
         [HttpPost("deassignshift")]
-        public async Task DeAssignShift(Shift s)
+        public async Task DeAssignShift(Shift shift)
         {
             try
             {
-                await _service.DeassignShift(s);
+                await _service.DeassignShift(shift);
             }
             catch (Exception ex)
             {
@@ -87,11 +87,11 @@ namespace vagtplanen.Server.Controllers
         }
 
         [HttpPost("assignteamtask")]
-        public async Task AssignTeamTask(TeamTask tt)
+        public async Task AssignTeamTask(TeamTask teamtask)
         {
             try
             {
-                await _service.AssignTeamtask(tt);
+                await _service.AssignTeamtask(teamtask);
             }
             catch (Exception ex)
             {
@@ -100,11 +100,11 @@ namespace vagtplanen.Server.Controllers
             }
         }
         [HttpPost("deassignteamtask")]
-        public async Task DeAssignTeamTask(TeamTask tt)
+        public async Task DeAssignTeamTask(TeamTask teamtask)
         {
             try
             {
-                await _service.AssignTeamtask(tt);
+                await _service.AssignTeamtask(teamtask);
             }
             catch (Exception ex)
             {
@@ -113,11 +113,11 @@ namespace vagtplanen.Server.Controllers
             }
         }
         [HttpPost("lockshift")]
-        public async Task LockShift(Shift s)
+        public async Task LockShift(Shift shift)
         {
             try
             {
-                await _service.LockShift(s);
+                await _service.LockShift(shift);
             }
             catch (Exception ex)
             {
@@ -126,11 +126,11 @@ namespace vagtplanen.Server.Controllers
             }
         }
         [HttpPost("locktask")]
-        public async Task LockTask (TaskClass t)
+        public async Task LockTask (TaskClass task)
         {
             try
             {
-                await _service.LockTask(t);
+                await _service.LockTask(task);
             }
             catch (Exception ex)
             {
@@ -139,11 +139,11 @@ namespace vagtplanen.Server.Controllers
             }
         }
         [HttpPost("lockteamtask")]
-        public async Task LockTask(TeamTask tt)
+        public async Task LockTask(TeamTask teamtask)
         {
             try
             {
-                await _service.LockTeamtask(tt);
+                await _service.LockTeamtask(teamtask);
             }
             catch (Exception ex)
             {
@@ -152,12 +152,12 @@ namespace vagtplanen.Server.Controllers
             }
         }
 
-        [HttpPost("assignskill/{vol}")]
-        public async Task AssignSkill(int vol, Skill s)
+        [HttpPost("assignskill/{volunteer_id}")]
+        public async Task AssignSkill(int volunteer_id, Skill skill)
         {
             try
             {
-                await _service.AssignSkill(vol, s);
+                await _service.AssignSkill(volunteer_id, skill);
             }
             catch (Exception ex)
             {
@@ -166,12 +166,12 @@ namespace vagtplanen.Server.Controllers
             }
         }
 
-        [HttpPost("deassignskill/{vol}")]
-        public async Task DeAssignSkill(int vol, Skill s)
+        [HttpPost("deassignskill/{volunteer_id}")]
+        public async Task DeAssignSkill(int volunteer_id, Skill skill)
         {
             try
             {
-                await _service.DeAssignSkill(vol, s);
+                await _service.DeAssignSkill(volunteer_id, skill);
             }
             catch (Exception ex)
             {

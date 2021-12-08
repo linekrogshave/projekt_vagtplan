@@ -96,14 +96,7 @@ using Radzen.Blazor;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 2 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/SeeTasks.razor"
-using vagtplanen.Shared.Models;
-
-#line default
-#line hidden
-#nullable disable
-    public partial class SeeTasks : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class CoordinatorInfo : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -111,20 +104,11 @@ using vagtplanen.Shared.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 78 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/SeeTasks.razor"
+#line 85 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/CoordinatorInfo.razor"
        
 
-    public List<TaskClass> tasks;
-    public List<Shift> shifts;
-    public RadzenDataGrid<Shift> grid;
-
-    public TaskClass task = new();
-
-    protected async override Task OnInitializedAsync()
-    {
-        tasks = await Http.GetFromJsonAsync<List<TaskClass>>("api/taskclass");
-        shifts = await Http.GetFromJsonAsync<List<Shift>>("api/shift");
-    }
+    [Parameter]
+    public Coordinator coor { get; set; }
 
     [Parameter]
     public EventCallback<bool> OnClose { get; set; }
@@ -134,53 +118,11 @@ using vagtplanen.Shared.Models;
         return OnClose.InvokeAsync(false);
     }
 
-    private Task ModalOk()
+    private async Task ModalOk()
     {
-        return OnClose.InvokeAsync(true);
+        await Http.PutAsJsonAsync<Coordinator>("api/coordinator", coor);
+        await OnClose.InvokeAsync(true);
     }
-    async void OnLock(Shift s)
-    {
-        await Http.PostAsJsonAsync($"api/method/lockshift", s);
-        if (s.locked == false)
-        {
-            s.locked = true;
-        }
-        else if (s.locked == true)
-        {
-            s.locked = false;
-        };
-        await grid.Reload();
-    }
-
-    async void OnLockT(TaskClass t)
-    {
-        task = await Http.GetFromJsonAsync<TaskClass>($"api/taskclass/{t.task_id}");
-        await Http.PostAsJsonAsync($"api/method/locktask", t);
-        foreach(Shift s in task.shifts)
-        {
-            await Http.PostAsJsonAsync($"api/method/lockshift", s);
-            s.locked = true;
-        };
-        shifts.Where(x => x.task.task_id == task.task_id)
-                    .ToList()
-                    .ForEach(x => x.locked = true);
-        await grid.Reload();
-    }
-    async void OnUnLockT(TaskClass t)
-    {
-        task = await Http.GetFromJsonAsync<TaskClass>($"api/taskclass/{t.task_id}");
-        await Http.PostAsJsonAsync($"api/method/locktask", t);
-        foreach (Shift s in task.shifts)
-        {
-            await Http.PostAsJsonAsync($"api/method/lockshift", s);
-            s.locked = false;
-        };
-        shifts.Where(x => x.task.task_id == task.task_id)
-                    .ToList()
-                    .ForEach(x => x.locked = false);
-        await grid.Reload();
-    }
-
 
 #line default
 #line hidden

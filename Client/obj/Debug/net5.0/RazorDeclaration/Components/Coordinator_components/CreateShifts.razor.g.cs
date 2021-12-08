@@ -96,6 +96,13 @@ using Radzen.Blazor;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/CreateShifts.razor"
+using vagtplanen.Shared.Models;
+
+#line default
+#line hidden
+#nullable disable
     public partial class CreateShifts : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -104,7 +111,7 @@ using Radzen.Blazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 36 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/CreateShifts.razor"
+#line 73 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/CreateShifts.razor"
        
 
     public Shift[] shifts;
@@ -126,6 +133,30 @@ using Radzen.Blazor;
     {
         return OnClose.InvokeAsync(true);
     }
+
+
+
+    public static Shift createS = new();
+    public static TaskClass createT = new();
+
+
+    public DateTime startdate = DateTime.Now;
+    public DateTime starttime = DateTime.Now;
+    
+
+
+
+    //private Task CreateShift()
+    //{
+    //    postUser(create);
+    //    return OnClose.InvokeAsync(true);
+    //}
+
+    //public Task<HttpResponseMessage> postUser(Shift shift)
+    //{
+    //    return Http.PostAsJsonAsync<Shift>("Shift", shift);
+    //}
+
 
 #line default
 #line hidden

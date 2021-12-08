@@ -17,11 +17,11 @@ namespace vagtplanen.Server.Controllers
 
 
         [HttpGet]
-        public async Task<ActionResult> Get()
+        public IActionResult Get()
         {
             try
             {
-                var list = await _service.Get();
+                var list = _service.Get();
                 return Ok(list);
             }
             catch (Exception ex)
@@ -32,14 +32,14 @@ namespace vagtplanen.Server.Controllers
         }
 
         [HttpGet("{id}", Name = "CouponById")]
-        public async Task<IActionResult> Get(int id)
+        public IActionResult Get(int id)
         {
             try
             {
-                var obj = await _service.Get(id);
-                if (obj == null)
+                var coupon = _service.Get(id);
+                if (coupon == null)
                     return NotFound();
-                return Ok(obj);
+                return Ok(coupon);
             }
             catch (Exception ex)
             {
@@ -49,12 +49,12 @@ namespace vagtplanen.Server.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Coupon coup)
+        public IActionResult Create(Coupon coupon)
         {
             try
             {
-                var _obj = _service.CreateCoupon(coup);
-                return CreatedAtRoute("CouponById", _obj);
+                var couponCreated = _service.CreateCoupon(coupon);
+                return CreatedAtRoute("CouponById", couponCreated);
             }
             catch (Exception ex)
             {
@@ -64,14 +64,14 @@ namespace vagtplanen.Server.Controllers
         }
 
         [HttpPut]
-        public IActionResult Update(Coupon coup)
+        public IActionResult Update(Coupon coupon)
         {
         
             try
             {
              
-                var obj = _service.Update(coup);
-                return Ok(obj);
+                var couponUpdated = _service.Update(coupon);
+                return Ok(couponUpdated);
             }
             //Hvis fejl
             catch (Exception ex)

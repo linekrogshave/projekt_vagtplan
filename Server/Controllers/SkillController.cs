@@ -25,7 +25,7 @@ namespace vagtplanen.Server.Controllers
 
         //Method til at hente alle skills til .../api/skill
         [HttpGet]
-        public ActionResult Get()
+        public IActionResult Get()
         {
             //Forsøger
             try
@@ -54,12 +54,12 @@ namespace vagtplanen.Server.Controllers
                 //Kører 'Get(string un)' metoden fra Service - laget
                 //Gemmer den skill som har id magen til em fra input i 'ski'
                 //Returnerer listen af alle skills med et Status 200 OK reponse
-                var ski = _service.Get(id);
+                var skill = _service.Get(id);
 
                 //Hvis 'ski' ikke kan findes i metoden returneres Status 404
-                if (ski == null)
+                if (skill == null)
                     return NotFound();
-                return Ok(ski);
+                return Ok(skill);
             }
             //Hvis fejl
             catch (Exception ex)
@@ -71,7 +71,7 @@ namespace vagtplanen.Server.Controllers
 
         //Method til at hente post volunteer til databasse gennnemm .../api/volunteer
         [HttpPost]
-        public IActionResult Create(Skill ski)
+        public IActionResult Create(Skill skill)
         {
             //Forsøger
             try
@@ -79,8 +79,8 @@ namespace vagtplanen.Server.Controllers
                 //Kører 'Create()' metoden fra Service - laget
                 //Gemmer samme objekt som fra input i 'coor'
                 //Returnerer objektet et Status 201 Created response
-                var skill = _service.Create(ski);
-                return CreatedAtRoute("SkillById", skill);
+                var skillCreated = _service.Create(skill);
+                return CreatedAtRoute("SkillById", skillCreated);
             }
             //Hvis fejl
             catch (Exception ex)
@@ -92,7 +92,7 @@ namespace vagtplanen.Server.Controllers
 
         //Method til at hente put volunteer i databasse gennnemm .../api/volunteer
         [HttpPut]
-        public IActionResult Update(Skill ski)
+        public IActionResult Update(Skill skill)
         {
             //Forsøger
             try
@@ -100,8 +100,8 @@ namespace vagtplanen.Server.Controllers
                 // Kører 'Update()' metoden fra Service - laget
                 //Gemmer samme objekt som fra input i 'coor'
                 //Returnerer objektet et Status 200 OK reponse
-                var skill = _service.Update(ski);
-                return Ok(skill);
+                var skillUpdated = _service.Update(skill);
+                return Ok(skillUpdated);
             }
             //Hvis fejl
             catch (Exception ex)

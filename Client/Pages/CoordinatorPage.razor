@@ -63,6 +63,18 @@
                     </div>
                 </div>
             </RadzenCard>
+            
+               <RadzenCard Style="width:300px;">
+                <div class="row">
+                    <div class="col-md-10">
+                        <b>Se din data:</b>
+                        <div>Se og ændre info vedrørende dig</div>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-success" @onclick="() => OpenCoordinatorInfoDialog()">Se</button>
+                    </div>
+                </div>
+            </RadzenCard>
         </div>
     </RadzenCard>
     <button type="button" class="btn btn-primary" @onclick="@Reload">Log ud</button>
@@ -116,6 +128,11 @@
 @if (CreateCouponDialogOpen)
 {
     <CreateCoupon OnClose="@OnCreateCouponDialogClose"></CreateCoupon>
+}
+
+@if (CoordinatorInfoDialogOpen)
+{
+    <CoordinatorInfo coor="@coor" OnClose="@OnCoordinatorInfoDialogClose"></CoordinatorInfo>
 }
 
 
@@ -265,6 +282,21 @@
     public void OnCreateCouponDialogClose(bool accepted)
     {
         CreateCouponDialogOpen = false;
+        StateHasChanged();
+    }
+    
+        // Kode til CoordinatorInfo Modal Dialog
+    public bool CoordinatorInfoDialogOpen { get; set; }
+
+    public void OpenCoordinatorInfoDialog()
+    {
+        CoordinatorInfoDialogOpen = true;
+        StateHasChanged();
+    }
+
+    public void OnCoordinatorInfoDialogClose(bool accepted)
+    {
+        CoordinatorInfoDialogOpen = false;
         StateHasChanged();
     }
 

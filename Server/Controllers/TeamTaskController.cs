@@ -18,7 +18,7 @@ namespace vagtplanen.Server.Controllers
 
 
         [HttpGet]
-        public ActionResult Get()
+        public IActionResult Get()
         {
             try
             {
@@ -31,16 +31,16 @@ namespace vagtplanen.Server.Controllers
             }
         }
 
-        [HttpGet("{em}", Name = "TeamTaskById")]
-        public IActionResult Get(int em)
+        [HttpGet("{id}", Name = "TeamTaskById")]
+        public IActionResult Get(int id)
         {
             try
             {
-                var coor = _service.Get(em);
+                var teamTask = _service.Get(id);
 
-                if (coor == null)
+                if (teamTask == null)
                     return NotFound();
-                return Ok(coor);
+                return Ok(teamTask);
             }
             catch (Exception ex)
             {
@@ -49,12 +49,12 @@ namespace vagtplanen.Server.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(TeamTask vol)
+        public IActionResult Create(TeamTask teamTask)
         {
             try
             {
-                var coor = _service.Create(vol);
-                return CreatedAtRoute("TeamTaskById", vol);
+                var teamTaskUpdated = _service.Create(teamTask);
+                return CreatedAtRoute("TeamTaskById", teamTaskUpdated);
             }
             catch (Exception ex)
             {

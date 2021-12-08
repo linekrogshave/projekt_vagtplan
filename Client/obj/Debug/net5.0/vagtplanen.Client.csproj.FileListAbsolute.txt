@@ -2407,6 +2407,7 @@ C:/Users/linek/Documents/Erhvervsakademi Aarhus/2. semester/Semesterprojekt/vagt
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/vagtplanen.Client.MvcApplicationPartsAssemblyInfo.cache
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/vagtplanen.Client.RazorComponent.input.cache
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/RazorDeclaration/App.razor.g.cs
+/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/RazorDeclaration/Components/Coordinator_components/CoordinatorInfo.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/RazorDeclaration/Components/Coordinator_components/CreateCoordinators.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/RazorDeclaration/Components/Coordinator_components/CreateCoupon.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/RazorDeclaration/Components/Coordinator_components/CreateShifts.razor.g.cs
@@ -2417,6 +2418,8 @@ C:/Users/linek/Documents/Erhvervsakademi Aarhus/2. semester/Semesterprojekt/vagt
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/RazorDeclaration/Components/Coordinator_components/SeeShifts.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/RazorDeclaration/Components/Coordinator_components/SeeTasks.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/RazorDeclaration/Components/Coordinator_components/SeeVolunteers.razor.g.cs
+/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/RazorDeclaration/Components/Team_components/AvailableTeamtasks.razor.g.cs
+/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/RazorDeclaration/Components/Team_components/TeamInfo.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/RazorDeclaration/Components/Volunteer_components/AllCoupons.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/RazorDeclaration/Components/Volunteer_components/AvailableShifts.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/RazorDeclaration/Components/Volunteer_components/MyCoupons.razor.g.cs
@@ -2436,6 +2439,7 @@ C:/Users/linek/Documents/Erhvervsakademi Aarhus/2. semester/Semesterprojekt/vagt
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/vagtplanen.Client.TagHelpers.output.cache
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/vagtplanen.Client.RazorCoreGenerate.cache
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/Razor/App.razor.g.cs
+/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/Razor/Components/Coordinator_components/CoordinatorInfo.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/Razor/Components/Coordinator_components/CreateCoordinators.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/Razor/Components/Coordinator_components/CreateCoupon.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/Razor/Components/Coordinator_components/CreateShifts.razor.g.cs
@@ -2446,6 +2450,8 @@ C:/Users/linek/Documents/Erhvervsakademi Aarhus/2. semester/Semesterprojekt/vagt
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/Razor/Components/Coordinator_components/SeeShifts.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/Razor/Components/Coordinator_components/SeeTasks.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/Razor/Components/Coordinator_components/SeeVolunteers.razor.g.cs
+/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/Razor/Components/Team_components/AvailableTeamtasks.razor.g.cs
+/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/Razor/Components/Team_components/TeamInfo.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/Razor/Components/Volunteer_components/AllCoupons.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/Razor/Components/Volunteer_components/AvailableShifts.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/Razor/Components/Volunteer_components/MyCoupons.razor.g.cs

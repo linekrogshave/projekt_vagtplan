@@ -31,16 +31,16 @@ namespace vagtplanen.Server.Controllers
             }
         }
 
-        [HttpGet("{em}", Name = "TaskClassById")]
-        public IActionResult Get(int em)
+        [HttpGet("{id}", Name = "TaskClassById")]
+        public IActionResult Get(int id)
         {
             try
             {
-                var coor = _service.Get(em);
+                var task = _service.Get(id);
 
-                if (coor == null)
+                if (task == null)
                     return NotFound();
-                return Ok(coor);
+                return Ok(task);
             }
             catch (Exception ex)
             {
@@ -49,12 +49,12 @@ namespace vagtplanen.Server.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(TaskClass vol)
+        public IActionResult Create(TaskClass task)
         {
             try
             {
-                var coor = _service.Create(vol);
-                return CreatedAtRoute("TaskClassById", vol);
+                var taskCreated = _service.Create(task);
+                return CreatedAtRoute("TaskClassById", task);
             }
             catch (Exception ex)
             {

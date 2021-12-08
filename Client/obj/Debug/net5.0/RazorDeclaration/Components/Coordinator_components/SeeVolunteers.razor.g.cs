@@ -104,14 +104,14 @@ using Radzen.Blazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 36 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/SeeVolunteers.razor"
+#line 38 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/SeeVolunteers.razor"
        
 
-    public Shift[] shifts;
+    public Volunteer[] volunteers;
 
     protected async override Task OnInitializedAsync()
     {
-        shifts = await Http.GetFromJsonAsync<Shift[]>("api/shift");
+        volunteers = await Http.GetFromJsonAsync<Volunteer[]>("api/volunteer");
     }
 
     [Parameter]

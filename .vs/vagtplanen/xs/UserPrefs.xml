@@ -1,9 +1,13 @@
 ﻿<Properties StartupConfiguration="{756938E9-D97A-47CB-8B33-97138F273F9E}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Client/Components/Coordinator_components/SeeTasks.razor">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Client/Pages/CoordinatorPage.razor">
     <Files>
-      <File FileName="Client/Components/Coordinator_components/SeeTasks.razor" Line="1" Column="1" />
+      <File FileName="Client/Components/Coordinator_components/SeeTasks.razor" Line="9" Column="78" />
       <File FileName="Client/Components/Coordinator_components/SeeShifts.razor" Line="74" Column="16" />
-      <File FileName="Client/Pages/CoordinatorPage.razor" Line="18" Column="39" />
+      <File FileName="Server/Controllers/MethodController.cs" Line="1" Column="1" />
+      <File FileName="Client/Pages/Login.razor" Line="22" Column="2" />
+      <File FileName="Server/Controllers/CoordinatorController.cs" Line="19" Column="18" />
+      <File FileName="Server/Services/CoordinatorService.cs" Line="37" Column="10" />
+      <File FileName="Client/Pages/CoordinatorPage.razor" Line="85" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,11 +15,11 @@
           <Node name="vagtplanen" expanded="True">
             <Node name="vagtplanen.Client" expanded="True">
               <Node name="Components" expanded="True">
-                <Node name="Coordinator_components" expanded="True">
-                  <Node name="SeeTasks.razor" selected="True" />
-                </Node>
+                <Node name="Coordinator_components" expanded="True" />
               </Node>
-              <Node name="Pages" expanded="True" />
+              <Node name="Pages" expanded="True">
+                <Node name="CoordinatorPage.razor" selected="True" />
+              </Node>
             </Node>
             <Node name="vagtplanen.Server" expanded="True">
               <Node name="Controllers" expanded="True" />

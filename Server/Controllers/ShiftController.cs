@@ -36,10 +36,10 @@ namespace vagtplanen.Server.Controllers
         {
             try
             {
-                var coor = _service.Get(id);
-                if (coor == null)
+                var shift = _service.Get(id);
+                if (shift == null)
                     return NotFound();
-                return Ok(coor);
+                return Ok(shift);
             }
             catch (Exception ex)
             {
@@ -53,8 +53,8 @@ namespace vagtplanen.Server.Controllers
         {
             try
             {
-                var _obj = _service.Create(shift);
-                return CreatedAtRoute("ShiftById", _obj);
+                var shiftCreated = _service.Create(shift);
+                return CreatedAtRoute("ShiftById", shiftCreated);
             }
             catch (Exception ex)
             {

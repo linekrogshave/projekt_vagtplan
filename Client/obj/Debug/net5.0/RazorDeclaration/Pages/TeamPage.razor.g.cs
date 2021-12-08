@@ -110,6 +110,13 @@ using vagtplanen.Client.Components.Volunteer_components;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Pages/TeamPage.razor"
+using vagtplanen.Client.Components.Team_components;
+
+#line default
+#line hidden
+#nullable disable
     public partial class TeamPage : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -118,76 +125,40 @@ using vagtplanen.Client.Components.Volunteer_components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 93 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Pages/TeamPage.razor"
+#line 64 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Pages/TeamPage.razor"
        
 
     [Parameter] public Team tea { get; set; }
 
-    // Kode til AvailableShifts Modal Dialog
-    public bool AvailableShiftsDialogOpen { get; set; }
 
-    public void OpenAvailableShiftsDialog()
+    // Kode til Available Teamtasks Modal Dialog
+    public bool AvailableTeamtasksDialogOpen { get; set; }
+
+    public void OpenAvailableTeamtasksDialog()
     {
-        AvailableShiftsDialogOpen = true;
+        AvailableTeamtasksDialogOpen = true;
         StateHasChanged();
     }
 
-    public void OnAvailableShiftsDialogClose(bool accepted, Shift s)
+    public void OnAvailableTeamtasksDialogClose(bool accepted)
     {
-        AvailableShiftsDialogOpen = false;
+        AvailableTeamtasksDialogOpen = false;
         StateHasChanged();
     }
 
-    // Kode til AllCoupons Modal Dialog
-    public bool AllCouponsDialogOpen { get; set; }
+    // Kode til TeamInfo Modal Dialog
+    public bool TeamInfoDialogOpen { get; set; }
 
-    public void OpenAllCouponsDialog()
+    public void OpenTeamInfoDialog()
     {
-        AllCouponsDialogOpen = true;
+        TeamInfoDialogOpen = true;
         StateHasChanged();
     }
 
-    public void OnAllCouponsDialogClose(bool accepted)
+    public void OnTeamInfoDialogClose(bool accepted)
     {
-        AllCouponsDialogOpen = false;
+        TeamInfoDialogOpen = false;
         StateHasChanged();
-    }
-
-
-    // Kode til MyCoupons Modal Dialog
-    public bool MyCouponsDialogOpen { get; set; }
-
-    public void OpenMyCouponsDialog()
-    {
-        MyCouponsDialogOpen = true;
-        StateHasChanged();
-    }
-
-    public void OnMyCouponsDialogClose(bool accepted)
-    {
-        MyCouponsDialogOpen = false;
-        StateHasChanged();
-    }
-
-    // Kode til ShiftsScheme Modal Dialog
-    public bool ShiftsSchemeDialogOpen { get; set; }
-
-    public void OpenShiftsSchemeDialog()
-    {
-        ShiftsSchemeDialogOpen = true;
-        StateHasChanged();
-    }
-
-    public void OnShiftsSchemeDialogClose(bool accepted)
-    {
-        ShiftsSchemeDialogOpen = false;
-        StateHasChanged();
-    }
-
-    public void Reload()
-    {
-        uriHelper.NavigateTo(uriHelper.Uri, forceLoad: true);
-        tea = null;
     }
 
 

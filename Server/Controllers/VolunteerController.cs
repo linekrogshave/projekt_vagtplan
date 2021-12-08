@@ -44,7 +44,7 @@ namespace vagtplanen.Server.Controllers
         }
 
         //Method til at hente alle volunteer til og fra .../api/volunteer/@email
-        [HttpGet("{em}", Name = "VolunteerById")]
+        [HttpGet("{em}", Name = "VolunteerByEmail")]
         public IActionResult Get(string em)
         {
             //Forsøger
@@ -53,12 +53,12 @@ namespace vagtplanen.Server.Controllers
                 //Kører 'Get(string un)' metoden fra Service - laget
                 //Gemmer den volunteer som har email magen til em fra input i 'coor'
                 //Returnerer listen af alle volunteres med et Status 200 OK reponse
-                var coor = _service.Get(em);
+                var volunteer = _service.Get(em);
 
                 //Hvis 'coor' ikke kan findes i metoden returneres Status 404
-                if (coor == null)
+                if (volunteer == null)
                     return NotFound();
-                return Ok(coor);
+                return Ok(volunteer);
             }
             //Hvis fejl
             catch (Exception ex)
@@ -70,7 +70,7 @@ namespace vagtplanen.Server.Controllers
 
         //Method til at hente post volunteer til databasse gennnemm .../api/volunteer
         [HttpPost]
-        public IActionResult Create(Volunteer vol)
+        public IActionResult Create(Volunteer volunteer)
         {
             //Forsøger
             try
@@ -78,8 +78,8 @@ namespace vagtplanen.Server.Controllers
                 //Kører 'Create()' metoden fra Service - laget
                 //Gemmer samme objekt som fra input i 'coor'
                 //Returnerer objektet et Status 201 Created response
-                var coor = _service.Create(vol);
-                return CreatedAtRoute("VolunteerById", vol);
+                var volunteerCreated = _service.Create(volunteer);
+                return CreatedAtRoute("VolunteerById", volunteerCreated);
             }
             //Hvis fejl
             catch (Exception ex)
@@ -91,7 +91,7 @@ namespace vagtplanen.Server.Controllers
 
         //Method til at hente put volunteer i databasse gennnemm .../api/volunteer
         [HttpPut]
-        public IActionResult Update(Volunteer vol)
+        public IActionResult Update(Volunteer volunteer)
         {
             //Forsøger
             try
@@ -99,8 +99,8 @@ namespace vagtplanen.Server.Controllers
                 // Kører 'Update()' metoden fra Service - laget
                 //Gemmer samme objekt som fra input i 'coor'
                 //Returnerer objektet et Status 200 OK reponse
-                var coor = _service.Update(vol);
-                return Ok(coor);
+                var volunteerUpdated = _service.Update(volunteer);
+                return Ok(volunteerUpdated);
             }
             //Hvis fejl
             catch (Exception ex)

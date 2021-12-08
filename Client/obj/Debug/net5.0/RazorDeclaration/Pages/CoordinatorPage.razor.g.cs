@@ -118,7 +118,7 @@ using vagtplanen.Client.Components.Coordinator_components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 124 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Pages/CoordinatorPage.razor"
+#line 141 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Pages/CoordinatorPage.razor"
        
     [Parameter] public Coordinator coor { get; set; }
 
@@ -263,6 +263,21 @@ using vagtplanen.Client.Components.Coordinator_components;
     public void OnCreateCouponDialogClose(bool accepted)
     {
         CreateCouponDialogOpen = false;
+        StateHasChanged();
+    }
+    
+        // Kode til CoordinatorInfo Modal Dialog
+    public bool CoordinatorInfoDialogOpen { get; set; }
+
+    public void OpenCoordinatorInfoDialog()
+    {
+        CoordinatorInfoDialogOpen = true;
+        StateHasChanged();
+    }
+
+    public void OnCoordinatorInfoDialogClose(bool accepted)
+    {
+        CoordinatorInfoDialogOpen = false;
         StateHasChanged();
     }
 

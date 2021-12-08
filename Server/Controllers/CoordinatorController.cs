@@ -63,20 +63,20 @@ namespace vagtplanen.Server.Controllers
         //    }
         //}
 
-        //[HttpPut]
-        //public IActionResult Update(Coordinator coor)
-        //{
-        //    try
-        //    {
-        //        var _coor = _service.Update(coor);
-        //        return CreatedAtRoute("CoordinatorById", _coor);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        //log error
-        //        return StatusCode(500, ex.Message);
-        //    }
-        //}
+        [HttpPut]
+        public IActionResult Update(Coordinator coordinator)
+        {
+            try
+            {
+                var coordinatorUpdated = _service.Update(coordinator);
+                return CreatedAtRoute("CoordinatorByEmail", coordinatorUpdated);
+            }
+            catch (Exception ex)
+            {
+                //log error
+                return StatusCode(500, ex.Message);
+            }
+        }
 
 
         //[HttpDelete]

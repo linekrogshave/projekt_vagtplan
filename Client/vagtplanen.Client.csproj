@@ -30,5 +30,9 @@
     <None Remove="Npgsql" />
     <None Remove="Dapper" />
     <None Remove="BlazorPro.Spinkit" />
+    <None Remove="Components\Team_components\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Components\Team_components\" />
   </ItemGroup>
 </Project>

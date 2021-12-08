@@ -4,26 +4,24 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Alle frivillige</h3>
+                <h3>Alle ledige vagter</h3>
                 <button type="button" class="close" @onclick="@ModalCancel">&times;</button>
             </div>
             <div class="modal-body">
-                @if (volunteers == null)
+                @if (shifts == null)
                 {
                     <p><em>Loading...</em></p>
                 }
                 else
                 {
                     <RadzenDataGrid AllowFiltering="true" AllowPaging="true" AllowSorting="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
-                                    Data="@volunteers" TItem="Volunteer">
+                                    Data="@(shifts.Where(x => x.taken == false))" TItem="Shift">
                         <Columns>
-                            <RadzenDataGridColumn TItem="Volunteer" Property="volunteer_id" Title="ID" Width="70px" />
-                            <RadzenDataGridColumn TItem="Volunteer" Property="first_name" Title="Fornavn" />
-                            <RadzenDataGridColumn TItem="Volunteer" Property="last_name" Title="Efternavn" />
-                            <RadzenDataGridColumn TItem="Volunteer" Property="mobile" Title="Telefon" />
-                            <RadzenDataGridColumn TItem="Volunteer" Property="email" Title="Email" />
-                            <RadzenDataGridColumn TItem="Volunteer" Property="address" Title="Adresse" />
-                            <RadzenDataGridColumn TItem="Volunteer" Property="hours" Title="Antal timer" />                     
+                            <RadzenDataGridColumn TItem="Shift" Property="shift_id" Title="ID" Width="70px" />
+                            <RadzenDataGridColumn TItem="Shift" Property="description" Title="Beskrivelse" />
+                            <RadzenDataGridColumn TItem="Shift" Property="start_time" Title="Start tidspunkt" />
+                            <RadzenDataGridColumn TItem="Shift" Property="end_time" Title="Slut tidspunkt" />
+                            <RadzenDataGridColumn TItem="Shift" Property="job.area" Title="Jobområde" />
                         </Columns>
                     </RadzenDataGrid>
                 }
@@ -37,11 +35,11 @@
 
 @code {
 
-    public Volunteer[] volunteers;
+    public Shift[] shifts;
 
     protected async override Task OnInitializedAsync()
     {
-        volunteers = await Http.GetFromJsonAsync<Volunteer[]>("api/volunteer");
+        shifts = await Http.GetFromJsonAsync<Shift[]>("api/shift");
     }
 
     [Parameter]
