@@ -78,7 +78,7 @@
         else
         {
             <RadzenDataGrid @ref="grid" AllowFiltering="true" AllowPaging="true" AllowSorting="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
-                            Data="@(shifts.Where(x => (x.end_time.Ticks > DateTime.Now.Ticks) && (x.volunteer.volunteer_id == vol.volunteer_id)))" TItem="Shift" Style="width:922px">
+                            Data="@(shifts.Where(x => (x.end_time.Ticks > DateTime.Now.Ticks) && (x.volunteer.volunteer_id == vol.volunteer_id)))" TItem="Shift" class="vagter-ting">
                 <Columns>
                     <RadzenDataGridColumn TItem="Shift" Property="task.description" Title="Beskrivelse" />
                     <RadzenDataGridColumn TItem="Shift" Property="start_time" Title="Start tidspunkt" />

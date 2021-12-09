@@ -199,14 +199,12 @@
       "mscorlib.dll": "sha256-+dB3Q0YubUPF1oZDMVZn6ZCiRkzRomtLoq51T5FocJk=",
       "netstandard.dll": "sha256-dOHF0zANIyA4WS496iWrAkTuEFWSWrXJjZj2pQQHrMA=",
       "System.Private.CoreLib.dll": "sha256-C96+zv+mWW0XzMG520oRgAG1lHVY8xzWGc6oc6rFjws=",
-      "vagtplanen.Shared.dll": "sha256-Qo21UfT0qEjGuYxbquQXt9o78AlGCXiPBD4Jp1OThoA=",
-      "vagtplanen.Client.dll": "sha256-czwdno0BVclu6D3iH6fJZc5\/SIWgpH+hwUw9K3fqUzA="
+      "vagtplanen.Shared.dll": "sha256-LMDVBws8rsHhEuIQjuwHT6PhYUkklIByrdl4+d+xO9g=",
+      "vagtplanen.Client.dll": "sha256-Uv9YBQLbZW1ZEMVHrvlqaplNjmJ5Xpe1RJcTsKSwwT0="
     },
-    "extensions": null,
     "lazyAssembly": null,
-    "libraryInitializers": null,
     "pdb": {
-      "vagtplanen.Client.pdb": "sha256-tYuPYS5HuUqm4blU4E81RtwVUT2n2pxAUn+beKh\/MLc="
+      "vagtplanen.Client.pdb": "sha256-qziZ1V\/SemlTPuATZHvt\/SKYYwfao+qljY79MfuYn\/Q="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-ir9YCVnnk7popgsYUkvitfGA4WpkP1ydPh\/ENHnxGys=",
