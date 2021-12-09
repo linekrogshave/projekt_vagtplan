@@ -113,7 +113,7 @@ namespace vagtplanen.Server.Services
 
                     first_name = obj.first_name,
                     last_name = obj.last_name,
-                    mobil = obj.mobile,
+                    mobile = obj.mobile,
                     email = obj.email,
                     address = obj.address,
                     gender = obj.gender,

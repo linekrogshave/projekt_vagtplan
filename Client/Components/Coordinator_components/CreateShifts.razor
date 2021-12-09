@@ -9,12 +9,7 @@
                 <button type="button" class="close" @onclick="@ModalCancel">&times;</button>
             </div>
             <div class="modal-body">
-                @if (shifts == null)
-                {
-                    <p><em>Loading...</em></p>
-                }
-                else
-                {
+               
                     <EditForm Model="@createT">
                         <DataAnnotationsValidator />
                         <ValidationSummary />
@@ -76,7 +71,7 @@
                         </div>
                     </EditForm>
 
-                        }
+                        
                 </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" @onclick="@ModalOk">OK</button>
@@ -88,7 +83,6 @@
 
 @code {
 
-    public Shift[] shifts;
 
     public static Shift createS = new();
     public static TaskClass createT = new();
@@ -100,10 +94,6 @@
     public DateTime enddate = DateTime.Now;
     public DateTime endtime = DateTime.Now;
 
-    protected async override Task OnInitializedAsync()
-    {
-        shifts = await Http.GetFromJsonAsync<Shift[]>("api/shift");
-    }
 
     [Parameter]
     public EventCallback<bool> OnClose { get; set; }
@@ -121,13 +111,12 @@
         DateTime end = enddate.Date.Add(endtime.TimeOfDay);
         createS.end_time = end;
 
+        createT.shifts = new();
+        createT.shifts.Add(createS);
 
+        await Http.PostAsJsonAsync("api/taskClass", createT);
         await OnClose.InvokeAsync(true);
     }
-
-
-
-
 
 
 

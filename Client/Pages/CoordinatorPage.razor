@@ -36,7 +36,6 @@
                     <div class="col-md-6">
                         <button class="btn btn-success" @onclick="OpenSeeVolunteersDialog">Se frivillige</button>
                         <button class="btn btn-success" @onclick="OpenCreateVolunteersDialog">Opret frivillige</button>
-                        <button class="btn btn-success" @onclick="OpenEditVolunteersDialog">Rediger frivilliges oplysninger</button>
                     </div>
                 </div>
             </RadzenCard>
@@ -48,21 +47,7 @@
                         <div>Her kan du se, ændre og oprette teams i systemet</div>
                     </div>
                     <div class="col-md-6">
-                        <button class="btn btn-success" @onclick="OpenCreateTeamsDialog">Opret frivillige</button>
-                    </div>
-                </div>
-            </RadzenCard>
-
-            <RadzenCard class="w-7">
-                <div class="row">
-                    <div class="col-md-10">
-                        <b>Koordinatorer:</b>
-                        <div>Her kan du se, ændre og oprette koordinatorer i systemet</div>
-                    </div>
-                    <div class="col-md-6">
-                        <button class="btn btn-success" @onclick="OpenSeeCoordinatorsDialog">Se koordinatorer</button>
-                        <button class="btn btn-success" @onclick="OpenCreateCoordinatorsDialog">Opret koordinatorer</button>
-                        <button class="btn btn-success" @onclick="OpenEditCoordinatorsDialog">Rediger koordinatorers oplysninger</button>
+                        <button class="btn btn-success" @onclick="OpenCreateTeamsDialog">Opret teams</button>
                     </div>
                 </div>
             </RadzenCard>
@@ -118,32 +103,12 @@
     <CreateVolunteers OnClose="@OnCreateVolunteersDialogClose"></CreateVolunteers>
 }
 
-@if (EditVolunteersDialogOpen)
-{
-    <EditVolunteers OnClose="@OnEditVolunteersDialogClose"></EditVolunteers>
-}
-
 @*TEAMS*@
 @if(CreateTeamsDialogOpen)
 {
     <CreateTeams OnClose="@OnCreateTeamsDialogClose"></CreateTeams>
 }
 
-@*COORDINATORS*@
-@if (SeeCoordinatorsDialogOpen)
-{
-    <SeeCoordinators OnClose="@OnSeeCoordinatorsDialogClose"></SeeCoordinators>
-}
-
-@if (CreateCoordinatorsDialogOpen)
-{
-    <CreateCoordinators OnClose="@OnCreateCoordinatorsDialogClose"></CreateCoordinators>
-}
-
-@if (EditCoordinatorsDialogOpen)
-{
-    <EditCoordinators OnClose="@OnEditCoordinatorsDialogClose"></EditCoordinators>
-}
 
 @*COUPONS*@
 @if (CreateCouponDialogOpen)
@@ -228,21 +193,6 @@
         StateHasChanged();
     }
 
-    // Kode til EditVolunteers Modal Dialog
-    public bool EditVolunteersDialogOpen { get; set; }
-
-    public void OpenEditVolunteersDialog()
-    {
-        EditVolunteersDialogOpen = true;
-        StateHasChanged();
-    }
-
-    public void OnEditVolunteersDialogClose(bool accepted)
-    {
-        EditVolunteersDialogOpen = false;
-        StateHasChanged();
-    }
-
     // Kode til CreateTeams Modal Dialog
     public bool CreateTeamsDialogOpen { get; set; }
 
@@ -258,51 +208,6 @@
         StateHasChanged();
     }
 
-    // Kode til SeeCoordinators Modal Dialog
-    public bool SeeCoordinatorsDialogOpen { get; set; }
-
-    public void OpenSeeCoordinatorsDialog()
-    {
-        SeeCoordinatorsDialogOpen = true;
-        StateHasChanged();
-    }
-
-    public void OnSeeCoordinatorsDialogClose(bool accepted)
-    {
-        SeeCoordinatorsDialogOpen = false;
-        StateHasChanged();
-    }
-
-    // Kode til CreateCoordinators Modal Dialog
-    public bool CreateCoordinatorsDialogOpen { get; set; }
-
-    public void OpenCreateCoordinatorsDialog()
-    {
-        CreateCoordinatorsDialogOpen = true;
-        StateHasChanged();
-    }
-
-    public void OnCreateCoordinatorsDialogClose(bool accepted)
-    {
-        CreateCoordinatorsDialogOpen = false;
-        StateHasChanged();
-    }
-
-    // Kode til EditCoordinators Modal Dialog
-    public bool EditCoordinatorsDialogOpen { get; set; }
-
-    public void OpenEditCoordinatorsDialog()
-    {
-        EditCoordinatorsDialogOpen = true;
-        StateHasChanged();
-    }
-
-    public void OnEditCoordinatorsDialogClose(bool accepted)
-    {
-        EditCoordinatorsDialogOpen = false;
-        StateHasChanged();
-    }
-
 
     // Kode til CreateCoupon Modal Dialog
     public bool CreateCouponDialogOpen { get; set; }
@@ -311,12 +216,6 @@
     {
         CreateCouponDialogOpen = true;
         StateHasChanged();
-    }
-
-    public void Reload()
-    {
-        uriHelper.NavigateTo(uriHelper.Uri, forceLoad: true);
-        coor = null;
     }
 
     public void OnCreateCouponDialogClose(bool accepted)
@@ -354,4 +253,11 @@
         StateHasChanged();
     }
 
+
+
+    public void Reload()
+    {
+        uriHelper.NavigateTo(uriHelper.Uri, forceLoad: true);
+        coor = null;
+    }
 }

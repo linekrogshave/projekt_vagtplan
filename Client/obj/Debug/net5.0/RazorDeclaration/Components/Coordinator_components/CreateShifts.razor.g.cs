@@ -111,10 +111,9 @@ using vagtplanen.Shared.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 89 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/CreateShifts.razor"
+#line 84 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/CreateShifts.razor"
        
 
-    public Shift[] shifts;
 
     public static Shift createS = new();
     public static TaskClass createT = new();
@@ -126,10 +125,6 @@ using vagtplanen.Shared.Models;
     public DateTime enddate = DateTime.Now;
     public DateTime endtime = DateTime.Now;
 
-    protected async override Task OnInitializedAsync()
-    {
-        shifts = await Http.GetFromJsonAsync<Shift[]>("api/shift");
-    }
 
     [Parameter]
     public EventCallback<bool> OnClose { get; set; }
@@ -147,13 +142,12 @@ using vagtplanen.Shared.Models;
         DateTime end = enddate.Date.Add(endtime.TimeOfDay);
         createS.end_time = end;
 
+        createT.shifts = new();
+        createT.shifts.Add(createS);
 
+        await Http.PostAsJsonAsync("api/taskClass", createT);
         await OnClose.InvokeAsync(true);
     }
-
-
-
-
 
 
 

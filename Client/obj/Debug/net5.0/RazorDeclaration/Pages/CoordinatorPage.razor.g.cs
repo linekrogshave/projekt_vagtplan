@@ -118,7 +118,7 @@ using vagtplanen.Client.Components.Coordinator_components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 166 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Pages/CoordinatorPage.razor"
+#line 131 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Pages/CoordinatorPage.razor"
        
     [Parameter] public Coordinator coor { get; set; }
 
@@ -184,21 +184,6 @@ using vagtplanen.Client.Components.Coordinator_components;
         StateHasChanged();
     }
 
-    // Kode til EditVolunteers Modal Dialog
-    public bool EditVolunteersDialogOpen { get; set; }
-
-    public void OpenEditVolunteersDialog()
-    {
-        EditVolunteersDialogOpen = true;
-        StateHasChanged();
-    }
-
-    public void OnEditVolunteersDialogClose(bool accepted)
-    {
-        EditVolunteersDialogOpen = false;
-        StateHasChanged();
-    }
-
     // Kode til CreateTeams Modal Dialog
     public bool CreateTeamsDialogOpen { get; set; }
 
@@ -214,51 +199,6 @@ using vagtplanen.Client.Components.Coordinator_components;
         StateHasChanged();
     }
 
-    // Kode til SeeCoordinators Modal Dialog
-    public bool SeeCoordinatorsDialogOpen { get; set; }
-
-    public void OpenSeeCoordinatorsDialog()
-    {
-        SeeCoordinatorsDialogOpen = true;
-        StateHasChanged();
-    }
-
-    public void OnSeeCoordinatorsDialogClose(bool accepted)
-    {
-        SeeCoordinatorsDialogOpen = false;
-        StateHasChanged();
-    }
-
-    // Kode til CreateCoordinators Modal Dialog
-    public bool CreateCoordinatorsDialogOpen { get; set; }
-
-    public void OpenCreateCoordinatorsDialog()
-    {
-        CreateCoordinatorsDialogOpen = true;
-        StateHasChanged();
-    }
-
-    public void OnCreateCoordinatorsDialogClose(bool accepted)
-    {
-        CreateCoordinatorsDialogOpen = false;
-        StateHasChanged();
-    }
-
-    // Kode til EditCoordinators Modal Dialog
-    public bool EditCoordinatorsDialogOpen { get; set; }
-
-    public void OpenEditCoordinatorsDialog()
-    {
-        EditCoordinatorsDialogOpen = true;
-        StateHasChanged();
-    }
-
-    public void OnEditCoordinatorsDialogClose(bool accepted)
-    {
-        EditCoordinatorsDialogOpen = false;
-        StateHasChanged();
-    }
-
 
     // Kode til CreateCoupon Modal Dialog
     public bool CreateCouponDialogOpen { get; set; }
@@ -267,12 +207,6 @@ using vagtplanen.Client.Components.Coordinator_components;
     {
         CreateCouponDialogOpen = true;
         StateHasChanged();
-    }
-
-    public void Reload()
-    {
-        uriHelper.NavigateTo(uriHelper.Uri, forceLoad: true);
-        coor = null;
     }
 
     public void OnCreateCouponDialogClose(bool accepted)
@@ -310,6 +244,13 @@ using vagtplanen.Client.Components.Coordinator_components;
         StateHasChanged();
     }
 
+
+
+    public void Reload()
+    {
+        uriHelper.NavigateTo(uriHelper.Uri, forceLoad: true);
+        coor = null;
+    }
 
 #line default
 #line hidden

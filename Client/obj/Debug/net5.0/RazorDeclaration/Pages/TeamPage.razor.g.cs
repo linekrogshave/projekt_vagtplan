@@ -125,10 +125,17 @@ using vagtplanen.Client.Components.Team_components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 64 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Pages/TeamPage.razor"
+#line 90 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Pages/TeamPage.razor"
        
 
     [Parameter] public Team tea { get; set; }
+     RadzenDataGrid<TeamTask> grid;
+    public List<TeamTask> teamtask;
+
+    protected override async Task OnInitializedAsync()
+    {
+        teamtask = await Http.GetFromJsonAsync<List<TeamTask>>("api/teamtask");
+    }
 
 
     // Kode til Available Teamtasks Modal Dialog
@@ -159,6 +166,19 @@ using vagtplanen.Client.Components.Team_components;
     {
         TeamInfoDialogOpen = false;
         StateHasChanged();
+    }
+     public async void OnRelease(TeamTask tt)
+    {
+        teamtask.Remove(tt);
+        await Http.PostAsJsonAsync<TeamTask>($"api/method/deassignteamtask/{tea.team_id}/{tt.teamtask_id}", tt);
+        tt.taken = false;
+        tt.team = new Team();
+        await grid.Reload();
+    }
+     public void ReloadPage()
+    {
+        uriHelper.NavigateTo(uriHelper.Uri, forceLoad: true);
+        tea = null;
     }
 
 

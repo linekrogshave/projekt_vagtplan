@@ -3800,13 +3800,11 @@ C:/Users/sisse/Desktop/Eksamensprojekt/Client/obj/Debug/net5.0/service-worker-as
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/RazorDeclaration/Components/Coordinator_components/CreateTeams.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/RazorDeclaration/Components/Coordinator_components/CreateVolunteers.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/RazorDeclaration/Components/Coordinator_components/EditCoordinators.razor.g.cs
-/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/RazorDeclaration/Components/Coordinator_components/EditVolunteers.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/RazorDeclaration/Components/Coordinator_components/SeeCoordinators.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/RazorDeclaration/Components/Coordinator_components/SeeCoupons.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/RazorDeclaration/Components/Coordinator_components/SeeShifts.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/RazorDeclaration/Components/Coordinator_components/SeeTasks.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/RazorDeclaration/Components/Coordinator_components/SeeVolunteers.razor.g.cs
-/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/RazorDeclaration/Components/Team_components/AvailableTasks.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/RazorDeclaration/Components/Team_components/AvailableTeamtasks.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/RazorDeclaration/Components/Team_components/TeamInfo.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/RazorDeclaration/Components/Volunteer_components/AllCoupons.razor.g.cs
@@ -3835,13 +3833,11 @@ C:/Users/sisse/Desktop/Eksamensprojekt/Client/obj/Debug/net5.0/service-worker-as
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/Razor/Components/Coordinator_components/CreateTeams.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/Razor/Components/Coordinator_components/CreateVolunteers.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/Razor/Components/Coordinator_components/EditCoordinators.razor.g.cs
-/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/Razor/Components/Coordinator_components/EditVolunteers.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/Razor/Components/Coordinator_components/SeeCoordinators.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/Razor/Components/Coordinator_components/SeeCoupons.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/Razor/Components/Coordinator_components/SeeShifts.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/Razor/Components/Coordinator_components/SeeTasks.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/Razor/Components/Coordinator_components/SeeVolunteers.razor.g.cs
-/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/Razor/Components/Team_components/AvailableTasks.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/Razor/Components/Team_components/AvailableTeamtasks.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/Razor/Components/Team_components/TeamInfo.razor.g.cs
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/Razor/Components/Volunteer_components/AllCoupons.razor.g.cs

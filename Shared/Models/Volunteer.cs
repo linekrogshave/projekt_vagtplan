@@ -45,7 +45,7 @@ public class Volunteer : User  {
             {
                 foreach (Coupon coupon in coupons)
                 {
-                    if (coupon != null)
+                    if (coupon != null )
                     {
                         sum -= coupon.price;
                     }

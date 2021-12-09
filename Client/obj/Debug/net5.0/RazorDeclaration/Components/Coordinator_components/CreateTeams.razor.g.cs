@@ -111,16 +111,11 @@ using vagtplanen.Shared.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 71 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/CreateTeams.razor"
+#line 66 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/CreateTeams.razor"
        
 
     public static Team create = new();
-    public Team[] teams;
-
-    protected async override Task OnInitializedAsync()
-    {
-        teams = await Http.GetFromJsonAsync<Team[]>("api/team");
-    }
+    
 
     [Parameter]
     public EventCallback<bool> OnClose { get; set; }
@@ -135,8 +130,6 @@ using vagtplanen.Shared.Models;
         await Http.PostAsJsonAsync("api/team", create);
         await OnClose.InvokeAsync(true);
     }
-
-
 
 
 

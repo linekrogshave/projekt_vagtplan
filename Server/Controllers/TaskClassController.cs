@@ -54,7 +54,7 @@ namespace vagtplanen.Server.Controllers
             try
             {
                 var taskCreated = _service.Create(task);
-                return CreatedAtRoute("TaskClassById", task);
+                return CreatedAtRoute("TaskClassById", taskCreated);
             }
             catch (Exception ex)
             {

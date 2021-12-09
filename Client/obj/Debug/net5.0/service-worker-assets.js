@@ -113,7 +113,7 @@
       "url": "_content\/BlazorPro.Spinkit\/spinkit.min.css"
     },
     {
-      "hash": "sha256-VsE+agF8P5IO1pRj1IEN8CxQzUMRn\/oz9iohrGmy2cc=",
+      "hash": "sha256-nmn3pZ71lLYustaz2JcsClh6aPTS81\/pbQXpZNeBzvQ=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -913,19 +913,19 @@
       "url": "_framework\/dotnet.5.0.12.js"
     },
     {
-      "hash": "sha256-gPKBAqVGGNSBkDt83Vc2Y75Hx5t4zkg9ea9U3iS7Mbs=",
+      "hash": "sha256-Qo21UfT0qEjGuYxbquQXt9o78AlGCXiPBD4Jp1OThoA=",
       "url": "_framework\/vagtplanen.Shared.dll"
     },
     {
-      "hash": "sha256-PoVdyxECFWJtZUEa+93TvsXJyht8s+yDDMdyAQlApw4=",
+      "hash": "sha256-mBp5PLjNqMerPDNKkanii6E6DDddHyOqeCwSKyOmoV4=",
       "url": "_framework\/vagtplanen.Shared.pdb"
     },
     {
-      "hash": "sha256-vNZpOqSlVt4smer62\/sNkvW+qLt45sym0Zg5INuxAI0=",
+      "hash": "sha256-czwdno0BVclu6D3iH6fJZc5\/SIWgpH+hwUw9K3fqUzA=",
       "url": "_framework\/vagtplanen.Client.dll"
     },
     {
-      "hash": "sha256-wOQDgQo+bt2PTRHKHQSp2ThVDeCGosS+UNZBPAnxILA=",
+      "hash": "sha256-tYuPYS5HuUqm4blU4E81RtwVUT2n2pxAUn+beKh\/MLc=",
       "url": "_framework\/vagtplanen.Client.pdb"
     },
     {
@@ -1729,7 +1729,7 @@
       "url": "_framework\/dotnet.5.0.12.js.gz"
     },
     {
-      "hash": "sha256-n8Hyo0waCPQ3btXlvBSv+CDs6DAlczFlvhyvJJNw6t0=",
+      "hash": "sha256-cU9FEcm8INB7jIGpC9B6+dlf9DK7wG\/maAQ29Ha8vig=",
       "url": "_framework\/vagtplanen.Shared.dll.gz"
     },
     {
@@ -1805,5 +1805,5 @@
       "url": "vagtplanen.Client.bundle.scp.css"
     }
   ],
-  "version": "ro3Y3CWi"
+  "version": "xpnIJMXk"
 };

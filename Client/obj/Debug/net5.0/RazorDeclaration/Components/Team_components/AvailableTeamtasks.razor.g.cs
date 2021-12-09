@@ -96,6 +96,13 @@ using Radzen.Blazor;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Team_components/AvailableTeamtasks.razor"
+using vagtplanen.Shared.Models;
+
+#line default
+#line hidden
+#nullable disable
     public partial class AvailableTeamtasks : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -104,18 +111,22 @@ using Radzen.Blazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 36 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Team_components/AvailableTeamtasks.razor"
+#line 44 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Team_components/AvailableTeamtasks.razor"
        
-
-    public Shift[] shifts;
+    public List<TeamTask> tasks = new();
+    public RadzenDataGrid<TeamTask> grid;
+    public TeamTask takenTask = new();
+    public TaskClass task = new();
 
     protected async override Task OnInitializedAsync()
     {
-        shifts = await Http.GetFromJsonAsync<Shift[]>("api/shift");
+        tasks = await Http.GetFromJsonAsync<List<TeamTask>>("api/teamtask");
     }
 
     [Parameter]
     public EventCallback<bool> OnClose { get; set; }
+
+    [Parameter] public Team tea { get; set; }
 
     private Task ModalCancel()
     {
@@ -125,6 +136,15 @@ using Radzen.Blazor;
     private Task ModalOk()
     {
         return OnClose.InvokeAsync(true);
+    }
+
+    async void OnTake(TeamTask task)
+    {
+        task.taken = true;
+        takenTask = task;
+        takenTask.team = tea;
+        await Http.PostAsJsonAsync($"api/method/assignteamtask", takenTask);
+        await grid.Reload();
     }
 
 #line default
