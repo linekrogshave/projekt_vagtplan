@@ -74,6 +74,7 @@
                         <div>Her kan du oprette kuponer</div>
                     </div>
                     <div class="col-md-6">
+                        <button class="btn btn-success" @onclick="OpenSeeCouponsDialog">Se kuponer</button>
                         <button class="btn btn-success" @onclick="OpenCreateCouponDialog">Opret kuponer</button>
                     </div>
                 </div>
@@ -148,6 +149,10 @@
 @if (CreateCouponDialogOpen)
 {
     <CreateCoupon OnClose="@OnCreateCouponDialogClose"></CreateCoupon>
+}
+@if (SeeCouponsDialogOpen)
+{
+    <SeeCoupons OnClose="@OnSeeCouponsDialogClose"></SeeCoupons>
 }
 
 @if (CoordinatorInfoDialogOpen)
@@ -332,6 +337,20 @@
     public void OnCoordinatorInfoDialogClose(bool accepted)
     {
         CoordinatorInfoDialogOpen = false;
+        StateHasChanged();
+    }
+    // Kode til SeeCoupons Modal Dialog
+    public bool SeeCouponsDialogOpen { get; set; }
+
+    public void OpenSeeCouponsDialog()
+    {
+        SeeCouponsDialogOpen = true;
+        StateHasChanged();
+    }
+
+    public void OnSeeCouponsDialogClose(bool accepted)
+    {
+        SeeCouponsDialogOpen = false;
         StateHasChanged();
     }
 

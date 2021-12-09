@@ -8,12 +8,7 @@
                 <button type="button" class="close" @onclick="@ModalCancel">&times;</button>
             </div>
             <div class="modal-body">
-                @if (volunteers == null)
-                {
-                    <p><em>Loading...</em></p>
-                }
-                else
-                {
+             
                     <EditForm Model="@create">
                         <DataAnnotationsValidator />
                         <ValidationSummary />

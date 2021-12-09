@@ -973,7 +973,11 @@
           "System.Threading": "4.0.11"
         }
       },
-      "System.Net.Http.Json/5.0.0": {},
+      "System.Net.Http.Json/5.0.0": {
+        "compile": {
+          "lib/net5.0/System.Net.Http.Json.dll": {}
+        }
+      },
       "System.ObjectModel/4.0.12": {
         "dependencies": {
           "System.Collections": "4.0.11",
