@@ -55,22 +55,22 @@ namespace vagtplanen.Server.Services
             }
         }
 
-        public Shift Create(Shift obj)
-        {
-            using (var conn = OpenConnection(_connectionString))
-            {
-                var query = @"CALL add_shift(@start_t, @end_t, @taskid)";
-                var values = new
-                {
-                    start_t = obj.start_time,
-                    end_t = obj.end_time,
-                    taskid = obj.task.task_id
-                };
+        //public Shift Create(Shift obj)
+        //{
+        //    using (var conn = OpenConnection(_connectionString))
+        //    {
+        //        var query = @"CALL add_shift(@start_t, @end_t, @taskid)";
+        //        var values = new
+        //        {
+        //            start_t = obj.start_time,
+        //            end_t = obj.end_time,
+        //            taskid = obj.task.task_id
+        //        };
 
-                conn.ExecuteAsync(query, values);
-                return obj;
-            }
-        }
+        //        conn.ExecuteAsync(query, values);
+        //        return obj;
+        //    }
+        //}
 
         //public Shift Update(Shift obj)
         //{

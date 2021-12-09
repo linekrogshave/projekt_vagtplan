@@ -65,21 +65,24 @@ namespace vagtplanen.Server.Services
             return listen;
         }
 
-        public TaskClass Create(TaskClass obj)
+        public TaskClass Create(TaskClass task)
         {
             using (var conn = OpenConnection(_connectionString))
             {
 
-                var query = @"CALL add_task(@description)";
+                var query = @"CALL add_task(@start_t, @end_t, @description, @number_of_shifts)";
 
                 var values = new
                 {
-                    description = obj.description
+                    start_t = task.shifts.First().start_time,
+                    end_t = task.shifts.First().end_time,
+                    description = task.description,
+                    number_of_shifts = task.number_of_shifts
                 };
 
                 conn.Execute(query, values);
 
-                return obj;
+                return task;
             }
         }
 
