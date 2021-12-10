@@ -1,35 +1,18 @@
 ﻿<Properties StartupConfiguration="{756938E9-D97A-47CB-8B33-97138F273F9E}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Client/Pages/VolunteerPage.razor">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../../usr/local/share/dotnet/sdk/6.0.100/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.targets">
     <Files>
       <File FileName="Client/Components/Volunteer_components/VolunteerInfo.razor" Line="66" Column="27" />
       <File FileName="Client/wwwroot/css/app.css" />
       <File FileName="Client/Pages/TeamPage.razor" />
-      <File FileName="Client/Components/Volunteer_components/ShiftsScheme.razor" Line="13" Column="39" />
-      <File FileName="Client/Pages/VolunteerPage.razor" Line="218" Column="27" />
+      <File FileName="Client/Components/Volunteer_components/ShiftsScheme.razor" />
+      <File FileName="Client/Pages/VolunteerPage.razor" />
+      <File FileName="../../../../../usr/local/share/dotnet/sdk/6.0.100/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.targets" Line="156" Column="9" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="vagtplanen" expanded="True">
-            <Node name="vagtplanen.Client" expanded="True">
-              <Node name="Components" expanded="True">
-                <Node name="Volunteer_components" expanded="True" />
-              </Node>
-              <Node name="Pages" expanded="True">
-                <Node name="VolunteerPage.razor" selected="True" />
-              </Node>
-              <Node name="Properties" expanded="True" />
-              <Node name="wwwroot" expanded="True">
-                <Node name="css" expanded="True" />
-              </Node>
-            </Node>
-            <Node name="vagtplanen.Server" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Services" expanded="True" />
-            </Node>
-            <Node name="vagtplanen.Shared" expanded="True">
-              <Node name="Models" expanded="True" />
-            </Node>
+            <Node name="vagtplanen.Server" selected="True" />
           </Node>
         </State>
       </Pad>
