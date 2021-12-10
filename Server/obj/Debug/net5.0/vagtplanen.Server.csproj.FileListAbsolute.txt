@@ -1,3 +1,4 @@
+/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/vagtplanen.Client.StaticWebAssets.xml
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/appsettings.Development.json
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/appsettings.json
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/BlazorDebugProxy/BrowserDebugHost.dll
@@ -9,7 +10,6 @@
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/BlazorDebugProxy/Mono.Cecil.Pdb.dll
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/BlazorDebugProxy/Mono.Cecil.Rocks.dll
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/BlazorDebugProxy/Newtonsoft.Json.dll
-/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/vagtplanen.Client.StaticWebAssets.xml
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/vagtplanen.Server.StaticWebAssets.xml
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/vagtplanen.Server.deps.json
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/bin/Debug/net5.0/vagtplanen.Server.runtimeconfig.json

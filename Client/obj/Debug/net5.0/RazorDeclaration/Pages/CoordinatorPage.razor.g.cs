@@ -249,7 +249,6 @@ using vagtplanen.Client.Components.Coordinator_components;
     public void Reload()
     {
         uriHelper.NavigateTo(uriHelper.Uri, forceLoad: true);
-        coor = null;
     }
 
 #line default

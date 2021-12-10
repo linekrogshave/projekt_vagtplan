@@ -28,16 +28,14 @@
             <RadzenCard class="w-7">
                 <div class="row">
                     <div class="col-md-10">
-                        <b>Ledige vagter:</b>
-                        <div>Her kan du ser tilgængelige ledige vagter</div>
+                        <b>Se din data:</b>
+                        <div>Se og ændre info vedrørende dig</div>
                     </div>
                     <div class="col-md-6">
                         <button class="btn btn-success" @onclick="() => OpenTeamInfoDialog()">Se</button>
                     </div>
                 </div>
             </RadzenCard>
-
-
         </div>
     </RadzenCard>
 
@@ -61,28 +59,18 @@
             </RadzenDataGrid>
         }
     </div>
-
-    @*<RadzenDataGrid AllowFiltering="true" AllowPaging="true" AllowSorting="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
-                        Data="@(tea.teamtasks)" TItem="vagtplanen.Shared.Models.Task" Style="width:922px">
-            <Columns>
-                <RadzenDataGridColumn TItem="Shift" Property="description" Title="Beskrivelse" />
-                <RadzenDataGridColumn TItem="Shift" Property="start_time" Title="Start tidspunkt" />
-                <RadzenDataGridColumn TItem="Shift" Property="end_time" Title="Slut tidspunkt" />
-                <RadzenDataGridColumn TItem="Shift" Property="job.area" Title="Jobområde" />
-            </Columns>
-        </RadzenDataGrid>*@
 </EditForm>
 
 
 
 @if (AvailableTeamtasksDialogOpen)
 {
-    <AvailableTeamtasks tea="@tea" OnClose="@OnAvailableTeamtasksDialogClose"></AvailableTeamtasks>
+    <AvailableTeamtasks tea="@tea" OnClose="@((args)=> OnAvailableTeamtasksDialogClose(args.Item1,args.Item2))"></AvailableTeamtasks>
 }
 
 @if (TeamInfoDialogOpen)
 {
-    <TeamInfo OnClose="@OnTeamInfoDialogClose"></TeamInfo>
+    <TeamInfo tea="@tea" OnClose="@OnTeamInfoDialogClose"></TeamInfo>
 }
 
 
@@ -90,7 +78,7 @@
 @code {
 
     [Parameter] public Team tea { get; set; }
-     RadzenDataGrid<TeamTask> grid;
+    RadzenDataGrid<TeamTask> grid;
     public List<TeamTask> teamtask;
 
     protected override async Task OnInitializedAsync()
@@ -108,8 +96,11 @@
         StateHasChanged();
     }
 
-    public void OnAvailableTeamtasksDialogClose(bool accepted)
+    public void OnAvailableTeamtasksDialogClose(bool accepted, TeamTask task)
     {
+        teamtask.Add(task);
+        tea.teamtasks.Add(task);
+        grid.Reload();
         AvailableTeamtasksDialogOpen = false;
         StateHasChanged();
     }
@@ -128,18 +119,18 @@
         TeamInfoDialogOpen = false;
         StateHasChanged();
     }
-     public async void OnRelease(TeamTask tt)
+    public async void OnRelease(TeamTask tt)
     {
         teamtask.Remove(tt);
-        await Http.PostAsJsonAsync<TeamTask>($"api/method/deassignteamtask/{tea.team_id}/{tt.teamtask_id}", tt);
+        tt.team = tea;
+        await Http.PostAsJsonAsync<TeamTask>("api/method/deassignteamtask", tt);
         tt.taken = false;
         tt.team = new Team();
         await grid.Reload();
     }
-     public void ReloadPage()
+    public void ReloadPage()
     {
         uriHelper.NavigateTo(uriHelper.Uri, forceLoad: true);
-        tea = null;
     }
 
 }

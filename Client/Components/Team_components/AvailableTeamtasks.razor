@@ -17,7 +17,7 @@
                 {
             <EditForm Model="@tea">
                 <RadzenDataGrid AllowFiltering="true" AllowPaging="true" AllowSorting="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
-                                @ref="grid" Data="@tasks.Where(x => x.locked == false && x.taken == false)" TItem="TeamTask">
+                                @ref="grid" Data="@tasks.Where(x => x.locked == false && x.taken == false && x.end_time.Ticks > DateTime.Now.Ticks)" TItem="TeamTask">
                     <Columns>
                         <RadzenDataGridColumn TItem="TeamTask" Property="description" Title="Beskrivelse" />
                         <RadzenDataGridColumn TItem="TeamTask" Property="start_time" Title="Start tidspunkt" />
@@ -53,18 +53,20 @@
     }
 
     [Parameter]
-    public EventCallback<bool> OnClose { get; set; }
+    public EventCallback<(bool, TeamTask)> OnClose { get; set; }
 
-    [Parameter] public Team tea { get; set; }
+    [Parameter]
+    public Team tea { get; set; }
+
 
     private Task ModalCancel()
     {
-        return OnClose.InvokeAsync(false);
+        return OnClose.InvokeAsync((false, new()));
     }
 
     private Task ModalOk()
     {
-        return OnClose.InvokeAsync(true);
+        return OnClose.InvokeAsync((true, takenTask));
     }
 
     async void OnTake(TeamTask task)

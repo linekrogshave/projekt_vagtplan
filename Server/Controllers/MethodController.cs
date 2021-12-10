@@ -104,7 +104,7 @@ namespace vagtplanen.Server.Controllers
         {
             try
             {
-                await _service.AssignTeamtask(teamtask);
+                await _service.DeassignTeamtask(teamtask);
             }
             catch (Exception ex)
             {

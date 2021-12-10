@@ -124,18 +124,20 @@ using vagtplanen.Shared.Models;
     }
 
     [Parameter]
-    public EventCallback<bool> OnClose { get; set; }
+    public EventCallback<(bool, TeamTask)> OnClose { get; set; }
 
-    [Parameter] public Team tea { get; set; }
+    [Parameter]
+    public Team tea { get; set; }
+
 
     private Task ModalCancel()
     {
-        return OnClose.InvokeAsync(false);
+        return OnClose.InvokeAsync((false, new()));
     }
 
     private Task ModalOk()
     {
-        return OnClose.InvokeAsync(true);
+        return OnClose.InvokeAsync((true, takenTask));
     }
 
     async void OnTake(TeamTask task)

@@ -225,7 +225,6 @@ using vagtplanen.Client.Components.Volunteer_components;
     public void ReloadPage()
     {
         uriHelper.NavigateTo(uriHelper.Uri, forceLoad: true);
-        vol = null;
     }
 
     
