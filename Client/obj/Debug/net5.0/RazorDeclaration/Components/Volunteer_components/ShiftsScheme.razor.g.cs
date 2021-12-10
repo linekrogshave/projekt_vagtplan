@@ -7,7 +7,6 @@
 namespace vagtplanen.Client.Components.Volunteer_components
 {
     #line hidden
-    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
@@ -96,6 +95,20 @@ using Radzen.Blazor;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Client/Components/Volunteer_components/ShiftsScheme.razor"
+using System;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Client/Components/Volunteer_components/ShiftsScheme.razor"
+using System.Globalization;
+
+#line default
+#line hidden
+#nullable disable
     public partial class ShiftsScheme : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -104,31 +117,34 @@ using Radzen.Blazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 36 "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Client/Components/Volunteer_components/ShiftsScheme.razor"
-       
+#line 45 "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Client/Components/Volunteer_components/ShiftsScheme.razor"
+           
 
-    [Parameter]
-    public Volunteer vol { get; set; }
+        [Parameter]
+        public Volunteer vol { get; set; }
 
-    public Shift[] shifts;
+        public Shift[] shifts;
 
-    protected async override Task OnInitializedAsync()
-    {
-        shifts = await Http.GetFromJsonAsync<Shift[]>("api/shift");
-    }
+        TextInfo t = new CultureInfo("en-US", false).TextInfo;
 
-    [Parameter]
-    public EventCallback<bool> OnClose { get; set; }
+        protected async override Task OnInitializedAsync()
+        {
+            shifts = await Http.GetFromJsonAsync<Shift[]>("api/shift");
+        }
 
-    private Task ModalCancel()
-    {
-        return OnClose.InvokeAsync(false);
-    }
+        [Parameter]
+        public EventCallback<bool> OnClose { get; set; }
 
-    private Task ModalOk()
-    {
-        return OnClose.InvokeAsync(true);
-    }
+        private Task ModalCancel()
+        {
+            return OnClose.InvokeAsync(false);
+        }
+
+        private Task ModalOk()
+        {
+            return OnClose.InvokeAsync(true);
+        }
+    
 
 #line default
 #line hidden
