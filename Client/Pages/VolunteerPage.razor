@@ -215,7 +215,8 @@
     public async void OnRelease(Shift s)
     {
         shifts.Remove(s);
-        await Http.PostAsJsonAsync<Shift>($"api/method/deassignshift/{vol.volunteer_id}/{s.shift_id}", s);
+        s.volunteer = vol;
+        await Http.PostAsJsonAsync<Shift>($"api/method/deassignshift", s);
         s.taken = false;
         s.volunteer = new Volunteer();
         await grid.Reload();

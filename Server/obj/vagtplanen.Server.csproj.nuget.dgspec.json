@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Server/vagtplanen.Server.csproj": {}
+    "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/vagtplanen.Server.csproj": {}
   },
   "projects": {
-    "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Client/vagtplanen.Client.csproj": {
+    "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/vagtplanen.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Client/vagtplanen.Client.csproj",
+        "projectUniqueName": "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/vagtplanen.Client.csproj",
         "projectName": "vagtplanen.Client",
-        "projectPath": "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Client/vagtplanen.Client.csproj",
-        "packagesPath": "/Users/andreasskovaagaard/.nuget/packages/",
-        "outputPath": "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Client/obj/",
+        "projectPath": "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/vagtplanen.Client.csproj",
+        "packagesPath": "/Users/nicolaiskat/.nuget/packages/",
+        "outputPath": "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/andreasskovaagaard/.config/NuGet/NuGet.Config"
+          "/Users/nicolaiskat/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -26,8 +26,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Shared/vagtplanen.Shared.csproj": {
-                "projectPath": "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Shared/vagtplanen.Shared.csproj"
+              "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/vagtplanen.Shared.csproj": {
+                "projectPath": "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/vagtplanen.Shared.csproj"
               }
             }
           }
@@ -85,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.403/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100/RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -94,17 +94,17 @@
         }
       }
     },
-    "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Server/vagtplanen.Server.csproj": {
+    "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/vagtplanen.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Server/vagtplanen.Server.csproj",
+        "projectUniqueName": "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/vagtplanen.Server.csproj",
         "projectName": "vagtplanen.Server",
-        "projectPath": "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Server/vagtplanen.Server.csproj",
-        "packagesPath": "/Users/andreasskovaagaard/.nuget/packages/",
-        "outputPath": "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Server/obj/",
+        "projectPath": "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/vagtplanen.Server.csproj",
+        "packagesPath": "/Users/nicolaiskat/.nuget/packages/",
+        "outputPath": "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/andreasskovaagaard/.config/NuGet/NuGet.Config"
+          "/Users/nicolaiskat/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -116,11 +116,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Client/vagtplanen.Client.csproj": {
-                "projectPath": "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Client/vagtplanen.Client.csproj"
+              "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/vagtplanen.Client.csproj": {
+                "projectPath": "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/vagtplanen.Client.csproj"
               },
-              "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Shared/vagtplanen.Shared.csproj": {
-                "projectPath": "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Shared/vagtplanen.Shared.csproj"
+              "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/vagtplanen.Shared.csproj": {
+                "projectPath": "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/vagtplanen.Shared.csproj"
               }
             }
           }
@@ -182,21 +182,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.403/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Shared/vagtplanen.Shared.csproj": {
+    "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/vagtplanen.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Shared/vagtplanen.Shared.csproj",
+        "projectUniqueName": "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/vagtplanen.Shared.csproj",
         "projectName": "vagtplanen.Shared",
-        "projectPath": "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Shared/vagtplanen.Shared.csproj",
-        "packagesPath": "/Users/andreasskovaagaard/.nuget/packages/",
-        "outputPath": "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Shared/obj/",
+        "projectPath": "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/vagtplanen.Shared.csproj",
+        "packagesPath": "/Users/nicolaiskat/.nuget/packages/",
+        "outputPath": "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/andreasskovaagaard/.config/NuGet/NuGet.Config"
+          "/Users/nicolaiskat/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -234,7 +234,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.403/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NvSd9GiUkS4YR85sCZJJ3lSfXWLOf1fRVphfc6j28uwdajAcCfIUJZ5PcO+Enjrwks0eQt/9e3tpMRwZ18ch3g==",
+  "dgSpecHash": "iRVIfzC0sNPGg0kBkHmQKevH0awTuURo5uVwm+cszsaYLihgiWdjR24MpaXkLYMD6LvJj6zj/8iaEcFl4eJ2hg==",
   "success": true,
-  "projectFilePath": "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Shared/vagtplanen.Shared.csproj",
+  "projectFilePath": "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/vagtplanen.Shared.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
