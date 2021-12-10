@@ -1,6 +1,13 @@
 ﻿<StaticWebAssets Version="1.0">
+<<<<<<< HEAD
   <ContentRoot BasePath="/" Path="/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/bin/Debug/net5.0/wwwroot/" />
   <ContentRoot BasePath="/" Path="/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/obj/Debug/net5.0/scopedcss/bundle/" />
   <ContentRoot BasePath="_content/BlazorPro.Spinkit" Path="/Users/nicolaiskat/.nuget/packages/blazorpro.spinkit/1.2.0/build/../staticwebassets/" />
   <ContentRoot BasePath="_content/Radzen.Blazor" Path="/Users/nicolaiskat/.nuget/packages/radzen.blazor/3.13.2/build/../staticwebassets/" />
+=======
+  <ContentRoot BasePath="/" Path="C:\Users\sisse\Desktop\vagtplanopgave\Client\bin\Debug\net5.0\wwwroot\" />
+  <ContentRoot BasePath="/" Path="C:\Users\sisse\Desktop\vagtplanopgave\Client\obj\Debug\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="_content/BlazorPro.Spinkit" Path="C:\Users\sisse\.nuget\packages\blazorpro.spinkit\1.2.0\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Radzen.Blazor" Path="C:\Users\sisse\.nuget\packages\radzen.blazor\3.13.2\build\..\staticwebassets\" />
+>>>>>>> 7a1fe0ccc5ac9ec3aa3a2ca83a6a6e0772a01c6c
 </StaticWebAssets>

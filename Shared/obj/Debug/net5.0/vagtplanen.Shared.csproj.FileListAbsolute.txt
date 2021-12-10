@@ -64,4 +64,18 @@ C:/Users/sisse/Desktop/Eksamensprojekt/Shared/obj/Debug/net5.0/vagtplanen.Shared
 /Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Shared/obj/Debug/net5.0/vagtplanen.Shared.dll
 /Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Shared/obj/Debug/net5.0/ref/vagtplanen.Shared.dll
 /Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Shared/obj/Debug/net5.0/vagtplanen.Shared.pdb
+<<<<<<< HEAD
 /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/obj/Debug/net5.0/vagtplanen.Shared.csproj.AssemblyReference.cache
+=======
+C:\Users\sisse\Desktop\vagtplanopgave\Shared\bin\Debug\net5.0\vagtplanen.Shared.deps.json
+C:\Users\sisse\Desktop\vagtplanopgave\Shared\bin\Debug\net5.0\vagtplanen.Shared.dll
+C:\Users\sisse\Desktop\vagtplanopgave\Shared\bin\Debug\net5.0\ref\vagtplanen.Shared.dll
+C:\Users\sisse\Desktop\vagtplanopgave\Shared\bin\Debug\net5.0\vagtplanen.Shared.pdb
+C:\Users\sisse\Desktop\vagtplanopgave\Shared\obj\Debug\net5.0\vagtplanen.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sisse\Desktop\vagtplanopgave\Shared\obj\Debug\net5.0\vagtplanen.Shared.AssemblyInfoInputs.cache
+C:\Users\sisse\Desktop\vagtplanopgave\Shared\obj\Debug\net5.0\vagtplanen.Shared.AssemblyInfo.cs
+C:\Users\sisse\Desktop\vagtplanopgave\Shared\obj\Debug\net5.0\vagtplanen.Shared.csproj.CoreCompileInputs.cache
+C:\Users\sisse\Desktop\vagtplanopgave\Shared\obj\Debug\net5.0\vagtplanen.Shared.dll
+C:\Users\sisse\Desktop\vagtplanopgave\Shared\obj\Debug\net5.0\ref\vagtplanen.Shared.dll
+C:\Users\sisse\Desktop\vagtplanopgave\Shared\obj\Debug\net5.0\vagtplanen.Shared.pdb
+>>>>>>> 7a1fe0ccc5ac9ec3aa3a2ca83a6a6e0772a01c6c

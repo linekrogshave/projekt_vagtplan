@@ -10,4 +10,8 @@ build_property.EnableSingleFileAnalyzer =
 build_property.EnableTrimAnalyzer = true
 build_property.IncludeAllContentForSelfExtract = 
 build_property.RootNamespace = vagtplanen.Client
+<<<<<<< HEAD
 build_property.ProjectDir = /Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/
+=======
+build_property.ProjectDir = C:\Users\sisse\Desktop\vagtplanopgave\Client\
+>>>>>>> 7a1fe0ccc5ac9ec3aa3a2ca83a6a6e0772a01c6c

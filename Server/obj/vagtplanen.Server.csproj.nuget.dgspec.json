@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/vagtplanen.Server.csproj": {}
   },
   "projects": {
@@ -15,19 +16,42 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/nicolaiskat/.config/NuGet/NuGet.Config"
+=======
+    "C:\\Users\\sisse\\Desktop\\vagtplanopgave\\Server\\vagtplanen.Server.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\sisse\\Desktop\\vagtplanopgave\\Client\\vagtplanen.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sisse\\Desktop\\vagtplanopgave\\Client\\vagtplanen.Client.csproj",
+        "projectName": "vagtplanen.Client",
+        "projectPath": "C:\\Users\\sisse\\Desktop\\vagtplanopgave\\Client\\vagtplanen.Client.csproj",
+        "packagesPath": "C:\\Users\\sisse\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sisse\\Desktop\\vagtplanopgave\\Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\sisse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>>>>> 7a1fe0ccc5ac9ec3aa3a2ca83a6a6e0772a01c6c
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+<<<<<<< HEAD
               "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/vagtplanen.Shared.csproj": {
                 "projectPath": "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/vagtplanen.Shared.csproj"
+=======
+              "C:\\Users\\sisse\\Desktop\\vagtplanopgave\\Shared\\vagtplanen.Shared.csproj": {
+                "projectPath": "C:\\Users\\sisse\\Desktop\\vagtplanopgave\\Shared\\vagtplanen.Shared.csproj"
+>>>>>>> 7a1fe0ccc5ac9ec3aa3a2ca83a6a6e0772a01c6c
               }
             }
           }
@@ -77,7 +101,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.browser-wasm",
-              "version": "[5.0.12, 5.0.12]"
+              "version": "[5.0.8, 5.0.8]"
             }
           ],
           "frameworkReferences": {
@@ -85,7 +109,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100/RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.7.21379.14\\RuntimeIdentifierGraph.json"
+>>>>>>> 7a1fe0ccc5ac9ec3aa3a2ca83a6a6e0772a01c6c
         }
       },
       "runtimes": {
@@ -94,6 +122,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Server/vagtplanen.Server.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -105,22 +134,45 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/nicolaiskat/.config/NuGet/NuGet.Config"
+=======
+    "C:\\Users\\sisse\\Desktop\\vagtplanopgave\\Server\\vagtplanen.Server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sisse\\Desktop\\vagtplanopgave\\Server\\vagtplanen.Server.csproj",
+        "projectName": "vagtplanen.Server",
+        "projectPath": "C:\\Users\\sisse\\Desktop\\vagtplanopgave\\Server\\vagtplanen.Server.csproj",
+        "packagesPath": "C:\\Users\\sisse\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sisse\\Desktop\\vagtplanopgave\\Server\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\sisse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>>>>> 7a1fe0ccc5ac9ec3aa3a2ca83a6a6e0772a01c6c
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+<<<<<<< HEAD
               "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/vagtplanen.Client.csproj": {
                 "projectPath": "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/vagtplanen.Client.csproj"
               },
               "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/vagtplanen.Shared.csproj": {
                 "projectPath": "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/vagtplanen.Shared.csproj"
+=======
+              "C:\\Users\\sisse\\Desktop\\vagtplanopgave\\Client\\vagtplanen.Client.csproj": {
+                "projectPath": "C:\\Users\\sisse\\Desktop\\vagtplanopgave\\Client\\vagtplanen.Client.csproj"
+              },
+              "C:\\Users\\sisse\\Desktop\\vagtplanopgave\\Shared\\vagtplanen.Shared.csproj": {
+                "projectPath": "C:\\Users\\sisse\\Desktop\\vagtplanopgave\\Shared\\vagtplanen.Shared.csproj"
+>>>>>>> 7a1fe0ccc5ac9ec3aa3a2ca83a6a6e0772a01c6c
               }
             }
           }
@@ -174,6 +226,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.8, 5.0.8]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -182,6 +240,7 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100/RuntimeIdentifierGraph.json"
         }
       }
@@ -197,11 +256,30 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/nicolaiskat/.config/NuGet/NuGet.Config"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.7.21379.14\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\sisse\\Desktop\\vagtplanopgave\\Shared\\vagtplanen.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sisse\\Desktop\\vagtplanopgave\\Shared\\vagtplanen.Shared.csproj",
+        "projectName": "vagtplanen.Shared",
+        "projectPath": "C:\\Users\\sisse\\Desktop\\vagtplanopgave\\Shared\\vagtplanen.Shared.csproj",
+        "packagesPath": "C:\\Users\\sisse\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sisse\\Desktop\\vagtplanopgave\\Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\sisse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>>>>> 7a1fe0ccc5ac9ec3aa3a2ca83a6a6e0772a01c6c
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -234,7 +312,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100/RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.7.21379.14\\RuntimeIdentifierGraph.json"
+>>>>>>> 7a1fe0ccc5ac9ec3aa3a2ca83a6a6e0772a01c6c
         }
       }
     }

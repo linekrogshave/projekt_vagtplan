@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "iRVIfzC0sNPGg0kBkHmQKevH0awTuURo5uVwm+cszsaYLihgiWdjR24MpaXkLYMD6LvJj6zj/8iaEcFl4eJ2hg==",
   "success": true,
   "projectFilePath": "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Shared/vagtplanen.Shared.csproj",
+=======
+  "dgSpecHash": "biBtg8KHaJ8XreAySp1Ln3SbLcGMYHWP5xzRvVIiatQ2QobHO6yHNdPcju04cL/UkMG/ptPWUeI3A19NIOkX2g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sisse\\Desktop\\vagtplanopgave\\Shared\\vagtplanen.Shared.csproj",
+>>>>>>> 7a1fe0ccc5ac9ec3aa3a2ca83a6a6e0772a01c6c
   "expectedPackageFiles": [],
   "logs": []
 }
