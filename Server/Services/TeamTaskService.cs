@@ -35,7 +35,7 @@ namespace vagtplanen.Server.Services
                 query,
                 (tt, t) =>
                 {
-                    tt.team = new();
+                    if (t == null) { t = new(); };
                     tt.team = t;
 
                     return tt;

@@ -4230,35 +4230,37 @@
     ]
   },
   "packageFolders": {
-    "/Users/andreasskovaagaard/.nuget/packages/": {}
+    "C:\\Users\\sisse\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Server/vagtplanen.Server.csproj",
+      "projectUniqueName": "C:\\Users\\sisse\\Desktop\\vagtplanopgave\\Server\\vagtplanen.Server.csproj",
       "projectName": "vagtplanen.Server",
-      "projectPath": "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Server/vagtplanen.Server.csproj",
-      "packagesPath": "/Users/andreasskovaagaard/.nuget/packages/",
-      "outputPath": "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Server/obj/",
+      "projectPath": "C:\\Users\\sisse\\Desktop\\vagtplanopgave\\Server\\vagtplanen.Server.csproj",
+      "packagesPath": "C:\\Users\\sisse\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sisse\\Desktop\\vagtplanopgave\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/andreasskovaagaard/.config/NuGet/NuGet.Config"
+        "C:\\Users\\sisse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Client/vagtplanen.Client.csproj": {
-              "projectPath": "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Client/vagtplanen.Client.csproj"
+            "C:\\Users\\sisse\\Desktop\\vagtplanopgave\\Client\\vagtplanen.Client.csproj": {
+              "projectPath": "C:\\Users\\sisse\\Desktop\\vagtplanopgave\\Client\\vagtplanen.Client.csproj"
             },
-            "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Shared/vagtplanen.Shared.csproj": {
-              "projectPath": "/Users/andreasskovaagaard/Dropbox/EAAA/IT-Arkitektur/Kode/2. Semester Eksamen/line-vagtplan/projekt_vagtplan/Shared/vagtplanen.Shared.csproj"
+            "C:\\Users\\sisse\\Desktop\\vagtplanopgave\\Shared\\vagtplanen.Shared.csproj": {
+              "projectPath": "C:\\Users\\sisse\\Desktop\\vagtplanopgave\\Shared\\vagtplanen.Shared.csproj"
             }
           }
         }
@@ -4312,6 +4314,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[5.0.8, 5.0.8]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -4320,7 +4328,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.403/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.7.21379.14\\RuntimeIdentifierGraph.json"
       }
     }
   }
