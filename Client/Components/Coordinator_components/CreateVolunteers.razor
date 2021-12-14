@@ -1,4 +1,6 @@
 ﻿@inject HttpClient Http
+@inject IJSRuntime JsRuntime
+
 
 <div class="modal fade show" id="myModal" style="display:block;" aria-modal="true" role="dialog">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -8,75 +10,75 @@
                 <button type="button" class="close" @onclick="@ModalCancel">&times;</button>
             </div>
             <div class="modal-body">
-             
-                    <EditForm Model="@create">
-                        <DataAnnotationsValidator />
-                        <ValidationSummary />
-                        <div class="form-group">
+
+                <EditForm Model="@create">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
+                    <div class="form-group">
+                        <div>
+                            <label>Indtast fornavn:</label>
                             <div>
-                                <label>Indtast fornavn:</label>
-                                <div>
-                                    <InputText @bind-Value="@create.first_name" />
-                                </div>
+                                <InputText @bind-Value="@create.first_name" />
                             </div>
                         </div>
-                        <div class="form-group">
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <label>Indtast efternavn:</label>
                             <div>
-                                <label>Indtast efternavn:</label>
-                                <div>
-                                    <InputText @bind-Value="@create.last_name" />
-                                </div>
+                                <InputText @bind-Value="@create.last_name" />
                             </div>
                         </div>
-                        <div class="form-group">
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <label>Indtast mobilnummer:</label>
                             <div>
-                                <label>Indtast mobilnummer:</label>
-                                <div>
-                                    <InputText @bind-Value="@create.mobile" />
-                                </div>
+                                <InputText @bind-Value="@create.mobile" />
                             </div>
                         </div>
-                        <div class="form-group">
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <label>Indtast email:</label>
                             <div>
-                                <label>Indtast email:</label>
-                                <div>
-                                    <InputText @bind-Value="@create.email" />
-                                </div>
+                                <InputText @bind-Value="@create.email" />
                             </div>
                         </div>
-                        <div class="form-group">
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <label>Indtast adresse:</label>
                             <div>
-                                <label>Indtast adresse:</label>
-                                <div>
-                                    <InputText @bind-Value="@create.address" />
-                                </div>
+                                <InputText @bind-Value="@create.address" />
                             </div>
                         </div>
-                        <div class="form-group">
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <label>Indtast køn:</label>
                             <div>
-                                <label>Indtast køn:</label>
-                                <div>
-                                    <InputText @bind-Value="@create.gender"/>
-                                </div>
+                                <InputText @bind-Value="@create.gender" />
                             </div>
                         </div>
-                        <div class="form-group">
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <label>Indtast cpr-nummer:</label>
                             <div>
-                                <label>Indtast cpr-nummer:</label>
-                                <div>
-                                    <InputText @bind-Value="@create.cpr" />
-                                </div>
+                                <InputText @bind-Value="@create.cpr" />
                             </div>
                         </div>
-                        <div class="form-group">
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <label>Indtast kode:</label>
                             <div>
-                                <label>Indtast kode:</label>
-                                <div>
-                                    <InputText @bind-Value="@create.password" />
-                                </div>
+                                <InputText @bind-Value="@create.password" />
                             </div>
                         </div>
-                    </EditForm>
+                    </div>
+                </EditForm>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" @onclick="@ModalOk">Opret</button>
@@ -100,6 +102,10 @@
     private async Task ModalOk()
     {
         await Http.PostAsJsonAsync("api/volunteer", create);
+
+        await JsRuntime.InvokeVoidAsync("alert", "Bekræftelse. Brugeren er oprettet.");
+
+
         await OnClose.InvokeAsync(true);
     }
 }

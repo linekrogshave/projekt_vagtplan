@@ -44,10 +44,24 @@
                 <div class="row">
                     <div class="col-md-10">
                         <b>Teams:</b>
-                        <div>Her kan du se, ændre og oprette teams i systemet</div>
+                        <div>Her kan du se og oprette teams i systemet</div>
                     </div>
                     <div class="col-md-6">
+                          <button class="btn btn-success" @onclick="OpenSeeTeamsDialog">Se teams</button>
                         <button class="btn btn-success" @onclick="OpenCreateTeamsDialog">Opret teams</button>
+                    </div>
+                </div>
+            </RadzenCard>
+
+             <RadzenCard class="w-7">
+                <div class="row">
+                    <div class="col-md-10">
+                        <b>Teamopgaver:</b>
+                        <div>Her kan du oprette teamopgaver</div>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-success" @onclick="OpenSeeTeamtaskDialog">Se teamopgaver</button>
+                        <button class="btn btn-success" @onclick="OpenCreateTeamtaskDialog">Opret teamopgaver</button>
                     </div>
                 </div>
             </RadzenCard>
@@ -104,9 +118,24 @@
 }
 
 @*TEAMS*@
+@if (SeeTeamsDialogOpen)
+{
+    <SeeTeams OnClose="@OnSeeTeamsDialogClose"></SeeTeams>
+}
 @if(CreateTeamsDialogOpen)
 {
     <CreateTeams OnClose="@OnCreateTeamsDialogClose"></CreateTeams>
+}
+
+@*TEAMTASK*@
+
+@if (SeeTeamtaskDialogOpen)
+{
+    <SeeTeamtask OnClose="@OnSeeTeamtaskDialogClose"></SeeTeamtask>
+}
+@if (CreateTeamtaskDialogOpen)
+{
+    <CreateTeamtask OnClose="@OnCreateTeamtaskDialogClose"></CreateTeamtask>
 }
 
 
@@ -208,6 +237,50 @@
         StateHasChanged();
     }
 
+     // Kode til SeeTeams Modal Dialog
+    public bool SeeTeamsDialogOpen { get; set; }
+
+    public void OpenSeeTeamsDialog()
+    {
+        SeeTeamsDialogOpen = true;
+        StateHasChanged();
+    }
+
+    public void OnSeeTeamsDialogClose(bool accepted)
+    {
+        SeeTeamsDialogOpen = false;
+        StateHasChanged();
+    }
+    
+    // Kode til CreateTeamtask Modal Dialog
+    public bool CreateTeamtaskDialogOpen { get; set; }
+
+    public void OpenCreateTeamtaskDialog()
+    {
+        CreateTeamtaskDialogOpen = true;
+        StateHasChanged();
+    }
+
+    public void OnCreateTeamtaskDialogClose(bool accepted)
+    {
+        CreateTeamtaskDialogOpen = false;
+        StateHasChanged();
+    }
+    
+    // Kode til SeeTeamtask Modal Dialog
+    public bool SeeTeamtaskDialogOpen { get; set; }
+
+    public void OpenSeeTeamtaskDialog()
+    {
+        SeeTeamtaskDialogOpen = true;
+        StateHasChanged();
+    }
+
+    public void OnSeeTeamtaskDialogClose(bool accepted)
+    {
+        SeeTeamtaskDialogOpen = false;
+        StateHasChanged();
+    }
 
     // Kode til CreateCoupon Modal Dialog
     public bool CreateCouponDialogOpen { get; set; }

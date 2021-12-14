@@ -104,10 +104,24 @@ using Radzen.Blazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 38 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/SeeVolunteers.razor"
-       
+#line 59 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/SeeVolunteers.razor"
+        public Volunteer[] volunteers;
 
-    public Volunteer[] volunteers;
+    private async void deleteControl(Volunteer vol)
+    {
+        await deleteVolunteer(vol);
+        uriHelper.NavigateTo(uriHelper.Uri);
+    }
+
+    protected async Task deleteVolunteer(Volunteer vol)
+    {
+        bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Er du sikker på, at du vil slette den frivilliges oplysninger?");
+        if (confirmed)
+        {
+            await Http.DeleteAsync($"api/volunteer/{vol.volunteer_id}");
+            await ModalOk();
+        }
+    }
 
     protected async override Task OnInitializedAsync()
     {
@@ -125,11 +139,13 @@ using Radzen.Blazor;
     private Task ModalOk()
     {
         return OnClose.InvokeAsync(true);
-    }
+    } 
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime JsRuntime { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager uriHelper { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }

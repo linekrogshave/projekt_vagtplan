@@ -1,19 +1,9 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Newtonsoft.Json.Serialization;
-using Microsoft.Extensions.FileProviders;
-using System.IO;
 using vagtplanen.Server.Services;
-using Radzen;
 
 namespace vagtplanen.Server
 {
@@ -41,10 +31,8 @@ namespace vagtplanen.Server
             services.AddSingleton<TeamTaskService>();
             services.AddSingleton<MethodService>();
 
-            services.AddControllersWithViews()
-                .AddNewtonsoftJson(options =>
-                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
-            ); services.AddRazorPages();
+            services.AddControllersWithViews();
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Threading.Tasks;
 using Dapper;
 using Microsoft.Extensions.Configuration;
 using Npgsql;
@@ -38,13 +36,8 @@ namespace vagtplanen.Server.Services
 
         public Coordinator Get(string e)
         {
-            using (var conn = OpenConnection(_connectionString))
-            {
-                var values = new { email = e };
-                var query = @"SELECT * FROM all_coordinators WHERE email = @email";
-                var result = conn.QueryFirstOrDefault<Coordinator>(query, values);
-                return result;
-            }
+            var result = Get().First(x => x.email == e);
+            return result;
         }
 
         public Coordinator Update(Coordinator obj)

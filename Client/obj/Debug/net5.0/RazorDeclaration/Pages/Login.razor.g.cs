@@ -136,7 +136,6 @@ using BlazorPro.Spinkit;
             int res = await Http.GetFromJsonAsync<int>($"api/method/login/{args.Username}/{args.Password}");
             if (res == 0)
             {
-
                 vol = await Http.GetFromJsonAsync<Volunteer>($"api/volunteer/{args.Username}");
                 page_access = vol.access;
                 isLoading = false;
@@ -152,7 +151,6 @@ using BlazorPro.Spinkit;
                 tea = await Http.GetFromJsonAsync<Team>($"api/team/{args.Username}");
                 page_access = tea.access;
                 isLoading = false;
-
             }
         }
         catch (Exception e)

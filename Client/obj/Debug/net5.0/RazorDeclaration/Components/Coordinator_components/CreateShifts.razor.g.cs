@@ -97,7 +97,7 @@ using Radzen.Blazor;
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/CreateShifts.razor"
+#line 3 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/CreateShifts.razor"
 using vagtplanen.Shared.Models;
 
 #line default
@@ -111,7 +111,7 @@ using vagtplanen.Shared.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 84 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/CreateShifts.razor"
+#line 85 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/CreateShifts.razor"
        
 
 
@@ -146,6 +146,10 @@ using vagtplanen.Shared.Models;
         createT.shifts.Add(createS);
 
         await Http.PostAsJsonAsync("api/taskClass", createT);
+
+        await JsRuntime.InvokeVoidAsync("alert", "Bekræftelse. Opgaven er oprettet.");
+        
+
         await OnClose.InvokeAsync(true);
     }
 
@@ -155,6 +159,7 @@ using vagtplanen.Shared.Models;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime JsRuntime { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }

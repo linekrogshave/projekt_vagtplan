@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Threading.Tasks;
 using Dapper;
 using Microsoft.Extensions.Configuration;
 using Npgsql;
@@ -64,7 +62,7 @@ namespace vagtplanen.Server.Services
                 var values = new
                 {
                     description = obj.description,
-                    contact_name = obj.people_needed,
+                    people_needed = obj.people_needed,
                     start_t = obj.start_time,
                     end_t = obj.end_time
                 };

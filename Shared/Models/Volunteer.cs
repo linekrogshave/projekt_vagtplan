@@ -9,6 +9,7 @@ public class Volunteer : User  {
         {
             double sum = 0;
             if (shifts != null)
+            {
                 foreach (Shift shift in shifts)
                 {
                     if (shift != null)
@@ -18,6 +19,7 @@ public class Volunteer : User  {
                     }
 
                 }
+            }
             return sum;
         }
     }

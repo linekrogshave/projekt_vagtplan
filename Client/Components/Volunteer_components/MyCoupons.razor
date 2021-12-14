@@ -1,4 +1,5 @@
 ﻿@inject HttpClient Http
+@inject IJSRuntime JsRuntime 
 
 <div class="modal fade show" id="myModal" style="display:block;" aria-modal="true" role="dialog">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -50,8 +51,12 @@
 
     async Task OnUse(Coupon c)
     {
-        vol.coupons.Remove(c);
-        await Http.PostAsJsonAsync($"api/method/usecoupon/{vol.volunteer_id}", c);
-        await grid.Reload();
+        bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Du er ved at bruge en af dine kuponer. Lad medarbejderen i boden trykke OK for at benytte din kupon.");
+        if (confirmed)
+        {
+            vol.coupons.Remove(c);
+            await Http.PostAsJsonAsync($"api/method/usecoupon/{vol.volunteer_id}", c);
+            await grid.Reload();
+        }
     }
 }

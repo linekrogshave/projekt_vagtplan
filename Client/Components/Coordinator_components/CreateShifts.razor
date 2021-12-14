@@ -1,4 +1,5 @@
 ﻿@inject HttpClient Http
+@inject IJSRuntime JsRuntime
 @using vagtplanen.Shared.Models
 
 <div class="modal fade show" id="myModal" style="display:block;" aria-modal="true" role="dialog">
@@ -9,70 +10,70 @@
                 <button type="button" class="close" @onclick="@ModalCancel">&times;</button>
             </div>
             <div class="modal-body">
-               
-                    <EditForm Model="@createT">
-                        <DataAnnotationsValidator />
-                        <ValidationSummary />
-                        <div class="form-group">
-                            <div>
-                                <label>Beskrivelse:</label>
-                                <div>
-                                    <InputText @bind-Value="@createT.description" />
-                                </div>
-                            </div>
-                        </div>
-                    </EditForm>
 
-                    <EditForm Model="@createS">
-                        <DataAnnotationsValidator />
-                        <ValidationSummary />
-                        <div class="form-group">
+                <EditForm Model="@createT">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
+                    <div class="form-group">
+                        <div>
+                            <label>Beskrivelse:</label>
                             <div>
-                                <label>Vagt startdato:</label>
-                                <div>
-                                    <input type="date" @bind="@startdate" />
-                                </div>
+                                <InputText @bind-Value="@createT.description" />
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label>Vagt starttid:</label>
-                            <div>
-                                <input type="time" @bind="@starttime" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div>
-                                <label>Vagt slutdato:</label>
-                                <div>
-                                    <input type="date" @bind="@enddate" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div>
-                                <label>Vagt sluttid:</label>
-                                <div>
-                                    <input type="time" @bind="@endtime" />
-                                </div>
-                            </div>
-                        </div>
+                    </div>
+                </EditForm>
 
-                    </EditForm>
-                    <EditForm Model="@createT">
-                        <DataAnnotationsValidator />
-                        <ValidationSummary />
-                        <div class="form-group">
+                <EditForm Model="@createS">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
+                    <div class="form-group">
+                        <div>
+                            <label>Vagt startdato:</label>
                             <div>
-                                <label>Antal vagter:</label>
-                                <div>
-                                    <InputNumber @bind-Value="@createT.number_of_shifts" />
-                                </div>
+                                <input type="date" @bind="@startdate" />
                             </div>
                         </div>
-                    </EditForm>
+                    </div>
+                    <div class="form-group">
+                        <label>Vagt starttid:</label>
+                        <div>
+                            <input type="time" @bind="@starttime" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <label>Vagt slutdato:</label>
+                            <div>
+                                <input type="date" @bind="@enddate" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <label>Vagt sluttid:</label>
+                            <div>
+                                <input type="time" @bind="@endtime" />
+                            </div>
+                        </div>
+                    </div>
 
-                        
-                </div>
+                </EditForm>
+                <EditForm Model="@createT">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
+                    <div class="form-group">
+                        <div>
+                            <label>Antal vagter:</label>
+                            <div>
+                                <InputNumber @bind-Value="@createT.number_of_shifts" />
+                            </div>
+                        </div>
+                    </div>
+                </EditForm>
+
+
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" @onclick="@ModalOk">OK</button>
             </div>
@@ -115,6 +116,10 @@
         createT.shifts.Add(createS);
 
         await Http.PostAsJsonAsync("api/taskClass", createT);
+
+        await JsRuntime.InvokeVoidAsync("alert", "Bekræftelse. Opgaven er oprettet.");
+        
+
         await OnClose.InvokeAsync(true);
     }
 

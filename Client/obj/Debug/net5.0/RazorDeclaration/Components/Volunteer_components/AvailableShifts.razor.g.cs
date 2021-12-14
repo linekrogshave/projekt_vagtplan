@@ -163,7 +163,7 @@ using Radzen.Blazor;
 
     private Task ModalOk()
     {
-        return OnClose.InvokeAsync((true, takenShift));
+        return OnClose.InvokeAsync((false, new Shift()));
     }
 
     async void OnTake(Shift s)
@@ -174,6 +174,7 @@ using Radzen.Blazor;
         takenShift.volunteer = vol;
         await Http.PostAsJsonAsync($"api/method/assignshift", takenShift);
         await grid.Reload();
+        await OnClose.InvokeAsync((true, takenShift));
     }
 
 #line default

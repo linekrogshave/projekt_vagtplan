@@ -104,7 +104,7 @@ using Radzen.Blazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 43 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/CreateCoupon.razor"
+#line 44 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/CreateCoupon.razor"
        
 
     public static Coupon create = new();
@@ -121,6 +121,10 @@ using Radzen.Blazor;
     private async Task ModalOk()
     {
         await Http.PostAsJsonAsync("api/coupon", create);
+
+        await JsRuntime.InvokeVoidAsync("alert", "Bekræftelse. Kuponen er oprettet");
+
+
         await OnClose.InvokeAsync(true);
     }
 
@@ -132,6 +136,7 @@ using Radzen.Blazor;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime JsRuntime { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }

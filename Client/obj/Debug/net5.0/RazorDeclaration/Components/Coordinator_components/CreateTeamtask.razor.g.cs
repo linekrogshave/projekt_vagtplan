@@ -96,7 +96,14 @@ using Radzen.Blazor;
 #line default
 #line hidden
 #nullable disable
-    public partial class SeeCoordinators : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 3 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/CreateTeamtask.razor"
+using vagtplanen.Shared.Models;
+
+#line default
+#line hidden
+#nullable disable
+    public partial class CreateTeamtask : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -104,15 +111,20 @@ using Radzen.Blazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 36 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/SeeCoordinators.razor"
+#line 75 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/CreateTeamtask.razor"
        
 
-    public Shift[] shifts;
 
-    protected async override Task OnInitializedAsync()
-    {
-        shifts = await Http.GetFromJsonAsync<Shift[]>("api/shift");
-    }
+    public static TeamTask createTT = new();
+   
+
+
+    public DateTime startdate = DateTime.Now;
+    public DateTime starttime = DateTime.Now;
+
+    public DateTime enddate = DateTime.Now;
+    public DateTime endtime = DateTime.Now;
+
 
     [Parameter]
     public EventCallback<bool> OnClose { get; set; }
@@ -122,14 +134,29 @@ using Radzen.Blazor;
         return OnClose.InvokeAsync(false);
     }
 
-    private Task ModalOk()
+    private async Task ModalOk()
     {
-        return OnClose.InvokeAsync(true);
+        DateTime start = startdate.Date.Add(starttime.TimeOfDay);
+        createTT.start_time = start;
+
+        DateTime end = enddate.Date.Add(endtime.TimeOfDay);
+        createTT.end_time = end;
+
+        await Http.PostAsJsonAsync("api/teamtask", createTT);
+
+        await JsRuntime.InvokeVoidAsync("alert", "Bekræftelse. Teamopgaven er oprettet.");
+
+
+        await OnClose.InvokeAsync(true);
     }
+
+
+
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime JsRuntime { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }

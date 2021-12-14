@@ -96,7 +96,14 @@ using Radzen.Blazor;
 #line default
 #line hidden
 #nullable disable
-    public partial class EditCoordinators : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 2 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/SeeTeamtask.razor"
+using vagtplanen.Shared.Models;
+
+#line default
+#line hidden
+#nullable disable
+    public partial class SeeTeamtask : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -104,14 +111,14 @@ using Radzen.Blazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 36 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/EditCoordinators.razor"
+#line 49 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/SeeTeamtask.razor"
        
 
-    public Shift[] shifts;
+    public TeamTask[] teamtask;
 
     protected async override Task OnInitializedAsync()
     {
-        shifts = await Http.GetFromJsonAsync<Shift[]>("api/shift");
+        teamtask = await Http.GetFromJsonAsync<TeamTask[]>("api/teamtask");
     }
 
     [Parameter]

@@ -118,7 +118,7 @@ using vagtplanen.Client.Components.Coordinator_components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 131 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Pages/CoordinatorPage.razor"
+#line 160 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Pages/CoordinatorPage.razor"
        
     [Parameter] public Coordinator coor { get; set; }
 
@@ -199,6 +199,50 @@ using vagtplanen.Client.Components.Coordinator_components;
         StateHasChanged();
     }
 
+     // Kode til SeeTeams Modal Dialog
+    public bool SeeTeamsDialogOpen { get; set; }
+
+    public void OpenSeeTeamsDialog()
+    {
+        SeeTeamsDialogOpen = true;
+        StateHasChanged();
+    }
+
+    public void OnSeeTeamsDialogClose(bool accepted)
+    {
+        SeeTeamsDialogOpen = false;
+        StateHasChanged();
+    }
+    
+    // Kode til CreateTeamtask Modal Dialog
+    public bool CreateTeamtaskDialogOpen { get; set; }
+
+    public void OpenCreateTeamtaskDialog()
+    {
+        CreateTeamtaskDialogOpen = true;
+        StateHasChanged();
+    }
+
+    public void OnCreateTeamtaskDialogClose(bool accepted)
+    {
+        CreateTeamtaskDialogOpen = false;
+        StateHasChanged();
+    }
+    
+    // Kode til SeeTeamtask Modal Dialog
+    public bool SeeTeamtaskDialogOpen { get; set; }
+
+    public void OpenSeeTeamtaskDialog()
+    {
+        SeeTeamtaskDialogOpen = true;
+        StateHasChanged();
+    }
+
+    public void OnSeeTeamtaskDialogClose(bool accepted)
+    {
+        SeeTeamtaskDialogOpen = false;
+        StateHasChanged();
+    }
 
     // Kode til CreateCoupon Modal Dialog
     public bool CreateCouponDialogOpen { get; set; }

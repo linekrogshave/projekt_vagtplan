@@ -97,7 +97,7 @@ using Radzen.Blazor;
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/CreateTeams.razor"
+#line 3 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/CreateTeams.razor"
 using vagtplanen.Shared.Models;
 
 #line default
@@ -111,7 +111,7 @@ using vagtplanen.Shared.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 66 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/CreateTeams.razor"
+#line 67 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/CreateTeams.razor"
        
 
     public static Team create = new();
@@ -128,7 +128,12 @@ using vagtplanen.Shared.Models;
     private async Task ModalOk()
     {
         await Http.PostAsJsonAsync("api/team", create);
+
+        await JsRuntime.InvokeVoidAsync("alert", "Bekræftelse. Teamet er oprettet");
+
+
         await OnClose.InvokeAsync(true);
+        create = new(); 
     }
 
 
@@ -137,6 +142,7 @@ using vagtplanen.Shared.Models;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime JsRuntime { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }

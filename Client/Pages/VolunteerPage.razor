@@ -143,10 +143,13 @@
 
     public void OnAvailableShiftsDialogClose(bool accepted, Shift s)
     {
-        shifts.Add(s);
-        vol.shifts.Add(s);
-        grid.Reload();
-        AvailableShiftsDialogOpen = false;
+        if(s.shift_id != 0)
+        {
+            shifts.Add(s);
+            vol.shifts.Add(s);
+            grid.Reload();
+        }
+        AvailableShiftsDialogOpen = accepted;
         StateHasChanged();
     }
 
@@ -216,7 +219,14 @@
     {
         shifts.Remove(s);
         s.volunteer = vol;
-        await Http.PostAsJsonAsync<Shift>($"api/method/deassignshift", s);
+        try
+        {
+            await Http.PostAsJsonAsync<Shift>($"api/method/deassignshift", s);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+        }
         s.taken = false;
         s.volunteer = new Volunteer();
         await grid.Reload();

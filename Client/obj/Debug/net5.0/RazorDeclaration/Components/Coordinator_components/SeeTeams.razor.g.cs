@@ -96,7 +96,14 @@ using Radzen.Blazor;
 #line default
 #line hidden
 #nullable disable
-    public partial class CreateCoordinators : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 4 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/SeeTeams.razor"
+using vagtplanen.Shared.Models;
+
+#line default
+#line hidden
+#nullable disable
+    public partial class SeeTeams : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -104,14 +111,32 @@ using Radzen.Blazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 36 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/CreateCoordinators.razor"
+#line 46 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Coordinator_components/SeeTeams.razor"
        
 
-    public Shift[] shifts;
+    public Team[] teams;
+
+    public async void deleteControl(Team team)
+    {
+        await deleteTeam(team);
+        uriHelper.NavigateTo(uriHelper.Uri);
+    }
+
+    protected async Task deleteTeam(Team team)
+    {
+        bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Er du sikker på, at du vil slette teamets oplysninger?");
+        if (confirmed)
+        {
+            await Http.DeleteAsync($"api/team/{team.team_id}");
+            await ModalOk();
+        }
+    }
+
+
 
     protected async override Task OnInitializedAsync()
     {
-        shifts = await Http.GetFromJsonAsync<Shift[]>("api/shift");
+        teams = await Http.GetFromJsonAsync<Team[]>("api/team");
     }
 
     [Parameter]
@@ -130,6 +155,8 @@ using Radzen.Blazor;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime JsRuntime { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager uriHelper { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
+﻿using System.Data;
 using System.Threading.Tasks;
 using Dapper;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Npgsql;
 using vagtplanen.Shared.Models;
