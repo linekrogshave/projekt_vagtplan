@@ -104,7 +104,7 @@ using Radzen.Blazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 32 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Volunteer_components/MyCoupons.razor"
+#line 33 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Volunteer_components/MyCoupons.razor"
        
 
     [Parameter]
@@ -126,14 +126,19 @@ using Radzen.Blazor;
 
     async Task OnUse(Coupon c)
     {
-        vol.coupons.Remove(c);
-        await Http.PostAsJsonAsync($"api/method/usecoupon/{vol.volunteer_id}", c);
-        await grid.Reload();
+        bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Du er ved at bruge en af dine kuponer. Lad medarbejderen i boden trykke OK for at benytte din kupon.");
+        if (confirmed)
+        {
+            vol.coupons.Remove(c);
+            await Http.PostAsJsonAsync($"api/method/usecoupon/{vol.volunteer_id}", c);
+            await grid.Reload();
+        }
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime JsRuntime { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }

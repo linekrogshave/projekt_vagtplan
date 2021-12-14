@@ -6,7 +6,6 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h3>Alle kuponer</h3>
-                <button type="button" class="close" @onclick="@ModalCancel">&times;</button>
             </div>
             <div class="modal-body">
                 @if (vol != null)
@@ -36,7 +35,7 @@
                 }
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" @onclick="@ModalOk">OK</button>
+                <button type="button" class="btn btn-primary" @onclick="@ModalOk">Luk</button>
             </div>
         </div>
     </div>
@@ -57,28 +56,28 @@
     [Parameter]
     public EventCallback<bool> OnClose { get; set; }
 
-    private Task ModalCancel()
-    {
-        return OnClose.InvokeAsync(false);
-    }
 
     private Task ModalOk()
     {
         return OnClose.InvokeAsync(true);
     }
 
-    async void OnBuy(Coupon c)
+    async void OnBuy(Coupon coupon)
     {
-        bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Du er ved at købe en kupon. Tryk OK for at bekræfte.");
-        if (confirmed)
+        if (vol.points >= coupon.price)
         {
-            if (vol.points >= c.price)
+            bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Du er ved at købe en kupon. Tryk OK for at bekræfte.");
+            if (confirmed)
             {
-                vol.coupons.Add(c);
-                await Http.PostAsJsonAsync($"api/method/buycoupon/{vol.volunteer_id}", c);
+                vol.coupons.Add(coupon);
+                await Http.PostAsJsonAsync($"api/method/buycoupon/{vol.volunteer_id}", coupon);
             }
+            await JsRuntime.InvokeVoidAsync("alert", "Du har annulleret dette køb.");
         }
-
+        else
+        {
+            await JsRuntime.InvokeVoidAsync("alert", "Du har ikke nok point til denne kupon.");
+        }
     }
 }
 

@@ -16,7 +16,7 @@
                     <ValidationSummary />
                     <div class="form-group">
                         <div>
-                            <label>Indtast fornavn:</label>
+                            <label>Fornavn:</label>
                             <div>
                                 <InputText @bind-Value="@create.first_name" />
                             </div>
@@ -24,7 +24,7 @@
                     </div>
                     <div class="form-group">
                         <div>
-                            <label>Indtast efternavn:</label>
+                            <label>Efternavn:</label>
                             <div>
                                 <InputText @bind-Value="@create.last_name" />
                             </div>
@@ -32,7 +32,7 @@
                     </div>
                     <div class="form-group">
                         <div>
-                            <label>Indtast mobilnummer:</label>
+                            <label>Mobilnummer:</label>
                             <div>
                                 <InputText @bind-Value="@create.mobile" />
                             </div>
@@ -40,7 +40,7 @@
                     </div>
                     <div class="form-group">
                         <div>
-                            <label>Indtast email:</label>
+                            <label>Email:</label>
                             <div>
                                 <InputText @bind-Value="@create.email" />
                             </div>
@@ -48,7 +48,7 @@
                     </div>
                     <div class="form-group">
                         <div>
-                            <label>Indtast adresse:</label>
+                            <label>Adresse:</label>
                             <div>
                                 <InputText @bind-Value="@create.address" />
                             </div>
@@ -56,7 +56,7 @@
                     </div>
                     <div class="form-group">
                         <div>
-                            <label>Indtast køn:</label>
+                            <label>Køn:</label>
                             <div>
                                 <InputText @bind-Value="@create.gender" />
                             </div>
@@ -64,7 +64,7 @@
                     </div>
                     <div class="form-group">
                         <div>
-                            <label>Indtast cpr-nummer:</label>
+                            <label>Cpr-nummer:</label>
                             <div>
                                 <InputText @bind-Value="@create.cpr" />
                             </div>
@@ -72,7 +72,7 @@
                     </div>
                     <div class="form-group">
                         <div>
-                            <label>Indtast kode:</label>
+                            <label>Kode:</label>
                             <div>
                                 <InputText @bind-Value="@create.password" />
                             </div>
@@ -103,7 +103,7 @@
     {
         await Http.PostAsJsonAsync("api/volunteer", create);
 
-        await JsRuntime.InvokeVoidAsync("alert", "Bekræftelse. Brugeren er oprettet.");
+        await JsRuntime.InvokeVoidAsync("alert", "Bekræftelse. Den frivillige er oprettet.");
 
 
         await OnClose.InvokeAsync(true);

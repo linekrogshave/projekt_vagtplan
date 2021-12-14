@@ -9,7 +9,6 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h3>Alle teams</h3>
-                <button type="button" class="close" @onclick="@ModalCancel">&times;</button>
             </div>
             <div class="modal-body">
                 @if (teams == null)
@@ -22,7 +21,7 @@
                                     Data="@teams" TItem="Team">
                         <Columns>
                             <RadzenDataGridColumn TItem="Team" Property="team_id" Title="ID" Width="70px" />
-                            <RadzenDataGridColumn TItem="Team" Property="name" Title="Team navn" />
+                            <RadzenDataGridColumn TItem="Team" Property="name" Title="Teamnavn" />
                             <RadzenDataGridColumn TItem="Team" Property="contact_name" Title="Kontaktperson" />
                             <RadzenDataGridColumn TItem="Team" Property="mobile" Title="Telefon" />
                             <RadzenDataGridColumn TItem="Team" Property="email" Title="Email" />
@@ -37,7 +36,7 @@
                 }
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" @onclick="@ModalOk">OK</button>
+                <button type="button" class="btn btn-primary" @onclick="@ModalOk">Luk</button>
             </div>
         </div>
     </div>
@@ -73,10 +72,6 @@
     [Parameter]
     public EventCallback<bool> OnClose { get; set; }
 
-    private Task ModalCancel()
-    {
-        return OnClose.InvokeAsync(false);
-    }
 
     private Task ModalOk()
     {

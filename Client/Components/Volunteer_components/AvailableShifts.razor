@@ -1,12 +1,12 @@
 ﻿@inject HttpClient Http
 @inject NavigationManager uriHelper
+@inject IJSRuntime JsRuntime 
 
 <div class="modal fade show" id="myModal" style="display:block;" aria-modal="true" role="dialog">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
                 <h3>Alle ledige vagter</h3>
-                <button type="button" class="close" @onclick="@ModalCancel">&times;</button>
             </div>
             <div class="modal-body">
                 @if (shifts == null)
@@ -20,8 +20,8 @@
                                         Data="@MyShifts()" TItem="Shift">
                             <Columns>
                                 <RadzenDataGridColumn TItem="Shift" Property="task.description" Title="Beskrivelse" />
-                                <RadzenDataGridColumn TItem="Shift" Property="start_time" Title="Start tidspunkt" />
-                                <RadzenDataGridColumn TItem="Shift" Property="end_time" Title="Slut tidspunkt" />
+                                <RadzenDataGridColumn TItem="Shift" Property="start_time" Title="Starttidspunkt" />
+                                <RadzenDataGridColumn TItem="Shift" Property="end_time" Title="Sluttidspunkt" />
                                 <RadzenDataGridColumn TItem="Shift" Property="shift_id" Title="Tag vagt" Width="75px" Filterable="false" Sortable="false">
                                     <Template Context="shift">
                                         <RadzenButton Icon="check_circle" Click=@(args => OnTake(shift)) />
@@ -33,7 +33,7 @@
                 }
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" @onclick="@ModalOk">OK</button>
+                <button type="button" class="btn btn-primary" @onclick="@ModalOk">Luk</button>
             </div>
         </div>
     </div>
@@ -90,11 +90,6 @@
 
     public Shift takenShift;
 
-    private Task ModalCancel()
-    {
-        return OnClose.InvokeAsync((false, new Shift()));
-    }
-
     private Task ModalOk()
     {
         return OnClose.InvokeAsync((false, new Shift()));
@@ -102,12 +97,16 @@
 
     async void OnTake(Shift s)
     {
-        shifts.Remove(s);
-        s.taken = true;
-        takenShift = s;
-        takenShift.volunteer = vol;
-        await Http.PostAsJsonAsync($"api/method/assignshift", takenShift);
-        await grid.Reload();
-        await OnClose.InvokeAsync((true, takenShift));
+        bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Du er ved at tage en vagt. Tryk OK for at bekræfte.");
+        if (confirmed)
+        {
+            shifts.Remove(s);
+            s.taken = true;
+            takenShift = s;
+            takenShift.volunteer = vol;
+            await Http.PostAsJsonAsync($"api/method/assignshift", takenShift);
+            await grid.Reload();
+            await OnClose.InvokeAsync((true, takenShift));
+        }
     }
 }

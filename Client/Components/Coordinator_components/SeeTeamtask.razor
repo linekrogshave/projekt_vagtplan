@@ -6,7 +6,6 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h3>Alle team opgaver</h3>
-                <button type="button" class="close" @onclick="@ModalCancel">&times;</button>
             </div>
             <div class="modal-body">
                 @if (teamtask== null)
@@ -21,8 +20,8 @@
                             <RadzenDataGridColumn TItem="TeamTask" Property="teamtask_id" Title="ID" Width="70px" />
                             <RadzenDataGridColumn TItem="TeamTask" Property="description" Title="Beskrivelse" />
                             <RadzenDataGridColumn TItem="TeamTask" Property="people_needed" Title="Personer" />
-                             <RadzenDataGridColumn TItem="TeamTask" Property="start_time" Title="Start tid" />
-                              <RadzenDataGridColumn TItem="TeamTask" Property="end_time" Title="Slut tid" />
+                             <RadzenDataGridColumn TItem="TeamTask" Property="start_time" Title="Starttidspunkt" />
+                              <RadzenDataGridColumn TItem="TeamTask" Property="end_time" Title="Sluttidspunkt" />
                                <RadzenDataGridColumn TItem="TeamTask" Property="team.name" Title="Taget af">
                                     <Template Context="teamtask">
                                         @if (teamtask.taken == true)
@@ -40,7 +39,7 @@
                 }
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" @onclick="@ModalOk">OK</button>
+                <button type="button" class="btn btn-primary" @onclick="@ModalOk">Luk</button>
             </div>
         </div>
     </div>
@@ -58,10 +57,6 @@
     [Parameter]
     public EventCallback<bool> OnClose { get; set; }
 
-    private Task ModalCancel()
-    {
-        return OnClose.InvokeAsync(false);
-    }
 
     private Task ModalOk()
     {

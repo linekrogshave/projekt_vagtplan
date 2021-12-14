@@ -7,8 +7,7 @@
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3>Se hvem du skal på vagt med</h3>
-                    <button type="button" class="close" @onclick="@ModalCancel">&times;</button>
+                    <h3>Se alle besatte vagter</h3>
                 </div>
                 <div class="modal-body">
                     @if (shifts == null)
@@ -28,15 +27,15 @@
                                     </RadzenDataGridColumn>
 
                                     <RadzenDataGridColumn TItem="Shift" Property="task.description" Title="Beskrivelse" />
-                                    <RadzenDataGridColumn TItem="Shift" Property="start_time" Title="Start tidspunkt" />
-                                    <RadzenDataGridColumn TItem="Shift" Property="end_time" Title="Slut tidspunkt" />
+                                    <RadzenDataGridColumn TItem="Shift" Property="start_time" Title="Starttidspunkt" />
+                                    <RadzenDataGridColumn TItem="Shift" Property="end_time" Title="Sluttidspunkt" />
                                 </Columns>
                             </RadzenDataGrid>
                         </EditForm>
                     }
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" @onclick="@ModalOk">OK</button>
+                    <button type="button" class="btn btn-primary" @onclick="@ModalOk">Luk</button>
                 </div>
             </div>
         </div>
@@ -58,11 +57,6 @@
 
         [Parameter]
         public EventCallback<bool> OnClose { get; set; }
-
-        private Task ModalCancel()
-        {
-            return OnClose.InvokeAsync(false);
-        }
 
         private Task ModalOk()
         {

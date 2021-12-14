@@ -58,7 +58,7 @@
     {
         await Http.PostAsJsonAsync("api/coupon", create);
 
-        await JsRuntime.InvokeVoidAsync("alert", "Bekræftelse. Kuponen er oprettet");
+        await JsRuntime.InvokeVoidAsync("alert", "Bekræftelse. Kuponen er oprettet.");
 
 
         await OnClose.InvokeAsync(true);

@@ -5,7 +5,6 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h3>Alle kuponer</h3>
-                <button type="button" class="close" @onclick="@ModalCancel">&times;</button>
             </div>
             <div class="modal-body">
                 @if (coupons == null)
@@ -26,7 +25,7 @@
                 }
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" @onclick="@ModalOk">OK</button>
+                <button type="button" class="btn btn-primary" @onclick="@ModalOk">Luk</button>
             </div>
         </div>
     </div>
@@ -44,10 +43,6 @@
     [Parameter]
     public EventCallback<bool> OnClose { get; set; }
 
-    private Task ModalCancel()
-    {
-        return OnClose.InvokeAsync(false);
-    }
 
     private Task ModalOk()
     {

@@ -104,7 +104,7 @@ using Radzen.Blazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 44 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Volunteer_components/AllCoupons.razor"
+#line 45 "/Users/nicolaiskat/Projects/linen/projekt_vagtplan/Client/Components/Volunteer_components/AllCoupons.razor"
        
 
     public List<Coupon> coupons;
@@ -130,18 +130,28 @@ using Radzen.Blazor;
         return OnClose.InvokeAsync(true);
     }
 
-    async void OnBuy(Coupon c)
+    async void OnBuy(Coupon coupon)
     {
-        if(vol.points >= c.price)
+        if (vol.points >= coupon.price)
         {
-            vol.coupons.Add(c);
-            await Http.PostAsJsonAsync($"api/method/buycoupon/{vol.volunteer_id}", c);
+            bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Du er ved at købe en kupon. Tryk OK for at bekræfte.");
+            if (confirmed)
+            {
+                vol.coupons.Add(coupon);
+                await Http.PostAsJsonAsync($"api/method/buycoupon/{vol.volunteer_id}", coupon);
+            }
         }
+        else
+        {
+            await JsRuntime.InvokeVoidAsync("alert", "Du har ikke nok point til denne kupon.");
+        }
+
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime JsRuntime { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }

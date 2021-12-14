@@ -15,23 +15,8 @@
             <RadzenCard class="w-7">
                 <div class="row">
                     <div class="col-md-10">
-                        <b>Vagter:</b>
-                        <div>Her kan du se eksisterende og oprette nye vagter</div>
-                    </div>
-                    <div class="col-md-6">
-                        <button class="btn btn-success" @onclick="OpenSeeShiftsDialog">Se vagter</button>
-                        <br />
-                        <br />
-                        <button class="btn btn-success" @onclick="OpenCreateShiftsDialog">Opret vagter</button>
-                    </div>
-                </div>
-            </RadzenCard>
-
-            <RadzenCard class="w-7">
-                <div class="row">
-                    <div class="col-md-10">
                         <b>Frivillige:</b>
-                        <div>Her kan du se, ændre og oprette frivillige i systemet</div>
+                        <div>Her kan du se eksisterende og oprette nye frivillige.</div>
                     </div>
                     <div class="col-md-6">
                         <button class="btn btn-success" @onclick="OpenSeeVolunteersDialog">Se frivillige</button>
@@ -44,20 +29,33 @@
                 <div class="row">
                     <div class="col-md-10">
                         <b>Teams:</b>
-                        <div>Her kan du se og oprette teams i systemet</div>
+                        <div>Her kan du se eksisterende og oprette nye teams.</div>
                     </div>
                     <div class="col-md-6">
-                          <button class="btn btn-success" @onclick="OpenSeeTeamsDialog">Se teams</button>
+                        <button class="btn btn-success" @onclick="OpenSeeTeamsDialog">Se teams</button>
                         <button class="btn btn-success" @onclick="OpenCreateTeamsDialog">Opret teams</button>
                     </div>
                 </div>
             </RadzenCard>
 
-             <RadzenCard class="w-7">
+            <RadzenCard class="w-7">
+                <div class="row">
+                    <div class="col-md-10">
+                        <b>Vagter:</b>
+                        <div>Her kan du se eksisterende og oprette nye vagter.</div>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-success" @onclick="OpenSeeShiftsDialog">Se vagter</button>
+                        <button class="btn btn-success" @onclick="OpenCreateShiftsDialog">Opret vagter</button>
+                    </div>
+                </div>
+            </RadzenCard>
+
+            <RadzenCard class="w-7">
                 <div class="row">
                     <div class="col-md-10">
                         <b>Teamopgaver:</b>
-                        <div>Her kan du oprette teamopgaver</div>
+                        <div>Her kan du se eksisterende og oprette nye teamopgaver.</div>
                     </div>
                     <div class="col-md-6">
                         <button class="btn btn-success" @onclick="OpenSeeTeamtaskDialog">Se teamopgaver</button>
@@ -70,7 +68,7 @@
                 <div class="row">
                     <div class="col-md-10">
                         <b>Kuponer:</b>
-                        <div>Her kan du oprette kuponer</div>
+                        <div>Her kan du se eksisterende og oprette nye kuponer.</div>
                     </div>
                     <div class="col-md-6">
                         <button class="btn btn-success" @onclick="OpenSeeCouponsDialog">Se kuponer</button>
@@ -82,11 +80,11 @@
             <RadzenCard class="w-7">
                 <div class="row">
                     <div class="col-md-10">
-                        <b>Se din data:</b>
-                        <div>Se og ændre info vedrørende dig</div>
+                        <b>Personlige oplysninger:</b>
+                        <div>Her kan du se og ændre dine personlige oplysninger.</div>
                     </div>
                     <div class="col-md-6">
-                        <button class="btn btn-success" @onclick="() => OpenCoordinatorInfoDialog()">Se</button>
+                        <button class="btn btn-success" @onclick="() => OpenCoordinatorInfoDialog()">Se oplysninger</button>
                     </div>
                 </div>
             </RadzenCard>

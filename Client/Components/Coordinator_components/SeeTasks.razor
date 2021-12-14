@@ -5,8 +5,7 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable ">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Alle vagter ud fra valgt opgave</h3>
-                <button type="button" class="close" @onclick="@ModalCancel">&times;</button>
+                <h3>Alle vagter sorteret efter opgave</h3>
             </div>
             <div class="modal-body">
                 @if (tasks == null)
@@ -34,8 +33,8 @@
                                         @ref="grid" Data="@(shifts.Where(x => x.task.task_id == task.task_id))" TItem="Shift">
                             <Columns>
                                 <RadzenDataGridColumn TItem="Shift" Property="task.description" Title="Beskrivelse" />
-                                <RadzenDataGridColumn TItem="Shift" Property="start_time" Title="Start tidspunkt" />
-                                <RadzenDataGridColumn TItem="Shift" Property="end_time" Title="Slut tidspunkt"/>
+                                <RadzenDataGridColumn TItem="Shift" Property="start_time" Title="Starttidspunkt" />
+                                <RadzenDataGridColumn TItem="Shift" Property="end_time" Title="Sluttidspunkt"/>
                                 <RadzenDataGridColumn TItem="Shift" Property="volunteer.email" Title="Taget af">
                                     <Template Context="shift">
                                         @if (shift.taken == true)
@@ -69,7 +68,7 @@
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" @onclick="@ModalOk">OK</button>
+                <button type="button" class="btn btn-primary" @onclick="@ModalOk">Luk</button>
             </div>
         </div>
     </div>
@@ -91,11 +90,6 @@
 
     [Parameter]
     public EventCallback<bool> OnClose { get; set; }
-
-    private Task ModalCancel()
-    {
-        return OnClose.InvokeAsync(false);
-    }
 
     private Task ModalOk()
     {

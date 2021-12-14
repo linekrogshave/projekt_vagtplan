@@ -1,19 +1,22 @@
 ﻿@using vagtplanen.Shared.Models
 @inject HttpClient Http
+@inject NavigationManager uriHelper
+
 
 <div class="modal fade show" id="myModal" style="display:block;" aria-modal="true" role="dialog">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Ret valgte data her</h3>
+                <h3>Her kan du rette i dine oplysninger.</h3>
                 <button type="button" class="close" @onclick="@ModalCancel">&times;</button>
             </div>
             <div class="modal-body">
                 <EditForm Model="@tea">
                     <DataAnnotationsValidator />
                     <div class="form-group ">
+                        <h5>Du vil automatisk blive logget ud, når du gemmer dine nye oplysninger.</h5>
                         <div>
-                            <label>Team navn:</label>
+                            <label>Teamnavn:</label>
                             <div>
                                 <InputText @bind-Value="@tea.name" />
                                 <ValidationMessage For="@(() => tea.name)" />
@@ -47,12 +50,12 @@
                             </div>
                         </div>
                     </div>
-                   
-                   
+
+
                 </EditForm>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" @onclick="@ModalOk">OK</button>
+                <button type="button" class="btn btn-primary" @onclick="@ModalOk">Gem</button>
             </div>
         </div>
     </div>
@@ -75,5 +78,11 @@
     {
         await Http.PutAsJsonAsync<Team>("api/team", tea);
         await OnClose.InvokeAsync(true);
+        Reload();
+    }
+
+    public void Reload()
+    {
+        uriHelper.NavigateTo(uriHelper.Uri, forceLoad: true);
     }
 }
